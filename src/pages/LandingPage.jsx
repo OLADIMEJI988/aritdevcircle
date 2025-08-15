@@ -39,7 +39,7 @@ export default function LandingPage() {
           </button>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex gap-7 text-sm md:text-[15px] items-center">
+          <div className="hidden md:flex gap-7 xl:gap-10 text-sm md:text-[15px] xl:text-[19px] items-center">
             {["About", "Mentorship", "Testimonials", "Programmes", "FAQ"].map(
               (item, idx) => (
                 <p
@@ -51,7 +51,7 @@ export default function LandingPage() {
                 </p>
               )
             )}
-            <button className="bg-[#fc4f7b] text-white flex items-center py-2 px-7 rounded-full font-semibold hover:opacity-90 transition">
+            <button className="bg-[#fc4f7b] text-white xl:text-[19px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90 transition">
               Join it’s Free
             </button>
           </div>
@@ -83,19 +83,19 @@ export default function LandingPage() {
         </AnimatePresence>
       </header>
 
-      <div className="flex flex-col md:flex-row justify-center gap-6 mt-3 relative z-10">
+      <div className="flex flex-col items-center md:flex-row mx-9 justify-between mt-8 relative z-10">
         {/* Left Image */}
         <motion.div
-            className="mr-0 md:mr-4 -mt-[70px] md:mt-0 flex justify-center items-center order-first md:order-none"
+            className="mr-0 md:mr-4 -mt-[70px] md:mt-0 order-first md:order-none"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 0.4, ease: "easeOut" }}
         >
-            <img className="h-[370px] md:h-[510px] rotate-90 md:rotate-0" src={leftimg} alt="left hero" />
+            <img className="h-[370px] md:h-[510px] xl:h-full rotate-90 md:rotate-0" src={leftimg} alt="left hero" />
         </motion.div>
 
         {/* Center Content */}
-        <div className="-mt-20 md:mt-0 md:pt-12 text-center order-2 md:order-none">
+        <div className="-mt-20 md:mt-0 text-center order-2 md:order-none">
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -104,15 +104,15 @@ export default function LandingPage() {
                 >
                 <div className="rounded-full py-1 px-3 flex justify-center items-center gap-1">
                     <img src={flash} alt="lightening img" className="h-[16px] md:h-[18px]" />
-                    <p className="text-[#D9D9D9] text-[13px] md:text-[12px]">
+                    <p className="text-[#D9D9D9] text-[13px] xl:text-[16px]">
                     From Learning to Earning
                     </p>
                 </div>
             </motion.div>
 
-            <div className="max-w-[95%] md:max-w-[680px] mx-auto mt-5 md:mt-4">
+            <div className="max-w-[95%] md:max-w-[680px] xl:max-w-[820px] mx-auto mt-5 md:mt-4 xl:mt-6">
             <motion.p
-                className="text-[#E3E3E3] text-[35px] sm:text-4xl md:text-5xl font-semibold leading-snug md:leading-[60px] tracking-normal flex flex-wrap justify-center"
+                className="text-[#E3E3E3] text-[35px] sm:text-4xl md:text-5xl xl:text-6xl font-semibold leading-snug md:leading-[60px] tracking-normal flex flex-wrap justify-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -136,7 +136,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#BBBABA] text-[15px] md:text-[13px] max-w-[550px] mx-auto mt-4"
+                className="text-[#BBBABA] text-[15px] md:text-[13px] xl:text-[16px] max-w-[550px] mx-auto mt-4 xl:mt-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
@@ -147,12 +147,12 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-            className="bg-[#fc4f7b] text-[#110D0D] py-2 px-5 rounded-full font-semibold hover:opacity-90 flex justify-center items-center gap-[14px] md:gap-3 mx-auto mt-6 md:mt-5"
+            className="bg-[#fc4f7b] text-[#110D0D] py-2 px-5 rounded-full font-semibold hover:opacity-90 flex justify-center items-center gap-[14px] md:gap-3 mx-auto mt-6 md:mt-5 xl:mt-7"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.3, ease: "easeOut" }}
             >
-            <p className="text-[16px] text-white">Join the Circle Now</p>
+            <p className="text-[16px] xl:text-[18px] text-white">Join the Circle Now</p>
             <div className="mt-[2px] bg-white p-[5px] rounded-full">
                 <img className="h-5" src={arrow} alt="arrow" />
             </div>
@@ -166,7 +166,7 @@ export default function LandingPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.6, duration: 0.4, ease: "easeOut" }}
         >
-            <img className="h-[370px] md:h-[510px] rotate-90 md:rotate-0" src={rightimg} alt="right hero" />
+            <img className="h-[370px] md:h-[510px] xl:h-full rotate-90 md:rotate-0" src={rightimg} alt="right hero" />
         </motion.div>
       </div>
 
