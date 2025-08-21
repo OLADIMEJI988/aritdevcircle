@@ -115,15 +115,15 @@ export default function LandingPage() {
                 transition={{ duration: 0.4 }}
                 className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10"
                 >
-                <div className="rounded-full py-[11px] mobile:max-lg:py-4 lg:py-[8px] xl:py-[11px] px-4 flex justify-center items-center gap-3 md:gap-2">
-                    <img src={flash} alt="lightening img" className="mobile:max-lg:h-[23px] lg:h-[18px] xl:h-[22px]" />
-                    <p className="text-[#D9D9D9] mobile:max-lg:text-[18px] lg:text-[14px] xl:text-[19px]">
+                <div className="rounded-full mobile:max-xsm:py-[13px] xsm:max-lg:py-4 lg:py-[8px] xl:py-[11px] px-4 flex justify-center items-center mobile:max-xxm:gap-2 xxm:gap-3 md:gap-2">
+                    <img src={flash} alt="lightening img" className="mobile:max-xsm:h-[21px] xsm:max-lg:h-[23px] lg:h-[18px] xl:h-[22px]" />
+                    <p className="text-[#D9D9D9] mobile:max-xsm:text-[15px] mobile:max-xsm:tracking-wide xsm:max-lg:text-[18px] lg:text-[14px] xl:text-[19px]">
                     Tech Community Empowerment
                     </p>
                 </div>
             </motion.div>
 
-            <div className="lg:max-w-[680px] xl:max-w-full mx-auto mt-8 lg:mt-4 xl:mt-6">
+            <div className="lg:max-w-[680px] xl:max-w-full mx-auto mobile:max-xxm:mt-6 xxm:mt-8 lg:mt-4 xl:mt-6">
             <motion.p
                 className="text-[#E3E3E3] mobile:max-xxm:text-[50px] xxm:max-xsm:text-6xl xsm:max-lg:text-7xl lg:text-[55px] xl:text-[66px] font-semibold leading-snug md:leading-[60px] tracking-normal flex flex-wrap justify-center"
                 initial="hidden"
