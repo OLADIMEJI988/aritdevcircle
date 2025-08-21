@@ -33,12 +33,12 @@ export default function LandingPage() {
         style={{ backgroundImage: `url(${glow})` }}
       />
       <div
-        className="absolute inset-0 w-full lg:hidden bg-no-repeat bg-center bg-cover pointer-events-none"
+        className="absolute inset-0 w-full mt-32 lg:hidden bg-no-repeat bg-center bg-cover pointer-events-none"
         style={{ backgroundImage: `url(${mobileglow})` }}
       />
 
       {/* Header */}
-      <header className="sticky lg:static top-0 bg-[#0f1014] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
+      <header className="sticky lg:static top-0 bg-[#0e0e0e] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
         <div className="flex justify-between items-center">
           <img className="h-16" src={Logo} alt="logo" />
 
@@ -81,7 +81,7 @@ export default function LandingPage() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-full left-0 w-full bg-[#0f1014] lg:hidden z-20 overflow-hidden"
+              className="absolute top-full left-0 w-full bg-[#0e0e0e] lg:hidden z-20 overflow-hidden"
             >
               <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center py-8">
                 <p className="hover:cursor-pointer">About</p>
@@ -192,7 +192,7 @@ export default function LandingPage() {
 
         </motion.div>
       </div>
-      <div className="h-48 ">
+      <div className="mobile:max-xxm:h-20 h-48 ">
 
       </div>
 
