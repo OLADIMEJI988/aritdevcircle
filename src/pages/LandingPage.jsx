@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import flash from "../assets/flash.png";
 import Logo from "../assets/QueenAritCircleLogo.svg";
 import glow from "../assets/inner glow.png";
+import mobileglow from "../assets/inner glow mobile.png";
 import arrow from "../assets/arrow-right.png";
 import leftimg from "../assets/Hero circular image left.png";
 import rightimg from "../assets/Hero circlar image right.png";
@@ -28,12 +29,16 @@ export default function LandingPage() {
     <div className="relative w-full min-h-screen bg-[#0E0E0E]">
       {/* Glow Background*/}
       <div
-        className="absolute inset-0 w-full lg:max-xl:h-[800px] xl:h-[920px] bg-no-repeat bg-center bg-cover pointer-events-none"
+        className="absolute mobile:max-lg:hidden inset-0 w-full lg:max-xl:h-[800px] xl:h-[920px] bg-no-repeat bg-center bg-cover pointer-events-none"
         style={{ backgroundImage: `url(${glow})` }}
+      />
+      <div
+        className="absolute inset-0 w-full lg:hidden bg-no-repeat bg-center bg-cover pointer-events-none"
+        style={{ backgroundImage: `url(${mobileglow})` }}
       />
 
       {/* Header */}
-      <header className="sticky lg:static top-0 bg-[#0e1319] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
+      <header className="sticky lg:static top-0 bg-[#0f1014] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
         <div className="flex justify-between items-center">
           <img className="h-16" src={Logo} alt="logo" />
 
@@ -76,7 +81,7 @@ export default function LandingPage() {
               animate={{ height: "auto", opacity: 1 }}
               exit={{ height: 0, opacity: 0 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-full left-0 w-full bg-[#0e1319] lg:hidden z-20 overflow-hidden"
+              className="absolute top-full left-0 w-full bg-[#0f1014] lg:hidden z-20 overflow-hidden"
             >
               <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center py-8">
                 <p className="hover:cursor-pointer">About</p>
@@ -149,7 +154,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#BBBABA] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-xxm:mt-5 xxm:max-md:mt-7 md:max-lg:mt-10 lg:mt-[22px] xl:mt-8"
+                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-xxm:mt-5 xxm:max-md:mt-7 md:max-lg:mt-10 lg:mt-[22px] xl:mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
