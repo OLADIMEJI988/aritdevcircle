@@ -78,7 +78,7 @@ export default function LandingPage() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="absolute top-full left-0 w-full bg-[#0e1319] lg:hidden z-20 overflow-hidden"
             >
-              <div className="flex flex-col gap-5 mobile:max-xxm:text-[23px] xxm:max-lg:text-[25px] text-center py-8">
+              <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center py-8">
                 <p className="hover:cursor-pointer">About</p>
                 <p className="hover:cursor-pointer">Mentorship</p>
                 <p className="hover:cursor-pointer">Testimonials</p>
@@ -160,7 +160,7 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xxm:py-4 xxm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xxm:px-7 xxm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
+            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xxm:py-[14px] xxm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xxm:px-6 xxm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.3, ease: "easeOut" }}
