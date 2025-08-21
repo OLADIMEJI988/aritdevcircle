@@ -149,7 +149,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#BBBABA] mobile:max-xxm:text-[25px] xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-xxm:mt-5 xxm:max-md:mt-7 md:max-lg:mt-10 lg:mt-[22px] xl:mt-8"
+                className="text-[#BBBABA] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-xxm:mt-5 xxm:max-md:mt-7 md:max-lg:mt-10 lg:mt-[22px] xl:mt-8"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
@@ -160,14 +160,14 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xxm:py-[14px] xxm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xxm:px-6 xxm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
+            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xxm:py-[13px] xxm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xxm:px-5 xxm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.3, ease: "easeOut" }}
             >
-            <p className="mobile:max-xxm:text-[22px] xxm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] text-white">Join the Circle Now</p>
+            <p className="mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] text-white">Join the Circle Now</p>
             <div className="mt-[2px] bg-white p-[5px] xl:p-[6px] rounded-full">
-                <img className="mobile:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
+                <img className="xxm:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
             </div>
             </motion.button>
         </div>
