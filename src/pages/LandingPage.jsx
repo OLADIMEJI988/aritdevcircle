@@ -14,6 +14,7 @@ import mobilebottomimg from "../assets/Hero circlar image Bottommobile.png";
 import xsmobiletopimg from "../assets/Hero circlar image Topxsmobile.png";
 import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.png";
 
+import './LandingPage.css'
 
 
 
@@ -30,7 +31,7 @@ export default function LandingPage() {
   );
 
   return (
-    <div className="relative w-full min-h-screen bg-[#0E0E0E]">
+    <div className="relative w-full min-h-screen bg-[#0E0E0E] inter">
       {/* Glow Background*/}
       <div
         className="absolute mobile:max-lg:hidden inset-0 w-full lg:max-xl:h-[800px] xl:h-[920px] bg-no-repeat bg-center bg-cover pointer-events-none"
@@ -102,7 +103,7 @@ export default function LandingPage() {
         </AnimatePresence>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-9 mx-[15px] relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-0 mx-[15px] relative z-10">
         {/* Left Image */}
         <motion.div
             className="flex justify-center items-center"
@@ -110,8 +111,8 @@ export default function LandingPage() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 0.4, ease: "easeOut" }}
         >
-            <img className="h-auto mobile:max-lg:hidden lg:h-[510px] xl:h-full md:w-full rotate-90 lg:rotate-0" src={leftimg} alt="left hero" />
-            <img className="h-auto mobile:max-md:hidden md:max-lg:max-h-full lg:hidden md:w-full lg:rotate-0" src={topimg} alt="left hero" />
+            <img className="h-auto mobile:max-lg:hidden lg:max-xl:h-[510px] xl:h-full  rotate-90 lg:rotate-0" src={leftimg} alt="left hero" />
+            <img className="h-auto mobile:max-md:hidden md:max-lg:max-h-full lg:hidden lg:rotate-0" src={topimg} alt="left hero" />
             <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={mobiletopimg} alt="left hero" />
             <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobiletopimg} alt="left hero" />
         </motion.div>
@@ -134,7 +135,7 @@ export default function LandingPage() {
 
             <div className="lg:max-xl:mx-16 xl:mx-12 xl:max-w-full mx-auto mobile:max-xxm:mt-6 xxm:max-lg:mt-7 lg:mt-3">
             <motion.p
-                className="text-[#E3E3E3] mobile:max-xxm:text-[45px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:text-[85px] font-semibold flex-wrap justify-center"
+                className="text-[#E3E3E3] mobile:max-xxm:text-[42px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:max-lxl:text-[80px] lxl:text-[85px] font-semibold tracking-wide flex-wrap justify-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -158,7 +159,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#E3E3E3] mobile:max-xxm:text-[45px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:text-[85px] font-semibold tracking-normal mobile:max-sm:-mt-3 sm:max-lg:mt-1 lg:max-xl:-mt-6 xl:-mt-10 flex-wrap justify-center"
+                className="text-[#E3E3E3] mobile:max-xxm:text-[42px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:max-lxl:text-[80px] lxl:text-[85px] font-semibold tracking-wide mobile:max-sm:-mt-3 sm:max-lg:mt-2 lg:max-xl:-mt-5 xl:-mt-8 flex-wrap justify-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
