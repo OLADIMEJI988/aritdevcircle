@@ -133,7 +133,7 @@ export default function LandingPage() {
                 </div>
             </motion.div>
 
-            <div className="lg:max-xl:mx-16 xl:mx-12 xl:max-w-full mx-auto mobile:max-xxm:mt-6 xxm:max-lg:mt-7 lg:mt-3">
+            <div className="mobile:max-xxm:ml-[11px] xxm:ml-2 mobile:max-xxm:mt-5 xxm:max-lg:mt-6 lg:mt-3">
             <motion.p
                 className="text-[#E3E3E3] mobile:max-xxm:text-[42px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:max-lxl:text-[80px] lxl:text-[85px] font-semibold tracking-wide flex-wrap justify-center"
                 initial="hidden"
@@ -159,7 +159,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#E3E3E3] mobile:max-xxm:text-[42px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:max-lxl:text-[80px] lxl:text-[85px] font-semibold tracking-wide mobile:max-sm:-mt-3 sm:max-lg:mt-2 lg:max-xl:-mt-5 xl:-mt-8 flex-wrap justify-center"
+                className="text-[#E3E3E3] mobile:max-xxm:text-[42px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:max-lxl:text-[80px] lxl:text-[85px] font-semibold tracking-wide mobile:max-sm:-mt-4 sm:max-lg:mt-2 lg:max-xl:-mt-5 xl:-mt-8 flex-wrap justify-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -183,7 +183,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-sm:mt-1 leading-8 sm:max-lg:mt-4 lg:mt-0"
+                className="text-[#CECECE] mobile:max-xxm:-ml-[1px] mobile:max-xsm:text-base mobile:max-xxm:mx-3 xsm:max-sm:text-[23px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-sm:mt-1 leading-8 sm:max-lg:mt-4 lg:mt-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
@@ -194,12 +194,12 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xxm:py-[13px] xxm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xxm:px-5 xxm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
+            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xsm:px-7 xsm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-6 lg:mt-6 xl:mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.3, ease: "easeOut" }}
             >
-            <p className="mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] text-white">Join the Circle Now</p>
+            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] text-white">Join the Circle Now</p>
             <div className="mt-[2px] bg-white p-[5px] xl:p-[6px] rounded-full">
                 <img className="xxm:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
             </div>
