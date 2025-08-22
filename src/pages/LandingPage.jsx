@@ -183,7 +183,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-sm:mt-3 sm:max-lg:mt-7 lg:mt-3"
+                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-sm:mt-1 leading-8 sm:max-lg:mt-4 lg:mt-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
