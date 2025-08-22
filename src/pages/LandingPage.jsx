@@ -43,7 +43,7 @@ export default function LandingPage() {
       />
 
       {/* Header */}
-      <header className="sticky lg:static top-0 bg-[#0e0e0e] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
+      <header className="sticky lg:static top-0 bg-[#0e0e0e] lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
         <div className="flex justify-between items-center mb-8">
           <img className="h-16" src={Logo} alt="logo" />
 
