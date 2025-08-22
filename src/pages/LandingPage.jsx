@@ -54,7 +54,7 @@ export default function LandingPage() {
             {isOpen ? (
               <i className="fa-solid fa-x"></i>
             ) : (
-              <i className="fa-solid fa-bars "></i>
+              <i className="fa-solid fa-bars"></i>
             )}
           </button>
 
@@ -88,7 +88,7 @@ export default function LandingPage() {
               transition={{ duration: 0.3, ease: "easeInOut" }}
               className="absolute top-full left-0 w-full bg-[#0e0e0e] lg:hidden z-20 overflow-hidden"
             >
-              <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center py-8">
+              <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center pb-8">
                 <p className="hover:cursor-pointer">About</p>
                 <p className="hover:cursor-pointer">Mentorship</p>
                 <p className="hover:cursor-pointer">Testimonials</p>
