@@ -21,7 +21,11 @@ import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.png";
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const heading = "From Learning To Earning".split(
+  const heading = "FROM LEARNING".split(
+    " "
+  );
+
+  const earn = "TO EARNING!".split(
     " "
   );
 
@@ -39,7 +43,7 @@ export default function LandingPage() {
 
       {/* Header */}
       <header className="sticky lg:static top-0 bg-[#0e0e0e] py-1 md:py-0 lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between items-center mb-8">
           <img className="h-16" src={Logo} alt="logo" />
 
           <button
@@ -98,10 +102,10 @@ export default function LandingPage() {
         </AnimatePresence>
       </header>
 
-      <div className="flex flex-col mobile:max-md:gap-9 gap-7 items-center lg:flex-row mx-[15px] justify-between mobile:max-md:mt-24 md:max-lg:mt-[3vh] lg:mt-[11vh] relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-9 mx-[15px] relative z-10">
         {/* Left Image */}
         <motion.div
-            className="mr-0 md:mr-4 -mt-[70px] md:mt-0 order-first md:order-none"
+            className="flex justify-center items-center"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.5, duration: 0.4, ease: "easeOut" }}
@@ -113,7 +117,7 @@ export default function LandingPage() {
         </motion.div>
 
         {/* Center Content */}
-        <div className="mobile:max-sm:mt-4 sm:max-md:mt-2 md:max-lg:-mt-4 lg:-mt-24 text-center order-2 md:order-none">
+        <div className="text-center flex flex-col items-center">
             <motion.div
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -123,14 +127,14 @@ export default function LandingPage() {
                 <div className="rounded-full mobile:max-xsm:py-[13px] xsm:max-lg:py-4 lg:py-[8px] xl:py-[11px] px-4 flex justify-center items-center mobile:max-xxm:gap-2 xxm:gap-3 md:gap-2">
                     <img src={flash} alt="lightening img" className="mobile:max-xsm:h-[21px] xsm:max-lg:h-[23px] lg:h-[18px] xl:h-[22px]" />
                     <p className="text-[#D9D9D9] mobile:max-xsm:text-[15px] mobile:max-xsm:tracking-wide xsm:max-lg:text-[18px] lg:text-[14px] xl:text-[19px]">
-                    Tech Community Empowerment
+                    Tech Career Empowerment
                     </p>
                 </div>
             </motion.div>
 
-            <div className="lg:max-w-[680px] xl:max-w-full mx-auto mobile:max-xxm:mt-6 xxm:mt-8 lg:mt-4 xl:mt-6">
+            <div className="lg:max-xl:mx-16 xl:mx-12 xl:max-w-full mx-auto mobile:max-xxm:mt-6 xxm:max-lg:mt-7 lg:mt-3">
             <motion.p
-                className="text-[#E3E3E3] mobile:max-xxm:text-[50px] xxm:max-xsm:text-6xl xsm:max-lg:text-7xl lg:text-[55px] xl:text-[66px] font-semibold leading-snug md:leading-[60px] tracking-normal flex flex-wrap justify-center"
+                className="text-[#E3E3E3] mobile:max-xxm:text-[45px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:text-[85px] font-semibold flex-wrap justify-center"
                 initial="hidden"
                 animate="visible"
                 variants={{
@@ -154,12 +158,36 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-xxm:mt-5 xxm:max-md:mt-7 md:max-lg:mt-10 lg:mt-[22px] xl:mt-8"
+                className="text-[#E3E3E3] mobile:max-xxm:text-[45px] xxm:max-sm:text-[50px] sm:max-lg:text-7xl lg:text-[55px] xl:text-[85px] font-semibold tracking-normal mobile:max-sm:-mt-3 sm:max-lg:mt-1 lg:max-xl:-mt-6 xl:-mt-10 flex-wrap justify-center"
+                initial="hidden"
+                animate="visible"
+                variants={{
+                hidden: {},
+                visible: { transition: { staggerChildren: 0.05, delayChildren: 0.3 } },
+                }}
+            >
+                {earn.map((word, i) => (
+                <motion.span
+                    key={i}
+                    variants={{
+                    hidden: { opacity: 0, y: 20 },
+                    visible: { opacity: 1, y: 0 },
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="mr-2"
+                >
+                    {word}
+                </motion.span>
+                ))}
+            </motion.p>
+
+            <motion.p
+                className="text-[#CECECE] mobile:max-xxm:text-[24px] mobile:max-xxm:mx-3 xxm:max-xsm:text-[27px] xsm:max-sm:text-[29px] sm:max-lg:text-[24px] lg:text-[15px] xl:text-[18px] lg:max-w-[550px] mx-auto mobile:max-sm:mt-3 sm:max-lg:mt-7 lg:mt-3"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4, delay: 0.9 }}
             >
-                Transform your tech skills into a career that pays.
+                Strengthen the skills that actually propel your career.
             </motion.p>
             </div>
 
@@ -179,7 +207,7 @@ export default function LandingPage() {
 
         {/* Right Image */}
         <motion.div
-            className="ml-0 mobile:max-md:mt-7 md:max-lg:mt-4 lg:mt-0 md:ml-4 flex justify-center items-center order-last md:order-none"
+            className="flex justify-center items-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.6, duration: 0.4, ease: "easeOut" }}
