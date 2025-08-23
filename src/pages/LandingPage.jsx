@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import flash from "../assets/flash.png";
-import Logo from "../assets/QueenAritCircleLogo.svg";
-import glow from "../assets/inner glow.png";
-import mobileglow from "../assets/inner glow mobile.png";
-import arrow from "../assets/arrow-right.png";
-import leftimg from "../assets/Group left.png";
-import rightimg from "../assets/Group right.png";
-import topimg from "../assets/Hero circlar image horizontalTop.png";
-import bottomimg from "../assets/Hero circlar image horizontalBottom.png";
-import mobiletopimg from "../assets/Hero circlar image Topmobile.png";
-import mobilebottomimg from "../assets/Hero circlar image Bottommobile.png";
-import xsmobiletopimg from "../assets/Hero circlar image Topxsmobile.png";
-import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.png";
+import flash from "../assets/flash.webp";
+import Logo from "../assets/QueenAritCircleLogo.webp";
+import glow from "../assets/inner glow.webp";
+import mobileglow from "../assets/inner glow mobile.webp";
+import arrow from "../assets/arrow-right.webp";
+import leftimg from "../assets/Group left.webp";
+import rightimg from "../assets/Group right.webp";
+import topimg from "../assets/Hero circlar image horizontalTop.webp";
+import bottomimg from "../assets/Hero circlar image horizontalBottom.webp";
+import mobiletopimg from "../assets/Hero circlar image Topmobile.webp";
+import mobilebottomimg from "../assets/Hero circlar image Bottommobile.webp";
+import xsmobiletopimg from "../assets/new group image 4.webp";
+import xsmobilebottomimg from "../assets/new group image.webp";
+// import xsmobiletopimg from "../assets/Hero circlar image Topxsmobile.webp";
+// import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.webp";
 
 import './LandingPage.css'
 
@@ -31,6 +33,7 @@ export default function LandingPage() {
   );
 
   return (
+    <>
     <div className="relative w-full min-h-screen bg-[#0E0E0E] inter">
       {/* Glow Background*/}
       <div
@@ -103,7 +106,7 @@ export default function LandingPage() {
         </AnimatePresence>
       </header>
 
-      <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-0 mx-[15px] relative z-10">
+      <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-11 blg:max-xl:gap-20 mx-[15px] relative z-10">
         {/* Left Image */}
         <motion.div
             className="flex justify-center items-center"
@@ -112,9 +115,9 @@ export default function LandingPage() {
             transition={{ delay: 1.5, duration: 0.4, ease: "easeOut" }}
         >
             <img className="h-auto mobile:max-lg:hidden lg:max-xl:h-[510px] xl:h-full  rotate-90 lg:rotate-0" src={leftimg} alt="left hero" />
-            <img className="h-auto mobile:max-md:hidden md:max-lg:max-h-full lg:hidden lg:rotate-0" src={topimg} alt="left hero" />
-            <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={mobiletopimg} alt="left hero" />
-            <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobiletopimg} alt="left hero" />
+            <img className="h-auto mobile:max-lg:max-h-full lg:hidden lg:rotate-0" src={xsmobiletopimg} alt="left hero" />
+            {/* <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={xsmobiletopimg} alt="left hero" />
+            <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobiletopimg} alt="left hero" /> */}
         </motion.div>
 
         {/* Center Content */}
@@ -150,7 +153,7 @@ export default function LandingPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4 }}
                     className="mr-2"
                 >
                     {word}
@@ -164,7 +167,7 @@ export default function LandingPage() {
                 animate="visible"
                 variants={{
                 hidden: {},
-                visible: { transition: { staggerChildren: 0.05, delayChildren: 0.3 } },
+                visible: { transition: { staggerChildren: 0.07, delayChildren: 0.5 } },
                 }}
             >
                 {earn.map((word, i) => (
@@ -174,7 +177,7 @@ export default function LandingPage() {
                     hidden: { opacity: 0, y: 20 },
                     visible: { opacity: 1, y: 0 },
                     }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.4 }}
                     className="mr-2"
                 >
                     {word}
@@ -214,18 +217,21 @@ export default function LandingPage() {
             transition={{ delay: 1.6, duration: 0.4, ease: "easeOut" }}
         >
             <img className="h-auto mobile:max-lg:hidden lg:h-[510px] xl:h-full md:w-full rotate-90 lg:rotate-0" src={rightimg} alt="right hero" />
-            <img className="h-auto mobile:max-md:hidden md:max-lg:max-h-full lg:hidden md:w-full lg:rotate-0" src={bottomimg} alt="left hero" />
-            <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={mobilebottomimg} alt="left hero" />
-            <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobilebottomimg} alt="left hero" />
+            <img className="h-auto mobile:max-lg:max-h-full lg:hidden md:w-full lg:rotate-0" src={xsmobilebottomimg} alt="left hero" />
+            {/* <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={xsmobilebottomimg} alt="left hero" />
+            <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobilebottomimg} alt="left hero" /> */}
 
 
         </motion.div>
       </div>
-      <div className="mobile:max-xxm:h-20 h-48 ">
 
-      </div>
+      <div className="mobile:max-xxm:h-20 h-48 ">
+        <p className="text-white">heyyy</p>
+    </div>
 
     </div>
+
+    </>
   );
 }
 
