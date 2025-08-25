@@ -17,6 +17,7 @@ import xsmobilebottomimg from "../assets/new group image.webp";
 // import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.webp";
 
 import './LandingPage.css'
+import Offer from "../components/Offer";
 
 
 
@@ -34,10 +35,10 @@ export default function LandingPage() {
 
   return (
     <>
-    <div className="relative w-full min-h-screen bg-[#0E0E0E] inter">
+    <div className="antialiased relative w-full mobile:max-lg:pb-36 xl:pb-24 lg:max-xl:h-[700px] bg-[#0E0E0E] inter">
       {/* Glow Background*/}
       <div
-        className="absolute mobile:max-lg:hidden inset-0 w-full lg:max-xl:h-[800px] xl:h-[920px] bg-no-repeat bg-center bg-cover pointer-events-none"
+        className="absolute mobile:max-lg:hidden inset-0 w-full xl:h-[965px] bg-no-repeat bg-center bg-cover pointer-events-none"
         style={{ backgroundImage: `url(${glow})` }}
       />
       <div
@@ -46,7 +47,7 @@ export default function LandingPage() {
       />
 
       {/* Header */}
-      <header className="sticky lg:static top-0 bg-[#0e0e0e] lg:bg-[#0E0E0E] text-[#BBBABA] px-5 md:px-[15px] z-20">
+      <header className="bg-[#0e0e0e] lg:bg-transparent text-[#BBBABA] px-5 md:px-[15px] relative z-50">
         <div className="flex justify-between items-center mb-8">
           <img className="h-16" src={Logo} alt="logo" />
 
@@ -74,30 +75,30 @@ export default function LandingPage() {
                 </p>
               )
             )}
-            <button className="bg-[#fc4f7b] text-white xl:text-[20px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90 transition">
+            <button className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
               Join it’s Free
             </button>
           </div>
         </div>
 
-        {/* Mobile Dropdown Menu */}
+        {/* Mobile Dropdown (overlay, does not push content) */}
         <AnimatePresence>
           {isOpen && (
             <motion.div
               key="mobile-menu"
-              initial={{ height: 0, opacity: 0 }}
-              animate={{ height: "auto", opacity: 1 }}
-              exit={{ height: 0, opacity: 0 }}
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3, ease: "easeInOut" }}
-              className="absolute top-full left-0 w-full bg-[#0e0e0e] lg:hidden z-20 overflow-hidden"
+              className="lg:hidden absolute left-0 w-full bg-[#0e0e0e] shadow-lg z-40"
             >
-              <div className="flex flex-col gap-5 mobile:max-xxm:text-[21px] xxm:max-lg:text-[25px] text-center pb-8">
+              <div className="flex flex-col gap-5 text-[20px] text-center py-6">
                 <p className="hover:cursor-pointer">About</p>
                 <p className="hover:cursor-pointer">Mentorship</p>
                 <p className="hover:cursor-pointer">Testimonials</p>
                 <p className="hover:cursor-pointer">Programmes</p>
                 <p className="hover:cursor-pointer">FAQ</p>
-                <button className="bg-[#fc4f7b] flex items-center text-white py-3 px-[32px] rounded-full font-semibold hover:opacity-90 transition max-w-60 mx-auto">
+                <button className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold hover:opacity-90 transition mx-auto">
                   Join it’s Free
                 </button>
               </div>
@@ -105,6 +106,7 @@ export default function LandingPage() {
           )}
         </AnimatePresence>
       </header>
+
 
       <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-11 blg:max-xl:gap-20 mx-[15px] relative z-10">
         {/* Left Image */}
@@ -126,7 +128,7 @@ export default function LandingPage() {
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
-                className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10"
+                className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition"
                 >
                 <div className="rounded-full mobile:max-xsm:py-[13px] xsm:max-lg:py-4 lg:py-[8px] xl:py-[11px] px-4 flex justify-center items-center mobile:max-xxm:gap-2 xxm:gap-3 md:gap-2">
                     <img src={flash} alt="lightening img" className="mobile:max-xsm:h-[21px] xsm:max-lg:h-[23px] lg:h-[18px] xl:h-[22px]" />
@@ -197,7 +199,7 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-            className="bg-[#fc4f7b] text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xsm:px-7 xsm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-6 lg:mt-6 xl:mt-8"
+            className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-5 lg:py-2 xl:py-3 mobile:max-xsm:px-7 xsm:max-lg:px-9 lg:px-5 xl:px-6 rounded-full font-semibold hover:opacity-90 flex justify-center items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 lg:gap-3 mx-auto mobile:max-lg:mt-[18px] lg:mt-6 xl:mt-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.4, delay: 1.3, ease: "easeOut" }}
@@ -220,16 +222,16 @@ export default function LandingPage() {
             <img className="h-auto mobile:max-lg:max-h-full lg:hidden md:w-full lg:rotate-0" src={xsmobilebottomimg} alt="left hero" />
             {/* <img className="h-auto mobile:max-sm:hidden sm:max-md:max-h-full md:hidden lg:rotate-0" src={xsmobilebottomimg} alt="left hero" />
             <img className="h-auto moblie:max-sm:max-h-full sm:hidden lg:rotate-0" src={xsmobilebottomimg} alt="left hero" /> */}
-
-
         </motion.div>
       </div>
 
-      <div className="mobile:max-xxm:h-20 h-48 ">
-        <p className="text-white">heyyy</p>
     </div>
 
+    <div className="">
+      <Offer />
     </div>
+
+    
 
     </>
   );
