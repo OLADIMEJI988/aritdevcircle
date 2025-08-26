@@ -13,12 +13,11 @@ import mobiletopimg from "../assets/Hero circlar image Topmobile.webp";
 import mobilebottomimg from "../assets/Hero circlar image Bottommobile.webp";
 import xsmobiletopimg from "../assets/new group image 4.webp";
 import xsmobilebottomimg from "../assets/new group image.webp";
-// import xsmobiletopimg from "../assets/Hero circlar image Topxsmobile.webp";
-// import xsmobilebottomimg from "../assets/Hero circlar image Bottomxsmobile.webp";
 
 import './LandingPage.css'
 import Offer from "../components/Offer";
 import About from "../components/About";
+import Events from "../components/Events";
 
 
 
@@ -46,6 +45,9 @@ export default function LandingPage() {
           className="absolute inset-0 w-full mt-32 lg:hidden bg-no-repeat bg-center bg-cover pointer-events-none"
           style={{ backgroundImage: `url(${mobileglow})` }}
         />
+
+        {/* Bottom Gradient Overlay */}
+        <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
         {/* Header */}
         <header className="bg-[#0e0e0e] lg:bg-transparent text-[#BBBABA] pt-3 px-5 md:px-[15px] relative z-50">
@@ -234,6 +236,10 @@ export default function LandingPage() {
 
       <div className="">
         <About />
+      </div>
+
+      <div>
+        <Events />
       </div>
 
     </>

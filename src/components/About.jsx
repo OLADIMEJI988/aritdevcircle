@@ -27,10 +27,14 @@ export default function Section() {
       ref={ref}
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
                  mobile:max-lg:h-full mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
-                 mobile:max-lg:pb-28 lg:pb-16"
+                 mobile:max-lg:pb-28 lg:pb-20"
     >
-      {/* Top Gradient Overlay */}
-      <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+     {/* Top Gradient Overlay */}
+    <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+
+    {/* Bottom Gradient Overlay */}
+    <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
+
 
       {/* Desktop Glow */}
       <div

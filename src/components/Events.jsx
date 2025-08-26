@@ -1,0 +1,156 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
+import eventsglow from "../assets/eventsbg.webp";
+import mentor from "../assets/mentor.webp";
+import queenarit from "../assets/queenarit.webp";
+import portfolioreview from "../assets/portfolioreview.webp";
+import hackathon from "../assets/hackathon.webp";
+import mumsintech from "../assets/mumsintech.webp";
+
+import EventCards from "./EventCards";
+
+export default function Events() {
+  const events = [
+    {
+      img: mentor,
+      title: "Mentor's Corner",
+      subtitle: "- August",
+      hostimg: queenarit,
+      hostname: "Queen Arit",
+      calendermonth: "AUG",
+      calenderday: "09",
+      date: "Sat 09, August",
+      time: "01:00pm - 02:00pm (Lagos Time)",
+      location: "Online",
+      link: "https://x.com/TheQueenArit",
+    },
+    {
+      img: mumsintech,
+      title: "Mums In Tech",
+      subtitle: "Encouragement & Learning",
+      hostimg: queenarit,
+      hostname: "Queen Arit",
+      calendermonth: "JUL",
+      calenderday: "12",
+      date: "Sat 12, July",
+      time: "07:00pm - 09:00pm (Lagos Time)",
+      location: "Online",
+      link: "https://x.com/TheQueenArit",
+    },
+    {
+      img: portfolioreview,
+      title: "Tech Portfolio Review",
+      hostimg: queenarit,
+      hostname: "Queen Arit",
+      calendermonth: "JUN",
+      calenderday: "07",
+      date: "Sat 07, June",
+      time: "12:30am - 02:00pm (Lagos Time)",
+      location: "Online",
+      link: "https://x.com/TheQueenArit",
+    },
+    {
+      img: hackathon,
+      title: "QAC Hackathon",
+      hostimg: queenarit,
+      hostname: "Queen Arit",
+      calendermonth: "SEP",
+      calenderday: "09",
+      date: "Sat 09, September",
+      time: "01:00pm - 02:00pm (Lagos Time)",
+      location: "Online",
+      link: "http;",
+    },
+  ];
+
+  // Variants for header animation
+  const headerVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
+  // Variants for card animations
+  const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: 0.6 + i * 0.25, duration: 0.6, ease: "easeOut" }, // delay starts after header
+    }),
+  };
+
+  const { ref, inView } = useInView({
+    threshold: 0.2,
+    triggerOnce: true,
+  });
+
+  return (
+    <div
+      className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
+                 mobile:max-lg:h-full h-[970px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
+                 mobile:max-lg:pb-28"
+      ref={ref}
+    >
+      {/* Top Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
+
+      {/* Desktop Glow */}
+      <div
+        className="mobile:max-lg:hidden absolute top-0 left-0 h-full w-full 
+                        bg-no-repeat bg-center bg-cover pointer-events-none z-0"
+        style={{ backgroundImage: `url(${eventsglow})` }}
+      />
+
+      {/* Animated Header */}
+      <motion.div
+        variants={headerVariants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className="text-white text-start relative px-[4vw] z-20 inter"
+      >
+        <p className="mobile:max-xxm:text-[35px] xxm:text-3xl font-semibold tracking-wide">
+          Examples Of{" "}
+          <span className="text-[#fc4f7b]">Queen Arit Circle</span> Past Events
+        </p>
+        <p className="max-w-[540px] leading-7 mt-[13px] font-light">
+          See how we turn learning into impact through our vibrant community
+          events, a taste of our community grow together
+        </p>
+      </motion.div>
+
+      {/* Animated Cards */}
+      <div className="mx-[2vw] grid justify-center 
+            mobile:max-ssm:grid-cols-1
+            ssm:max-mdxl:grid-cols-2 
+            mdxl:max-lg:grid-cols-3 
+            lg:grid-cols-4 
+            mt-7
+            mobile:max-ssm:gap-6 
+            ssm:max-blg:gap-[14px] blg:gap-7 
+            relative z-20">
+            {events.map((event, i) => (
+                <motion.div
+                key={i}
+                variants={cardVariants}
+                initial="hidden"
+                animate={inView ? "visible" : "hidden"}
+                custom={i}
+                className="flex justify-center"
+                >
+                <EventCards {...event} />
+                </motion.div>
+            ))}
+        </div>
+
+    </div>
+  );
+}

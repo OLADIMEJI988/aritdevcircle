@@ -32,8 +32,11 @@ export default function Offer() {
       ref={ref}
       className="antialiased relative overflow-hidden mobile:max-lg:pt-20 lg:pt-16 w-full mobile:max-lg:pb-28 mobile:max-lg:h-full lg:pb-24 bg-[#0E0E0E] inter"
     >
-      {/* Gradient at the top */}
+      {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
       
       {/* Background Glow */}
       <div
@@ -88,7 +91,7 @@ export default function Offer() {
           animate={isInView ? "show" : "hidden"}
           custom={2}
           className="mobile:max-lg:hidden lg:block border border-[#FF4F76] rounded-2xl max-w-56 pt-5 px-4 text-left 
-                    hover:shadow-[0_0_8px_#FF4F76] cursor-pointer hoverEffect transition"
+                    hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition"
         >
           <img src={rocket} className="h-[34px]" alt="" />
           <p className="font-semibold mt-9 text-2xl">Career</p>
