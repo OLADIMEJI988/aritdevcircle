@@ -30,7 +30,7 @@ export default function Offer() {
   return (
     <div 
       ref={ref}
-      className="antialiased relative overflow-hidden mobile:max-lg:pt-20 lg:pt-16 w-full mobile:max-lg:pb-28 mobile:max-lg:h-full lg:pb-24 bg-[#0E0E0E] inter"
+      className="antialiased relative overflow-hidden mobile:max-lg:pt-20 lg:pt-16 w-full mobile:max-lg:pb-28 lg:pb-24 mobile:max-lg:h-full bg-[#0E0E0E] inter"
     >
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
@@ -50,7 +50,7 @@ export default function Offer() {
       />
 
       {/* Headings */}
-      <div className="absolute top-20 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center text-center w-full">
+      <div className="absolute top-20 tracking-wide left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex flex-col items-center text-center w-full">
             <motion.p
                 variants={fadeUp}
                 initial="hidden"
@@ -58,7 +58,7 @@ export default function Offer() {
                 custom={0}
                 className="text-white mobile:max-xxm:text-[35px] px-[15px] xxm:max-xsm:text-3xl xsm:text-4xl font-semibold inter"
             >
-                What Makes <span className="text-[#fc4f7b] mobile:max-xxm:hidden">Queen Arit Circle</span>
+                What Makes <span className="text-[#fc4f7b] mobile:max-xxm:hidden">Queen Arit Circle</span> <span className='mobile:max-md:hidden'>Different</span> 
             </motion.p>
 
             <motion.p
@@ -76,9 +76,9 @@ export default function Offer() {
                 initial="hidden"
                 animate={isInView ? "show" : "hidden"}
                 custom={1}
-                className="text-white mobile:max-xxm:text-[35px] px-[15px] xxm:max-xsm:text-3xl xsm:text-4xl font-semibold inter"
+                className="text-white md:hidden mobile:max-xxm:text-[35px] px-[15px] xxm:max-xsm:text-3xl xsm:text-4xl font-semibold inter"
             >
-                Community Different
+                Different
             </motion.p>
       </div>
 
@@ -97,7 +97,7 @@ export default function Offer() {
           <p className="font-semibold mt-9 text-2xl">Career</p>
           <p className="font-semibold mt-[5px] mb-[18px] text-2xl">Readiness</p>
           <p className="tracking-wide text-sm leading-7">
-            Helping members sharpen skills that actually move their careers forward
+            Helping members improve the skills that actually move their careers forward
           </p>
         </motion.div>
 
@@ -109,7 +109,7 @@ export default function Offer() {
             custom={3}
             className='mobile:max-lg:block lg:hidden'
           >
-            <EachOffer icon={rocket} title="Career Readiness" subtext=" Helping members sharpen skills that actually move their careers forward" />
+            <EachOffer icon={rocket} title="Career Readiness" subtext=" Helping members improve the skills that actually move their careers forward" />
           </motion.div>
 
           <motion.div
@@ -138,7 +138,7 @@ export default function Offer() {
             animate={isInView ? "show" : "hidden"}
             custom={6}
           >
-            <EachOffer icon={globe} title="A hub for diverse tech fields" subtext="Bringing together developers, designers, PMs, data pros, writers, VAs, and more." />
+            <EachOffer icon={globe} title="A hub for diverse tech fields" subtext="Collaborate and network with developers, designers, PMs, data pros, writers, VAs, and more." />
           </motion.div>
         </div>
       </div>

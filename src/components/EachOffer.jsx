@@ -7,7 +7,7 @@ export default function EachOffer({ icon, title, subtext }) {
 
         {/* <div className='lg:hidden w-full h-[1px] bg-[#FF4F76] mt-7 my-5'></div>  */}
 
-        <div className='mobile:max-lg:text-center'> {/* mobile:max-lg:mt-7 */}
+        <div className='mobile:max-lg:text-center'> {/*  */}
             <p className='font-bold mobile:max-md:text-2xl md:max-lg:text-[30px]'>{title}</p>
             <p className='mt-3 text-[15px] xsm:max-md:text-lg md:max-lg:text-[16px] md:max-lg:mt-5'>{subtext}</p>
         </div>

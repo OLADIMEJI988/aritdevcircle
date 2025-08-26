@@ -9,10 +9,10 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-export default function EventCards({ img, title, subtitle, hostimg, hostname, calendermonth, calenderday, date, time, location, link }) {
+export default function EventCards({ img, title, hostimg, hostname, description }) {
   return (
     <div
-      className="antialiased border border-[#FF4F76] mobile:max-ssm:w-80 pb-4 rounded-2xl 
+      className="antialiased tracking-wide border border-[#FF4F76] mobile:max-ssm:w-80 pb-4 rounded-2xl 
                  mobile:max-lg:flex mobile:max-lg:flex-col
                  lg:block text-start hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition"
     >
@@ -27,7 +27,7 @@ export default function EventCards({ img, title, subtitle, hostimg, hostname, ca
         viewport={{ once: true, amount: 0.3 }}
         className="mobile:max-lg:px-[18px] lg:px-[10px] text-white text-2xl -mt-2 inter tracking-wide leading-6"
       >
-        {title} <span className="text-[15px]">{subtitle}</span>
+        {title}
       </motion.p>
 
       <motion.div
@@ -43,6 +43,16 @@ export default function EventCards({ img, title, subtitle, hostimg, hostname, ca
       </motion.div>
 
       <motion.div
+        variants={itemVariants}
+        initial="hidden"
+        whileInView="show"
+        viewport={{ once: true, amount: 0.3 }}
+        className="flex items-center mobile:max-lg:px-[18px] lg:px-[10px] gap-[4px] text-[13px]"
+      >
+        <p className="text-white leading-[22px] mt-1 text-[12px] tracking-wide">{description}</p>
+      </motion.div>
+
+      {/* <motion.div
         variants={itemVariants}
         initial="hidden"
         whileInView="show"
@@ -79,7 +89,7 @@ export default function EventCards({ img, title, subtitle, hostimg, hostname, ca
           <p>{location}</p>
           <p className="mt-1">{link}</p>
         </div>
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 }

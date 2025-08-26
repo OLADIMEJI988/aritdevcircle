@@ -61,15 +61,16 @@ export default function Section() {
           animate={isInView ? "show" : "hidden"}
           custom={0}
           className="text-white mobile:max-xxm:text-[42px] px-[15px] 
-                     xxm:max-xsm:text-[39px] xsm:text-[46px] font-semibold inter"
+                     xxm:max-xsm:text-[39px] tracking-wide xsm:text-[46px] font-semibold inter"
         >
-          About{" "}
-          <span className="text-[#fc4f7b] mobile:max-xxm:hidden">
-            Queen Arit Circle
+          A{" "}
+          <span className="text-[#fc4f7b]">
+            Queen's
           </span>
+          {" "}Welcome
         </motion.p>
 
-        <motion.p
+        {/* <motion.p
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
@@ -77,8 +78,8 @@ export default function Section() {
           className="xxm:hidden text-[#fc4f7b] -my-2 mobile:max-xxm:text-[42px] 
                      px-[15px] xxm:max-xsm:text-4xl xsm:text-4xl font-semibold inter"
         >
-          Queen Arit Circle
-        </motion.p>
+          Queen's 
+        </motion.p> */}
       </div>
 
       <div className="flex mobile:max-lg:flex-col mobile:max-lg:items-center justify-center">
@@ -98,7 +99,7 @@ export default function Section() {
         </motion.div>
 
         {/* Desktop View */}
-        <div className="z-20 lg:text-left max-w-[600px] lg:max-blg:-ml-5 blg:ml-5">
+        <div className="z-20 lg:text-left tracking-wide max-w-[600px] lg:max-blg:-ml-5 blg:ml-5">
           <motion.p
             variants={fadeUp}
             initial="hidden"
@@ -106,7 +107,7 @@ export default function Section() {
             custom={3}
             className="text-white text-5xl mobile:max-lg:hidden"
           >
-            About <span className="text-[#fc4f7b]">Queen Arit Circle</span>
+            A <span className="text-[#fc4f7b]">Queen's</span> Welcome
           </motion.p>
 
           <div className="text-white mobile:max-lg:mx-[2vw] mobile:max-lg:-mt-9">

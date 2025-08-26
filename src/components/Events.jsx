@@ -14,54 +14,33 @@ import EventCards from "./EventCards";
 export default function Events() {
   const events = [
     {
+        img: hackathon,
+        title: "QAC Hackathon",
+        hostimg: queenarit,
+        hostname: "Queen Arit",
+        description: "Our flagship program, the QAC Hackathon brings designers, developers and product/project managers together to build a fullstack app under real-world constraints & conditions."
+    },
+    {
       img: mentor,
       title: "Mentor's Corner",
-      subtitle: "- August",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      calendermonth: "AUG",
-      calenderday: "09",
-      date: "Sat 09, August",
-      time: "01:00pm - 02:00pm (Lagos Time)",
-      location: "Online",
-      link: "https://x.com/TheQueenArit",
+      description: "Enjoy high quality tech mentoring without the high price! Once monthly, we answer your career questions with knowledge, wisdom and humour!"
     },
     {
       img: mumsintech,
       title: "Mums In Tech",
-      subtitle: "Encouragement & Learning",
+    //   subtitle: "Encouragement & Learning",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      calendermonth: "JUL",
-      calenderday: "12",
-      date: "Sat 12, July",
-      time: "07:00pm - 09:00pm (Lagos Time)",
-      location: "Online",
-      link: "https://x.com/TheQueenArit",
+      description: "Queen Arit became an engineer as a mum-of-two. So mums in Tech hold a special place in her spirit. These events are uniquely designed to empower mums with their multi-faceted lives!"
     },
     {
       img: portfolioreview,
-      title: "Tech Portfolio Review",
+      title: "Tech Profile Reviews",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      calendermonth: "JUN",
-      calenderday: "07",
-      date: "Sat 07, June",
-      time: "12:30am - 02:00pm (Lagos Time)",
-      location: "Online",
-      link: "https://x.com/TheQueenArit",
-    },
-    {
-      img: hackathon,
-      title: "QAC Hackathon",
-      hostimg: queenarit,
-      hostname: "Queen Arit",
-      calendermonth: "SEP",
-      calenderday: "09",
-      date: "Sat 09, September",
-      time: "01:00pm - 02:00pm (Lagos Time)",
-      location: "Online",
-      link: "http;",
+      description: "Before they meet you, your professional profiles speak for you. Learn how to make the BEST impression with your resume, LinkedIn and portfolio."
     },
   ];
 
@@ -115,11 +94,11 @@ export default function Events() {
         variants={headerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="text-white text-start relative px-[4vw] z-20 inter"
+        className="text-white text-start tracking-wide relative px-[4vw] z-20 inter"
       >
         <p className="mobile:max-xxm:text-[35px] xxm:text-3xl font-semibold tracking-wide">
           Examples Of{" "}
-          <span className="text-[#fc4f7b]">Queen Arit Circle</span> Past Events
+          <span className="text-[#fc4f7b]">Past Circle</span> Events
         </p>
         <p className="max-w-[540px] leading-7 mt-[13px] font-light">
           See how we turn learning into impact through our vibrant community
