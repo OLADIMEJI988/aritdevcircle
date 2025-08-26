@@ -12,6 +12,7 @@
         xlm: '452px',
         xsm: "500px",
         ssm: "586px",
+        wsm: "617px",
         sm: "640px",
         md: "768px",
         mdxl: "770px",

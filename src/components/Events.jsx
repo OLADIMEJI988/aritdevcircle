@@ -72,15 +72,15 @@ export default function Events() {
   return (
     <div
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full h-[970px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
-                 mobile:max-lg:pb-28"
+                 mobile:max-lg:h-full h-[910px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
+                 mobile:max-lg:pb-28 lg:-mb-10"
       ref={ref}
     >
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
       {/* Bottom Gradient Overlay */}
-      <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
+      {/* <div className="absolute bottom-0 left-0 w-full h-[19px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" /> */}
 
       {/* Desktop Glow */}
       <div
