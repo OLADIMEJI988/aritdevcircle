@@ -110,7 +110,7 @@ export default function Section() {
             A <span className="text-[#fc4f7b]">Queen's</span> Welcome
           </motion.p>
 
-          <div className="text-white mobile:max-lg:mx-[2vw] mobile:max-lg:-mt-9">
+          <div className="text-white mobile:max-lg:mx-[5vw] mobile:max-lg:-mt-9">
             <motion.p
               variants={fadeUp}
               initial="hidden"

@@ -100,10 +100,6 @@ export default function Events() {
           Examples Of{" "}
           <span className="text-[#fc4f7b]">Past Circle</span> Events
         </p>
-        <p className="max-w-[540px] leading-7 mt-[13px] font-light">
-          See how we turn learning into impact through our vibrant community
-          events, a taste of our community grow together
-        </p>
       </motion.div>
 
       {/* Animated Cards */}
@@ -112,7 +108,7 @@ export default function Events() {
             ssm:max-mdxl:grid-cols-2 
             mdxl:max-lg:grid-cols-3 
             lg:grid-cols-4 
-            mt-7
+            mt-8
             mobile:max-ssm:gap-6 
             ssm:max-blg:gap-[14px] blg:gap-7 
             relative z-20">
