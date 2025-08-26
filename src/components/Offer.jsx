@@ -101,7 +101,7 @@ export default function Offer() {
           </p>
         </motion.div>
 
-        <div className='w-full xsm:max-lg:gap-4 xsm:max-lg:grid mobile:max-md:grid-cols-1 md:max-lg:grid-cols-2'>
+        <div className='w-full mobile:max-lg:mx-[2vw] xsm:max-lg:gap-4 xsm:max-lg:grid mobile:max-md:grid-cols-1 md:max-lg:grid-cols-2'>
           <motion.div
             variants={fadeUp}
             initial="hidden"

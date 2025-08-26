@@ -109,7 +109,7 @@ export default function Section() {
             About <span className="text-[#fc4f7b]">Queen Arit Circle</span>
           </motion.p>
 
-          <div className="text-white mobile:max-lg:mx-[20px] mobile:max-lg:-mt-9">
+          <div className="text-white mobile:max-lg:mx-[2vw] mobile:max-lg:-mt-9">
             <motion.p
               variants={fadeUp}
               initial="hidden"
