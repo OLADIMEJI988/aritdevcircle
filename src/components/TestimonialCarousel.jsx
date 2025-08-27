@@ -132,7 +132,7 @@ const testimonials = [
     name: "Motunrayo A",
     link: {
         label: "Frontend Engineer ",
-        url: "(Will send LinkedIn later)"
+        url: "https://www.linkedin.com/in/motunrayoadeneye/"
     },
     img: motunrayo,
     text: "Only this year, I have hopped on different challenges which I have never had any experience on, some I got gifts while some I lost. The essence of all these for me is that I get better. As a result of this I have gathered a lot of experiences which I haven't been able to get for 2 years.",
@@ -200,7 +200,7 @@ export default function TestimonialCarousel() {
   ];
 
   return (
-    <div className="flex flex-col items-center pt-10 mobile:max-lg:pb-80 lg:pb-20 bg-[#0E0E0E] text-white overflow-hidden relative">
+    <div className="flex flex-col items-center pt-10 mobile:max-lg:pb-28 lg:pb-24 bg-[#0E0E0E] text-white overflow-hidden relative">
       {/* Heading */}
       <motion.div
             ref={ref}

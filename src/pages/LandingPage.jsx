@@ -17,6 +17,7 @@ import Offer from "../components/Offer";
 import About from "../components/About";
 import Events from "../components/Events";
 import TestimonialCarousel from "../components/TestimonialCarousel";
+import FAQ from "../components/FAQ";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -276,8 +277,10 @@ export default function LandingPage() {
         <TestimonialCarousel />
       </div>
 
-      {/* placeholders for ids referenced by menus - kept them for later */}
-      <div id="faq" className="scroll-mt-[80px]" />
+      <div id="faq" className="scroll-mt-[80px]">
+        <FAQ />
+      </div>
+
     </>
   );
 }
