@@ -3,6 +3,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import eventsglow from "../assets/eventsbg.webp";
+import mobileglow from "../assets/mobilesideglow.png";
+import desktopline from "../assets/desktopline.png";
+import mobileline from "../assets/mobileline.png";
 import mentor from "../assets/mentor.webp";
 import queenarit from "../assets/queenarit.webp";
 import portfolioreview from "../assets/portfolioreview.webp";
@@ -72,15 +75,15 @@ export default function Events() {
   return (
     <div
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full h-[910px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
-                 mobile:max-lg:pb-28 lg:-mb-10"
+                 mobile:max-lg:h-full h-[780px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
+                 mobile:max-ssm:pb-60 ssm:max-lg:pb-64 lg:-mb-10"
       ref={ref}
     >
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
       {/* Bottom Gradient Overlay */}
-      {/* <div className="absolute bottom-0 left-0 w-full h-[19px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" /> */}
+      <div className="mobile:max-ssm:hidden absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
       {/* Desktop Glow */}
       <div
@@ -88,6 +91,28 @@ export default function Events() {
                         bg-no-repeat bg-center bg-cover pointer-events-none z-0"
         style={{ backgroundImage: `url(${eventsglow})` }}
       />
+
+
+      <div
+            className="lg:hidden absolute top-0 left-0 h-full w-full 
+                        bg-no-repeat bg-center bg-cover pointer-events-none z-0"
+            style={{ backgroundImage: `url(${mobileglow})` }}
+       />
+
+
+        <div
+            className="mobile:max-ssm:hidden lg:hidden absolute bottom-0 left-0 h-[300px] w-full 
+                        bg-no-repeat translate-y-28 mb-14 bg-center bg-cover pointer-events-none z-0"
+            style={{ backgroundImage: `url(${desktopline})` }}
+        />
+
+
+      <div
+            className="ssm:hidden absolute bottom-0 left-0 h-[250px] w-full 
+                        bg-no-repeat translate-y-11 mb-10 bg-center bg-cover pointer-events-none z-0"
+            style={{ backgroundImage: `url(${mobileline})` }}
+        />
+
 
       {/* Animated Header */}
       <motion.div

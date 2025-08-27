@@ -10,6 +10,7 @@
         mmm: "402px",
         xxm: "424px",
         xlm: '452px',
+        blm: "465px",
         xsm: "500px",
         ssm: "586px",
         wsm: "617px",

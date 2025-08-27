@@ -37,18 +37,18 @@ export default function Section() {
 
 
       {/* Desktop Glow */}
-      <div
+      {/* <div
         className="mobile:max-lg:hidden absolute top-0 left-0 translate-x-[650px] h-[700px] w-full 
                    bg-no-repeat bg-center bg-cover pointer-events-none z-0"
         style={{ backgroundImage: `url(${glow})` }}
-      />
+      /> */}
 
       {/* Mobile Glow */}
-      <div
+      {/* <div
         className="lg:hidden absolute top-0 left-0 h-full w-full 
                    bg-no-repeat bg-center bg-cover pointer-events-none z-0"
         style={{ backgroundImage: `url(${mobileglow})` }}
-      />
+      /> */}
 
       {/* Content */}
 
