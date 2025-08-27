@@ -132,7 +132,7 @@ const testimonials = [
     name: "Motunrayo A",
     link: {
         label: "Frontend Engineer ",
-        url: "https://www.linkedin.com/in/motunrayoadeneye/"
+        url: "https://www.linkedin.com/in/motunrayo-adeneye"
     },
     img: motunrayo,
     text: "Only this year, I have hopped on different challenges which I have never had any experience on, some I got gifts while some I lost. The essence of all these for me is that I get better. As a result of this I have gathered a lot of experiences which I haven't been able to get for 2 years.",
