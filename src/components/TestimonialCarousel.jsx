@@ -2,61 +2,151 @@ import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import nextarrow from "../assets/nextarrow.webp";
 import previousarrow from "../assets/previousarrow.webp";
+import Ego from "../assets/Ego.webp";
+import oladimeji from "../assets/oladimeji.webp";
+import precious from "../assets/precious.webp";
+import damilola from "../assets/damilola.webp";
+import jacinta from "../assets/jacinta.webp";
+import aishat from "../assets/aishat.webp";
+import vera from "../assets/vera.webp";
+import eseosa from "../assets/eseosa.webp";
+import miracle from "../assets/miracle.webp";
+import chukwudi from "../assets/chukwudi.webp";
+import motunrayo from "../assets/motunrayo.webp";
+import marvelous from "../assets/marvelous.webp";
+
 
 const testimonials = [
   {
     id: 1,
-    name: "Motunrayo .O.",
+    name: "Nwakaego O",
     link: {
-        label: "Software Developer ",
-        url: "(Link to profile)"
+        label: "Product Designer ",
+        url: "https://www.linkedin.com/in/onyah-nwakaego"
     },
-    img: "https://randomuser.me/api/portraits/women/1.jpg",
-    text: "As a mother of two trying to break into tech, I often felt overwhelmed, torn between raising my kids and pursuing my career. This community made me realize I wasn’t alone. The support, flexibility, and encouragement I received here helped me stay consistent even on tough days. Seeing other women juggle motherhood and tech gave me the hope and strength to keep going. Now I believe it’s possible to grow my career without sacrificing family.",
+    img: Ego,
+    text: "Joining The Queen Arit Circle has been nothing short of life changing. I have expanded my tech knowledge and engaged in powerful conversations that have shaped my confidence and voice. I have grown as a designer, unlocked new opportunities, and am thriving in both career and motherhood!",
   },
 
   {
     id: 2,
-    name: "Motunrayo .O.",
+    name: "Oladimeji S",
     link: {
-        label: "Software Developer ",
-        url: "(Link to profile)"
+        label: "Frontend Developer ",
+        url: "https://www.linkedin.com/in/sholanke-oladimeji"
     },
-    img: "https://randomuser.me/api/portraits/men/2.jpg",
-    text: "Joining this group gave me the confidence to switch careers into UX. The feedback and mentorship helped me land my first role much faster than I expected.",
+    img: oladimeji,
+    text: "Being part of the Circle has boosted my skills as a frontend developer and opened me up to knowledge I didn’t even know I needed. Beyond the tech, the community vibe and connections have been a huge blessing.",
   },
 
   {
     id: 3,
-    name: "Motunrayo .O.",
+    name: "Precious E.B",
     link: {
-        label: "Software Developer ",
-        url: "(Link to profile)"
+        label: "Virtual Assistant",
+        url: " https://www.linkedin.com/in/precious-eniola-balogun "
     },
-    img: "https://randomuser.me/api/portraits/women/3.jpg",
-    text: "Balancing learning and family was difficult, but having a community of supportive peers made all the difference in staying motivated.",
+    img: precious,
+    text: "The VA Challenge was a game changer for my career. I learned how to confidently pitch myself, design a client onboarding process, and create a professional discovery call template, all things I hadn’t done before. After the challenge I landed a VA role! I thank God for ordering my steps, and the queen herself Arit for creating this amazing space to grow, learn, and connect.",
   },
 
   {
     id: 4,
-    name: "Motunrayo .O.",
+    name: "Damilola A",
     link: {
-        label: "Software Developer ",
+        label: "Creative Designer ",
         url: "(Link to profile)"
     },
-    img: "https://randomuser.me/api/portraits/men/4.jpg",
-    text: "I felt stuck in my old career path, but the resources shared here helped me build a portfolio and transition into data analytics successfully.",
+    img: damilola,
+    text: "Joining the Queen Arit Circle has been a blessing to me. It had opened my eyes to know how to do things differently, not just in TECH but in LIFE generally. Thank you for sharing the LIGHT.",
   },
 
   {
     id: 5,
-    name: "Motunrayo .O.",
+    name: "Jacinta U",
+    link: {
+        label: "Technical Writer ",
+        url: " https://www.linkedin.com/in/jacinta-ugochukwu-730044255"
+    },
+    img: jacinta,
+    text: "In just three months with this community, I’ve grown more than I imagined possible. Under Queen Arit’s mentorship, I found the confidence to speak with clarity. I’m deeply grateful for this transformative journey.",
+  },
+
+  {
+    id: 6,
+    name: "Aishat O",
+    link: {
+        label: "Virtual Assistant ",
+        url: "https://www.linkedin.com/in/aishat-olayiwola"
+    },
+    img: aishat,
+    text: "Being part of TQA Circle not up to 3 months has been truly transformative. The VA Challenge gained me clarity, confidence, and direction I haven't found anywhere else. I have achieved milestones I didn’t think were possible in such a short time.",
+  },
+
+  {
+    id: 7,
+    name: "Vera N",
+    link: {
+        label: "Frontend Developer ",
+        url: "https://www.linkedin.com/in/chioma-vera-nkanmuo/"
+    },
+    img: vera,
+    text: "Being part of this community helped me break out of my shell - staying visible and consistently building my online presence. Through the QAC hackathon, I found my voice again as a frontend developer and reignited my passion to grow.",
+  },
+
+  {
+    id: 8,
+    name: "Eseosa O",
+    link: {
+        label: "Product Designer ",
+        url: "http://linkedin.com/in/eseosa-okosun-177869280"
+    },
+    img: eseosa,
+    text: "Being in Queen Arits' community for a while allowed me to immerse myself in growth. Communication, consistency, and visibility used to be what I struggled with, but barely 2 weeks in, I've moved from a struggling designer to a lady who knows what success is like.",
+  },
+
+  {
+    id: 9,
+    name: "Miracle A",
+    link: {
+        label: "UI/UX Engineer ",
+        url: "https://www.linkedin.com/in/miracleagitan/"
+    },
+    img: miracle,
+    text: "Just 3 days into the VA Challenge, I landed a gig! This community truly bridges the gap from learning to earning, by providing real opportunities and support that have boosted my confidence and opened doors I never imagined!",
+  },
+
+  {
+    id: 10,
+    name: "Chukwudi D.O.",
     link: {
         label: "Software Developer ",
-        url: "(Link to profile)"
+        url: "https://www.linkedin.com/in/chukwudi-david-okoro-66b25620b"
     },
-    img: "https://randomuser.me/api/portraits/women/5.jpg",
-    text: "This network not only helped me sharpen my skills but also connected me with amazing opportunities in the product space.",
+    img: chukwudi,
+    text: "The Queen Arit circle gave me an opportunity that connected me with great mentors and peers. These people had a major impact on my growth and helped me gain confidence in my career as software developer.",
+  },
+
+  {
+    id: 11,
+    name: "Motunrayo A",
+    link: {
+        label: "Frontend Engineer ",
+        url: "(Will send LinkedIn later)"
+    },
+    img: motunrayo,
+    text: "Only this year, I have hopped on different challenges which I have never had any experience on, some I got gifts while some I lost. The essence of all these for me is that I get better. As a result of this I have gathered a lot of experiences which I haven't been able to get for 2 years.",
+  },
+
+  {
+    id: 12,
+    name: "Marvelous B",
+    link: {
+        label: "Automation Engineer ",
+        url: "https://www.linkedin.com/in/marvelous-benjaminin-00a444262"
+    },
+    img: marvelous,
+    text: "Joining this community pushed me beyond my comfort zone — from the VA Challenge that gave me so much clarity, to landing a job after Challenge! Shout-out to Queen Arit for carving destinies.",
   },
 
 ];
@@ -153,7 +243,7 @@ export default function TestimonialCarousel() {
                         viewport={{ once: true, amount: 0.3 }}
                         className={`${
                         position === "center" ? "text-white" : "text-gray-400"
-                        } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] mobile:max-xxm:h-[360px] h-[310px]`}
+                        } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] mobile:max-xxm:h-[360px] h-[285px]`}
                     >
                         {/* Text at the top */}
                         <motion.p variants={itemVariants} className="text-sm leading-relaxed">
@@ -162,12 +252,14 @@ export default function TestimonialCarousel() {
 
                         {/* Profile always pinned to bottom */}
                         <div className="flex items-center mt-5 gap-3">
-                            <motion.img
-                                variants={itemVariants}
-                                src={t.img}
-                                alt={t.name}
-                                className="w-12 h-12 rounded-full object-cover border-[3px] border-[#4D4D4D]"
-                            />
+                            <div className="w-12 h-12 aspect-square rounded-full overflow-hidden border-[3px] border-[#4D4D4D] flex-shrink-0">
+                                <motion.img
+                                    variants={itemVariants}
+                                    src={t.img}
+                                    alt={t.name}
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
 
                             <div className="leading-snug -mt-[5px]">
                                 <motion.h3 variants={itemVariants} className="font-semibold tracking-wide">
