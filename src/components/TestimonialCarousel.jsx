@@ -109,7 +109,7 @@ const testimonials = [
     id: 9,
     name: "Miracle A",
     link: {
-        label: "UI/UX Engineer ",
+        label: "Virtual Assistant ",
         url: "https://www.linkedin.com/in/miracleagitan/"
     },
     img: miracle,
@@ -132,7 +132,7 @@ const testimonials = [
     name: "Motunrayo A",
     link: {
         label: "Frontend Engineer ",
-        url: "https://www.linkedin.com/in/motunrayo-adeneye"
+        url: "https://www.linkedin.com/in/motunrayoadeneye"
     },
     img: motunrayo,
     text: "Only this year, I have hopped on different challenges which I have never had any experience on, some I got gifts while some I lost. The essence of all these for me is that I get better. As a result of this I have gathered a lot of experiences which I haven't been able to get for 2 years.",
@@ -280,12 +280,14 @@ export default function TestimonialCarousel() {
                                     href={t.link.url}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`text-xs tracking-wide ${
+                                    className={`text-xs tracking-wide block max-w-[220px] truncate hover:underline ${
                                         position === "center" ? "text-[#DF496A]" : "text-gray-400"
                                     }`}
+                                    title={t.link.url} // full link visible on hover
                                     >
                                     {t.link.url}
                                 </motion.a>
+
 
                             </div>
                         </div>

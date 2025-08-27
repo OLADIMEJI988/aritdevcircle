@@ -107,11 +107,11 @@ export default function Events() {
         />
 
 
-      <div
+       <div
             className="ssm:hidden absolute bottom-0 left-0 h-[250px] w-full 
                         bg-no-repeat translate-y-11 mb-10 bg-center bg-cover pointer-events-none z-0"
             style={{ backgroundImage: `url(${mobileline})` }}
-        />
+       />
 
 
       {/* Animated Header */}

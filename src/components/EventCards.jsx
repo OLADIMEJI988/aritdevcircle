@@ -21,7 +21,7 @@ export default function EventCards({ img, title, hostimg, hostname, description 
       }}
     >
       {/* Overlay to darken background */}
-      <div className="absolute inset-0 bg-black bg-opacity-40 rounded-2xl pointer-events-none"></div>
+      <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl pointer-events-none"></div>
 
       {/* event image */}
       <img src={img} alt="event" className="w-full rounded-t-2xl relative z-10" />
