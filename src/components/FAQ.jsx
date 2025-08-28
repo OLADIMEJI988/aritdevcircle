@@ -16,7 +16,7 @@ export default function FAQ() {
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
       {/* Bottom Gradient Overlay */}
-      <div className="mobile:max-ssm:hidden absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
+      <div className="absolute bottom-0 left-0 w-full h-[50px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
       {/* Background Glow (Desktop) */}
       <div
