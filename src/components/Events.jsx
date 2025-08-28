@@ -121,7 +121,7 @@ export default function Events() {
         animate={inView ? "visible" : "hidden"}
         className="text-white text-start tracking-wide relative px-[4vw] z-20 inter"
       >
-        <p className="mobile:max-xxm:text-[35px] xxm:text-3xl font-semibold tracking-wide">
+        <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl font-semibold tracking-wide">
           Examples Of{" "}
           <span className="text-[#fc4f7b]">Past Circle</span> Events
         </p>
@@ -135,7 +135,7 @@ export default function Events() {
             lg:grid-cols-4 
             mt-8
             mobile:max-ssm:gap-6 
-            ssm:max-blg:gap-[14px] blg:gap-7 
+            ssm:max-blg:gap-[14px] blg:max-xl:gap-4 xl:gap-5 
             relative z-20">
             {events.map((event, i) => (
                 <motion.div

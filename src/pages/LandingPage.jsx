@@ -145,41 +145,45 @@ export default function LandingPage() {
         </header>
 
         <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-11 blg:max-xl:gap-20 mx-[15px] relative z-10">
-          {/* Left Image */}
+          {/* Left Image (mobile top image) */}
           <motion.div
-            className="flex justify-center items-center"
+            className="flex justify-center items-center min-h-[170px] lg:min-h-0" // reserve space on mobile
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
             style={{ willChange: "transform, opacity" }}
           >
+            {/* Desktop left image */}
             <img
               className="h-auto mobile:max-lg:hidden lg:max-xl:h-[510px] xl:h-full rotate-90 lg:rotate-0"
               src={leftimg}
               alt="left hero"
             />
+
+            {/* Mobile top image */}
             <img
-              className="h-auto mobile:max-lg:max-h-full lg:hidden lg:rotate-0"
+              className="h-auto max-h-[250px] lg:hidden lg:rotate-0"
               src={xsmobiletopimg}
               alt="left hero"
             />
           </motion.div>
 
+
           {/* Center Content */}
           <div className="text-center flex flex-col items-center">
             {/* Badge */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-              style={{ willChange: "transform, opacity" }}
+            <div
+              // initial={{ opacity: 0, y: -10 }}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
+              // style={{ willChange: "transform, opacity" }}
               className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition"
             >
               <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
                 <img src={flash} alt="lightening img" className="h-[22px]" />
                 <p className="text-[#D9D9D9] text-[16px]">Tech Career Empowerment</p>
               </div>
-            </motion.div>
+            </div>
 
             {/* Headings */}
             <motion.p
