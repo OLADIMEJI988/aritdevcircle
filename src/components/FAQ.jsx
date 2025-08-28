@@ -1,16 +1,16 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import faqglow from "../assets/faqglow.webp";
-import mobileglow from "../assets/mobilesideglow.png";
-import desktopline from "../assets/desktopline.png";
-import mobileline from "../assets/mobileline.png";
+import mobileglow from "../assets/mobilesideglow.webp";
+import desktopline from "../assets/desktopline.webp";
+import mobileline from "../assets/mobilefaqline.webp";
 import arrowUp from "../assets/arrowup.webp";
 import arrowDown from "../assets/arrowdown.webp";
 import Questions from "./Questions";
 
 export default function FAQ() {
   return (
-    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-32 blm:max-lg:pb-44 lg:pb-60 py-10 tracking-wide inter overflow-hidden">
+    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-28 blm:max-lg:pb-44 lg:pb-60 py-10 tracking-wide inter overflow-hidden">
 
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
@@ -59,7 +59,7 @@ export default function FAQ() {
           />
           <FAQItem
             question="Do I need prior experience in tech to join?"
-            answer="Not at all. Whether you’re just starting out, transitioning into tech, or looking to level up your existing skills, you’ll find resources and support tailored to your stage."
+            answer="All experience levels are welcome! However we don't provide beginner training materials. Our focus is on helping those who already have some tech skills take that next big step: turning those skills into paid opportunities!"
           />
           <FAQItem
             question="What makes this community different from others?"

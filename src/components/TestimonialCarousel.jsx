@@ -210,13 +210,13 @@ export default function TestimonialCarousel() {
             className="text-center tracking-wide font-semibold inter mb-8 text-3xl sm:text-4xl"
             >
             <p>
-                See Reviews From {" "}
+                Circle Members Are {" "}
                 {/* <span className="text-[#FA3E67] mobile:max-xsm:hidden">
                 Community Members
                 </span> */}
             </p>
             {/* <span className="text-[#FA3E67] xsm:hidden">Community Members</span> */}
-            <p className="text-[#FA3E67]">Circle Members</p>
+            <p className="text-[#FA3E67]">Winning!</p>
       </motion.div>
 
       {/* Cards */}
@@ -243,7 +243,7 @@ export default function TestimonialCarousel() {
                         viewport={{ once: true, amount: 0.3 }}
                         className={`${
                         position === "center" ? "text-white" : "text-gray-400"
-                        } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] mobile:max-xxm:h-[360px] h-[285px]`}
+                        } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] h-auto`}
                     >
                         {/* Text at the top */}
                         <motion.p variants={itemVariants} className="text-sm leading-relaxed">
@@ -251,7 +251,7 @@ export default function TestimonialCarousel() {
                         </motion.p>
 
                         {/* Profile always pinned to bottom */}
-                        <div className="flex items-center mt-5 gap-3">
+                        <div className="flex items-center mt-7 gap-3">
                             <div className="w-12 h-12 aspect-square rounded-full overflow-hidden border-[3px] border-[#4D4D4D] flex-shrink-0">
                                 <motion.img
                                     variants={itemVariants}
@@ -301,7 +301,7 @@ export default function TestimonialCarousel() {
       </div>
 
       {/* Controls */}
-      <div className="flex mt-10 space-x-48">
+      <div className="flex mt-5 space-x-48">
             <button
                 onClick={prevSlide}
                 className="w-11 h-11 flex items-center justify-center rounded-2xl border border-[#292929] 

@@ -14,7 +14,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
           isOpen ? "border-[#FA3E67]" : "border-[#707070]"
         }`}
       >
-        <p className="font-medium py-1 mobile:max-xxm:w-64 xxm:max-blm:w-[295px] sm:text-[15px] leading-snug sm:leading-normal">
+        <p className="font-medium text-start py-1 mobile:max-xxm:w-64 xxm:max-blm:w-[295px] sm:text-[15px] leading-snug sm:leading-normal">
           {question}
         </p>
 

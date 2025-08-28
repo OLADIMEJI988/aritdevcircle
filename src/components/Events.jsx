@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 
 import eventsglow from "../assets/eventsbg.webp";
-import mobileglow from "../assets/mobilesideglow.png";
-import desktopline from "../assets/desktopline.png";
-import mobileline from "../assets/mobileline.png";
+import mobileglow from "../assets/mobilesideglow.webp";
+import desktopline from "../assets/desktopline.webp";
+import mobileline from "../assets/mobileline.webp";
 import mentor from "../assets/mentor.webp";
 import queenarit from "../assets/queenarit.webp";
 import portfolioreview from "../assets/portfolioreview.webp";
