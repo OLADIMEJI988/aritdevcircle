@@ -18,6 +18,7 @@ import About from "../components/About";
 import Events from "../components/Events";
 import TestimonialCarousel from "../components/TestimonialCarousel";
 import FAQ from "../components/FAQ";
+import Footer from "../components/Footer";
 
 export default function LandingPage() {
   const navigate = useNavigate();
@@ -214,7 +215,7 @@ export default function LandingPage() {
             </motion.p>
 
             <motion.p
-              className="text-[#E3E3E3] -mt-2 xsm:max-lg:mt-2 text-[38px] xsm:max-lg:text-5xl lg:text-[55px] xl:text-[80px] font-semibold tracking-wide flex-wrap justify-center"
+              className="text-[#E3E3E3] -mt-3 xsm:max-lg:mt-2 text-[38px] xsm:max-lg:text-5xl lg:text-[55px] xl:text-[80px] font-semibold tracking-wide flex-wrap justify-center"
               initial="hidden"
               animate="visible"
               variants={{
@@ -308,6 +309,10 @@ export default function LandingPage() {
 
       <div id="faq" className="scroll-mt-[80px]">
         <FAQ />
+      </div>
+
+      <div>
+        <Footer />
       </div>
 
     </>

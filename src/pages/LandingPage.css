@@ -1,30 +1,16 @@
 
 .inter{
-    font-family: "Inter Tight", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "Inter Tight", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-
 
 .exo{
   font-family: "Exo 2", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-}
-
-.glass{
-  border-radius: 8px;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  backdrop-filter: blur(20px) !important;
-  -webkit-backdrop-filter: blur(20px) !important;
-  border-top: 1px solid rgb(255, 255, 255, 0.4);
-  border-left: 1px solid rgb(255, 255, 255, 0.3);
-  border-right: 1px solid rgb(255, 255, 255, 0.3);
-  border-bottom: 1px solid rgb(255, 255, 255, 0.4);
-  display: flex-column;
-  justify-content: center;
 }
 
 .openSans{

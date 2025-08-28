@@ -30,7 +30,7 @@ export default function Offer() {
   return (
     <div 
       ref={ref}
-      className="antialiased relative overflow-hidden mobile:max-lg:pt-20 lg:pt-16 w-full mobile:max-lg:pb-28 lg:pb-24 mobile:max-lg:h-full bg-[#0E0E0E] inter"
+      className="antialiased relative overflow-hidden mobile:max-lg:pt-20 lg:pt-16 w-full mobile:max-lg:pb-28 lg:pb-20 mobile:max-lg:h-full bg-[#0E0E0E] inter"
     >
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />

@@ -218,7 +218,7 @@ export default function TestimonialCarousel() {
       </motion.div>
 
       {/* Cards */}
-      <div className="flex items-center space-x-6">
+      <div className="flex items-center space-x-4">
         {visibleCards.map((t, index) => {
           const position = index === 1 ? "center" : "side";
 
@@ -304,7 +304,7 @@ export default function TestimonialCarousel() {
       </div>
 
       {/* Controls */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-48">
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-36">
         <button
           onClick={prevSlide}
           className="w-11 h-11 flex items-center justify-center rounded-2xl border border-[#292929] shadow-[0_3px_8px_#101010] bg-[#161616] hover:bg-[#1E1E1E]"
@@ -321,7 +321,7 @@ export default function TestimonialCarousel() {
       </div>
     </div>
 
-    <div className="bg-[#0E0E0E] mobile:max-lg:py-7 lg:py-8"></div>
+    <div className="bg-[#0E0E0E] mobile:max-lg:py-7 lg:py-9"></div>
     </>
   );
 }

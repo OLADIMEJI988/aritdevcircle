@@ -10,7 +10,7 @@ import Questions from "./Questions";
 
 export default function FAQ() {
   return (
-    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-28 blm:max-lg:pb-44 lg:pb-60 pt-10 tracking-wide inter overflow-hidden">
+    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-28 blm:max-lg:pb-44 lg:pb-48 pt-10 tracking-wide inter overflow-hidden">
 
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
@@ -32,7 +32,7 @@ export default function FAQ() {
 
       {/* Bottom Line (Desktop) */}
       <div
-        className="lg:block mobile:max-ssm:hidden absolute bottom-0 left-0 h-[300px] w-full bg-no-repeat bg-center bg-cover pointer-events-none z-0"
+        className="lg:block mobile:max-ssm:hidden absolute bottom-0 left-0 h-[250px] w-full bg-no-repeat bg-center bg-cover pointer-events-none z-0"
         style={{ backgroundImage: `url(${desktopline})` }}
       />
 
