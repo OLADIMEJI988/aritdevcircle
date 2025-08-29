@@ -19,7 +19,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
         </p>
 
         {isOpen ? (
-          <div className="border border-[#FA3E67] mobile:max-xxm:h-8 mobile:max-xxm:w-8 h-9 w-9 flex items-center justify-center rounded-full">
+          <div className="border hover:shadow-[0_0_8px_#FA3E67] transition border-[#FA3E67] mobile:max-xxm:h-8 mobile:max-xxm:w-8 h-9 w-9 flex items-center justify-center rounded-full">
             <button
               onClick={closePopup}
               className="flex items-center justify-center"
@@ -32,7 +32,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
             </button>
           </div>
         ) : (
-          <div className="border border-[#707070] h-9 w-9 mobile:max-xxm:h-8 mobile:max-xxm:w-8 flex items-center justify-center rounded-full">
+          <div className="border hover:shadow-[0_0_8px_#707070] transition border-[#707070] h-9 w-9 mobile:max-xxm:h-8 mobile:max-xxm:w-8 flex items-center justify-center rounded-full">
             <button
               onClick={openPopup}
               className="flex items-center justify-center"

@@ -307,14 +307,14 @@ export default function TestimonialCarousel() {
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex space-x-36">
         <button
           onClick={prevSlide}
-          className="w-11 h-11 flex items-center justify-center rounded-2xl border border-[#292929] shadow-[0_3px_8px_#101010] bg-[#161616] hover:bg-[#1E1E1E]"
+          className="w-11 h-11 flex items-center justify-center rounded-2xl hover:shadow-[0_0_8px_#292929] transition border border-[#292929] shadow-[0_3px_8px_#101010] bg-[#161616]"
         >
           <img src={previousarrow} alt="previous" />
         </button>
 
         <button
           onClick={nextSlide}
-          className="w-11 h-11 flex items-center justify-center rounded-2xl border border-[#292929] shadow-[0_3px_8px_#101010] bg-[#161616] hover:bg-[#1E1E1E]"
+          className="w-11 h-11 flex items-center justify-center rounded-2xl hover:shadow-[0_0_8px_#292929] transition border border-[#292929] shadow-[0_3px_8px_#101010] bg-[#161616]"
         >
           <img src={nextarrow} alt="next" />
         </button>

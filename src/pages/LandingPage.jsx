@@ -99,7 +99,7 @@ export default function LandingPage() {
                   </p>
                 )
               )}
-              <button className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
+              <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
                 Join it’s Free
               </button>
             </div>
@@ -136,7 +136,7 @@ export default function LandingPage() {
                     </ScrollLink>
                   ))}
 
-                  <button className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold hover:opacity-90 transition mx-auto">
+                  <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold hover:opacity-90 transition mx-auto">
                     Join it’s Free
                   </button>
                 </div>
@@ -163,7 +163,7 @@ export default function LandingPage() {
 
             {/* Mobile top image */}
             <img
-              className="h-auto max-h-[250px] lg:hidden lg:rotate-0"
+              className="h-auto mobile:max-lg:max-h-full lg:hidden md:w-full lg:rotate-0"
               src={xsmobiletopimg}
               alt="left hero"
             />
@@ -254,14 +254,15 @@ export default function LandingPage() {
 
             {/* CTA Button */}
             <motion.button
-              className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] text-white py-2 px-7 rounded-full font-semibold hover:opacity-90 flex items-center gap-3 mx-auto mt-4"
+              onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
+              className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] transition text-white py-2 px-7 rounded-full font-semibold hover:opacity-90 flex items-center gap-3 mx-auto mt-4"
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 1.2, ease: [0.25, 1, 0.5, 1] }}
+              transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
               style={{ willChange: "transform, opacity" }}
             >
               <p className="text-lg">Join the Circle Now</p>
-              <div className="bg-white p-2 rounded-full">
+              <div onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-white p-2 rounded-full">
                 <img className="h-6" src={arrow} alt="arrow" />
               </div>
             </motion.button>

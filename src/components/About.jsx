@@ -1,7 +1,5 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import glow from "../assets/inner glow.webp";
-import mobileglow from "../assets/mobilesideglow.webp";
 import queenarit from "../assets/queenarit.webp";
 import arrow from "../assets/arrow-right.webp";
 
@@ -30,7 +28,7 @@ export default function Section() {
                  mobile:max-lg:pb-28 lg:pb-20"
     >
      {/* Top Gradient Overlay */}
-    <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+    <div className="absolute top-0 left-0 w-full h-[29px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
     {/* Bottom Gradient Overlay */}
     <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
@@ -89,10 +87,10 @@ export default function Section() {
           initial="hidden"
           animate={isInView ? "show" : "hidden"}
           custom={2}
-          className="mobile:max-xxm:mt-20 mobile:max-lg:ml-[5px] mobile:max-lg:-mr-4"
+          className="mobile:max-xxm:mt-24 xxm:max-lg:mt-5 mobile:max-lg:mb-4"
         >
           <img
-            className="xxm:h-[450px] mobile:max-xxm:h-[400px]"
+            className="xxm:h-[450px] mobile:max-xxm:h-[380px]"
             src={queenarit}
             alt=""
           />
@@ -155,6 +153,7 @@ export default function Section() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
+                onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
                 className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect 
                             transition text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
                             mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold 

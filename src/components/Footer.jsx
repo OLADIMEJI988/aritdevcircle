@@ -87,7 +87,7 @@ export default function Footer() {
     };
   
     return (
-      <div className="relative bg-[#0E0E0E] min-h-[690px] md:min-h-[800px] overflow-hidden flex flex-col justify-between">
+      <div className="relative bg-[#0E0E0E] min-h-[760px] md:min-h-[800px] overflow-hidden flex flex-col justify-between">
         {/* Top Gradient Overlay */}
         <div className="absolute top-0 left-0 w-full h-[80px] md:h-[100px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-30" />
   
@@ -135,7 +135,7 @@ export default function Footer() {
   
         {/* Text + CTA */}
         <div className="relative z-40 text-white mobile:max-ssm:mt-[150px] mt-[180px] md:mt-[242px] text-center px-4">
-          <div className="space-y-2 mobile:max-ssm:hidden text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium">
+          <div className="space-y-2 mobile:max-ssm:hidden ssm:text-3xl lg:text-4xl font-medium">
             <AnimatedText
               text="Join a community of over 5000+"
               highlight={{ start: 25, end: 30 }}
@@ -144,7 +144,7 @@ export default function Footer() {
             <AnimatedText text="from learning to earning." />
           </div>
 
-          <div className="space-y-1 ssm:hidden inter tracking-wide text-[25px] mt-2 font-medium text-center">
+          <div className="space-y-1 ssm:hidden inter tracking-wide text-[27px] mt-2 font-medium text-center">
                 <AnimatedText text="Join a community of over" delayIndex={0} />
 
                 <div className="flex items-center justify-center gap-2">
@@ -161,14 +161,15 @@ export default function Footer() {
   
           {/* CTA Button */}
           <motion.button
-            className="bg-[#fc4f7b] text-white py-2 sm:py-[11px] px-4 sm:px-6 rounded-full font-semibold flex items-center gap-2 sm:gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
+            onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
+            className="bg-[#fc4f7b] text-white py-[10px] ssm:max-sm:py-[13px] sm:py-[11px] px-4 ssm:px-6 rounded-full font-semibold flex items-center gap-2 sm:gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8, ease: [0.25, 1, 0.5, 1] }}
           >
-            <p className="text-sm sm:text-lg">Join the Circle Now</p>
-            <div className="bg-white p-[4px] sm:p-[6px] rounded-full">
-              <img className="h-4 sm:h-5" src={arrow} alt="arrow" />
+            <p className="text-[15px] ssm:max-sm:text-[20px] sm:text-lg">Join the Circle Now</p>
+            <div className="bg-white p-[5px] sm:p-[6px] rounded-full">
+              <img className="h-[18px] sm:h-5" src={arrow} alt="arrow" />
             </div>
           </motion.button>
         </div>
@@ -179,18 +180,18 @@ export default function Footer() {
             {/* Social icons */}
             <div className="flex mobile:max-ssm:gap-4 ssm:gap-3">
               <motion.a href="https://x.com/TheQueenArit" target="_blank">
-                <img className="cursor-pointer mobile:max-ssm:h-8 ssm:h-7" src={twitter} alt="Twitter" />
+                <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={twitter} alt="Twitter" />
               </motion.a>
               <motion.a href="https://instagram.com/" target="_blank">
-                <img className="cursor-pointer mobile:max-ssm:h-8 ssm:h-7" src={instagram} alt="Instagram" />
+                <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={instagram} alt="Instagram" />
               </motion.a>
               <motion.a href="https://linkedIn.com/" target="_blank">
-                <img className="cursor-pointer mobile:max-ssm:h-8 ssm:h-7" src={linkedin} alt="LinkedIn" />
+                <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={linkedin} alt="LinkedIn" />
               </motion.a>
             </div>
   
             {/* Nav links (with scroll functionality restored) */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-ssm:text-[14px] text-[12px] sm:text-[13px] tracking-wider inter text-[#CECECE]">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-sm:mt-1 mobile:max-sm:text-[16px] text-[12px] sm:text-[13px] tracking-wider inter text-[#CECECE]">
               <div onClick={() => handleScroll("about-section", -20)} className="relative cursor-pointer group">
                 <AnimatedText text="About" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
@@ -214,7 +215,7 @@ export default function Footer() {
   
             {/* Logo */}
             <motion.div>
-              <img className="h-12" src={Logo} alt="Logo" />
+              <img className="h-12 mobile:max-sm:h-14" src={Logo} alt="Logo" />
             </motion.div>
           </div>
   
@@ -232,12 +233,12 @@ export default function Footer() {
             <div className="flex flex-col items-center">
               <img
                 onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-                className="h-7 cursor-pointer rounded-full hover:shadow-[0_0_7px_#FF4F76] hover:scale-95 hover:opacity-90 transition"
+                className="mobile:max-sm:h-9 h-7 cursor-pointer rounded-full hover:shadow-[0_0_7px_#FF4F76] hover:scale-95 hover:opacity-90 transition"
                 src={backtotop}
                 alt="Back to top"
               />
               <div className="mt-[2px]">
-                <AnimatedText text="Back to top" className="text-[12px] text-[#CECECE]" />
+                <AnimatedText text="Back to top" className="text-[12px] mobile:max-sm:text-[14px] text-[#CECECE]" />
               </div>
             </div>
           </div>
