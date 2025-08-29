@@ -119,7 +119,7 @@ export default function Events() {
         variants={headerVariants}
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
-        className="text-white text-start tracking-wide relative px-[4vw] z-20 inter"
+        className="text-white tracking-wide relative px-[4vw] z-20 inter"
       >
         <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl font-semibold tracking-wide">
           Examples Of{" "}

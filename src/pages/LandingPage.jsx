@@ -62,7 +62,7 @@ export default function LandingPage() {
         <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
         {/* Header */}
-        <header className="bg-[#0e0e0e] lg:bg-transparent text-[#BBBABA] pt-3 px-5 md:px-[15px] relative z-50">
+        <header className="bg-[#0e0e0e] lg:bg-transparent text-[#BBBABA] pt-3 px-5 md:px-10 relative z-50">
           <div className="flex justify-between items-center mb-8">
             <Link to="/">
               <img className="h-16" src={Logo} alt="logo" />
@@ -243,7 +243,7 @@ export default function LandingPage() {
 
             {/* Subtitle */}
             <motion.p
-              className="text-[#CECECE] text-lg lg:text-[18px] max-w-[550px] mx-auto mt-2 leading-8"
+              className="text-[#CECECE] text-lg lg:text-[18px] max-w-[550px] mx-auto mt-2 lg:-mt-[1px] leading-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 1, ease: [0.25, 1, 0.5, 1] }}
@@ -255,14 +255,15 @@ export default function LandingPage() {
             {/* CTA Button */}
             <motion.button
               onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
-              className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] transition text-white py-2 px-7 rounded-full font-semibold hover:opacity-90 flex items-center gap-3 mx-auto mt-4"
+              className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] transition text-white mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
+                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold hover:opacity-90 flex items-center gap-3 mx-auto mt-4 lg:mt-7"
               initial={{ opacity: 0, y: 25 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
               style={{ willChange: "transform, opacity" }}
             >
               <p className="text-lg">Join the Circle Now</p>
-              <div onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-white p-2 rounded-full">
+              <div onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-white p-[5px] rounded-full">
                 <img className="h-6" src={arrow} alt="arrow" />
               </div>
             </motion.button>

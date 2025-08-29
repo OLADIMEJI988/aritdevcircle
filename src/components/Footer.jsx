@@ -87,7 +87,7 @@ export default function Footer() {
     };
   
     return (
-      <div className="relative bg-[#0E0E0E] min-h-[760px] md:min-h-[800px] overflow-hidden flex flex-col justify-between">
+      <div className="relative bg-[#0E0E0E] h-[800px] overflow-hidden flex flex-col justify-between">
         {/* Top Gradient Overlay */}
         <div className="absolute top-0 left-0 w-full h-[80px] md:h-[100px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-30" />
   
@@ -132,44 +132,43 @@ export default function Footer() {
             viewport={{ once: true, amount: 0.3 }}
           />
         </div>
+ 
   
         {/* Text + CTA */}
         <div className="relative z-40 text-white mobile:max-ssm:mt-[150px] mt-[180px] md:mt-[242px] text-center px-4">
           <div className="space-y-2 mobile:max-ssm:hidden ssm:text-3xl lg:text-4xl font-medium">
             <AnimatedText
-              text="Join a community of over 5000+"
-              highlight={{ start: 25, end: 30 }}
+              text="Join our community of 1000+ "
+              highlight={{ start: 21, end: 30 }}
             />
-            <AnimatedText text="people who are deliberately upskilling" />
-            <AnimatedText text="from learning to earning." />
+            <AnimatedText text="techies who are strategically moving" />
+            <AnimatedText text="from learning to earning!" />
           </div>
 
           <div className="space-y-1 ssm:hidden inter tracking-wide text-[27px] mt-2 font-medium text-center">
-                <AnimatedText text="Join a community of over" delayIndex={0} />
+                <AnimatedText text="Join our community of" delayIndex={0} />
 
                 <div className="flex items-center justify-center gap-2">
-                    <AnimatedText text="5000+" className="text-[#fc4f7b]" delayIndex={1} />
-                    <AnimatedText text="people who are" delayIndex={2} />
+                    <AnimatedText text="1000+" className="text-[#fc4f7b]" delayIndex={1} />
+                    <AnimatedText text="techies who are" delayIndex={2} />
                 </div>
 
-                <AnimatedText text="deliberately upskilling" delayIndex={3} />
-                <AnimatedText text="from learning to earning." delayIndex={4} />
+                <AnimatedText text="strategically moving" delayIndex={3} />
+                <AnimatedText text="from learning to earning!" delayIndex={4} />
           </div>
-
-
-
   
           {/* CTA Button */}
           <motion.button
             onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
-            className="bg-[#fc4f7b] text-white py-[10px] ssm:max-sm:py-[13px] sm:py-[11px] px-4 ssm:px-6 rounded-full font-semibold flex items-center gap-2 sm:gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
+            className="bg-[#fc4f7b] text-white mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
+                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold flex items-center gap-2 sm:gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8, ease: [0.25, 1, 0.5, 1] }}
           >
-            <p className="text-[15px] ssm:max-sm:text-[20px] sm:text-lg">Join the Circle Now</p>
-            <div className="bg-white p-[5px] sm:p-[6px] rounded-full">
-              <img className="h-[18px] sm:h-5" src={arrow} alt="arrow" />
+            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px]">Join the Circle Now</p>
+            <div className="bg-white p-[5px] xl:p-[6px] rounded-full">
+              <img className="xxm:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
             </div>
           </motion.button>
         </div>
@@ -219,11 +218,11 @@ export default function Footer() {
             </motion.div>
           </div>
   
-          <div className="h-[1px] w-full bg-[#313131] mt-4 sm:mt-5" />
+          <div className="h-[1px] w-full bg-[#313131] mt-8" />
   
           <div className="px-4 sm:px-8 lg:px-12 mt-2 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             {/* copyright */}
-            <div className="text-[#CECECE] flex flex-wrap text-[11px] sm:text-[12px] tracking-wide gap-2 justify-center">
+            <div className="text-[#CECECE] mobile:max-sm:opacity-65 flex flex-wrap text-[10px] sm:text-[12px] tracking-wide gap-2 justify-center">
               <AnimatedText text="© 2025 Queen Arit Circle." />
               <AnimatedText text="All Rights Reserved." />
               <AnimatedText text="Privacy Policy" />

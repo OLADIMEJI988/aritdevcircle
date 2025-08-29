@@ -41,7 +41,7 @@ export default function EventCards({ img, title, hostimg, hostname, description 
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, amount: 0.3 }}
-        className="flex items-center mobile:max-lg:px-[18px] lg:px-[10px] gap-[4px] text-[13px] relative z-10"
+        className="flex items-center mobile:max-lg:px-[18px] lg:px-[10px] gap-[4px] text-[13px] mt-[7px] relative z-10"
       >
         <p className="text-[#FF4F76]">Hosted by</p>
         <img src={hostimg} className="h-8" alt="host" />

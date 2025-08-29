@@ -58,7 +58,7 @@ export default function Offer() {
                 custom={0}
                 className="text-white mobile:max-xxm:text-[35px] px-[15px] xxm:max-xsm:text-3xl xsm:text-4xl font-semibold inter"
             >
-                What Makes <span className="text-[#fc4f7b] mobile:max-xxm:hidden">Queen Arit Circle</span> <span className='mobile:max-md:hidden'>Different</span> 
+                What Makes The <span className="text-[#fc4f7b] mobile:max-xxm:hidden">Queen Arit Circle</span> <span className='mobile:max-md:hidden'>Different ?</span> 
             </motion.p>
 
             <motion.p
@@ -78,7 +78,7 @@ export default function Offer() {
                 custom={1}
                 className="text-white md:hidden mobile:max-xxm:text-[35px] px-[15px] xxm:max-xsm:text-3xl xsm:text-4xl font-semibold inter"
             >
-                Different
+                Different ?
             </motion.p>
       </div>
 

@@ -225,78 +225,84 @@ export default function TestimonialCarousel() {
           return (
             <AnimatePresence key={t.id} mode="wait">
               <div className="relative bg-[#161616] p-3 rounded-2xl border border-[#707070]">
-                {/* Outer subtle glow */}
+                {/* Top subtle glow */}
                 <div className="absolute inset-0 rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.4)] pointer-events-none z-0" />
                 {/* Bottom-only blur */}
                 <div className="absolute inset-x-3 -bottom-1 h-[3px] bg-[#222222] blur-[3px] pointer-events-none z-0" />
 
-                {/* Card */}
-                <motion.div
-                  key={t.id}
-                  variants={cardVariants}
-                  initial="hidden"
-                  whileInView="visible"
-                  exit="exit"
-                  viewport={{ once: true, amount: 0.3 }}
-                  className={`${
-                    position === "center" ? "text-white" : "text-gray-400"
-                  } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] h-auto`}
-                >
-                  {/* Text */}
-                  <motion.p variants={itemVariants} className="text-sm leading-relaxed">
-                    {t.text}
-                  </motion.p>
+                {position === "center" ? (
+                  <motion.div
+                    key={`${t.id}-${current}`}
+                    variants={cardVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className={`${
+                      position === "center" ? "text-white" : "text-gray-400"
+                    } relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] h-auto`}
+                  >
+                    {/* Text */}
+                    <motion.p variants={itemVariants} className="text-sm leading-relaxed">
+                      {t.text}
+                    </motion.p>
 
-                  {/* Profile */}
-                  <div className="flex items-center mt-7 gap-3">
-                    {/* Profile image */}
-                    <div className="w-12 h-12 aspect-square rounded-full overflow-hidden border-[3px] border-[#4D4D4D] flex-shrink-0">
-                      <motion.img
-                        variants={itemVariants}
-                        src={t.img}
-                        alt={t.name}
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-
-                    {/* Name and label + icon */}
-                    <div className="leading-snug -mt-[5px]">
-                      <motion.h3
-                        variants={itemVariants}
-                        className="font-semibold tracking-wide"
-                      >
-                        {t.name}
-                      </motion.h3>
-
-                      {/* Role / label with LinkedIn icon beside */}
-                      <motion.div
-                        variants={itemVariants}
-                        className={`flex items-center gap-3 ${
-                          position === "center" ? "text-[#FA3E67]" : "text-gray-400"
-                        }`}
-                      >
-                        <p className="text-xs tracking-wide">{t.link.label}</p>
-
-                        <motion.a
-                          href={t.link.url}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="inline-block"
+                    {/* Profile */}
+                    <div className="flex items-center mt-7 gap-3">
+                      <div className="w-12 h-12 aspect-square rounded-full overflow-hidden border-[3px] border-[#4D4D4D] flex-shrink-0">
+                        <motion.img
+                          variants={itemVariants}
+                          src={t.img}
+                          alt={t.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="leading-snug -mt-[5px]">
+                        <motion.h3 variants={itemVariants} className="font-semibold tracking-wide">
+                          {t.name}
+                        </motion.h3>
+                        <motion.div
+                          variants={itemVariants}
+                          className="flex items-center gap-3 text-[#FA3E67]"
                         >
-                          <img
-                            src={linkedin}
-                            alt="LinkedIn"
-                            className={`w-6 h-6 cursor-pointer hover:opacity-80 transition-all duration-300 ${
-                              position === "center" ? "filter-none" : "filter brightness-75"
-                            }`}
-                          />
-                        </motion.a>
-                      </motion.div>
+                          <p className="text-xs tracking-wide">{t.link.label}</p>
+                          <a href={t.link.url} target="_blank" rel="noopener noreferrer">
+                            <img src={linkedin} alt="LinkedIn" className="w-6 h-6 cursor-pointer" />
+                          </a>
+                        </motion.div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ) : (
 
+                  // 🔹 Side cards stay static
+                  <div
+                    key={t.id}
+                    className={`text-gray-400 relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] h-auto`}
+                  >
+                    {/* Text */}
+                    <p className="text-sm leading-relaxed">{t.text}</p>
+
+                    {/* Profile */}
+                    <div className="flex items-center mt-7 gap-3">
+                      <div className="w-12 h-12 aspect-square rounded-full overflow-hidden border-[3px] border-[#4D4D4D] flex-shrink-0">
+                        <img src={t.img} alt={t.name} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="leading-snug -mt-[5px]">
+                        <h3 className="font-semibold tracking-wide">{t.name}</h3>
+                        <div className="flex items-center gap-3 text-gray-400">
+                          <p className="text-xs tracking-wide">{t.link.label}</p>
+                          <a href={t.link.url} target="_blank" rel="noopener noreferrer">
+                            <img
+                              src={linkedin}
+                              alt="LinkedIn"
+                              className="w-6 h-6 cursor-pointer filter brightness-75"
+                            />
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
-
-                </motion.div>
+                )}
               </div>
             </AnimatePresence>
           );

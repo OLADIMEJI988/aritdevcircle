@@ -10,11 +10,11 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
   return (
     <div className="w-full tracking-wide max-w-[98%] sm:max-w-[85%] md:max-w-[80%] lg:max-w-[80%] mx-auto mb-4 transition-all duration-300 inter">
       <div
-        className={`border flex justify-between items-start sm:items-center px-[13px] sm:px-6 py-4 rounded-lg ${
-          isOpen ? "border-[#FA3E67]" : "border-[#707070]"
+        className={`border-2 flex justify-between items-start sm:items-center px-[13px] sm:px-6 py-4 rounded-lg ${
+          isOpen ? "border-[#FA3E67]" : "border-[#7070702d]"
         }`}
       >
-        <p className="font-medium text-start py-1 mobile:max-xxm:w-64 xxm:max-blm:w-[295px] sm:text-[15px] leading-snug sm:leading-normal">
+        <p className="font-medium text-start py-1 mobile:max-xxm:w-64 xxm:max-blm:w-[295px] mobile:max-sm:text-[17px] sm:text-[15px] lg:text-[17px] leading-snug sm:leading-normal">
           {question}
         </p>
 
@@ -32,7 +32,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
             </button>
           </div>
         ) : (
-          <div className="border hover:shadow-[0_0_8px_#707070] transition border-[#707070] h-9 w-9 mobile:max-xxm:h-8 mobile:max-xxm:w-8 flex items-center justify-center rounded-full">
+          <div className="border hover:shadow-[0_0_8px_#707070] transition border-[#7070702d] h-9 w-9 mobile:max-xxm:h-8 mobile:max-xxm:w-8 flex items-center justify-center rounded-full">
             <button
               onClick={openPopup}
               className="flex items-center justify-center"
@@ -57,7 +57,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="overflow-hidden"
           >
-            <div className="border border-t-0 border-[#79797d] bg-transparent mx-2 sm:mx-[7px] px-4 py-3 text-white text-sm rounded-b-md tracking-wide text-left">
+            <div className="border-2 border-t-0 tracking-wider leading-6 border-[#79797d] bg-transparent mx-2 sm:mx-[7px] px-4 py-3 text-white text-sm rounded-b-md text-left">
               <p>{answer}</p>
             </div>
           </motion.div>
