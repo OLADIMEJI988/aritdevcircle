@@ -2,10 +2,10 @@ import React, { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import glow from "../assets/inner glow.webp";
 import mobileglow from "../assets/mobilesideglow.webp";
-import rocket from "../assets/rocket.webp";
-import guide from "../assets/guide.webp";
-import chain from "../assets/chain.webp";
-import globe from "../assets/globe.webp";
+import rocket from "../assets/rocket.svg";
+import guide from "../assets/guide.svg";
+import chain from "../assets/chain.svg";
+import globe from "../assets/globe.svg";
 import EachOffer from './EachOffer';
 
 import './Offer.css'

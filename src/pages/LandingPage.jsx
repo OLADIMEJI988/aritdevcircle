@@ -2,11 +2,11 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate, Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import flash from "../assets/flash.webp";
+import flash from "../assets/flash.svg";
 import Logo from "../assets/QueenAritCircleLogo.webp";
 import glow from "../assets/inner glow.webp";
 import mobileglow from "../assets/inner glow mobile.webp";
-import arrow from "../assets/arrow-right.webp";
+import arrow from "../assets/arrow-right.svg";
 import leftimg from "../assets/Group left.webp";
 import rightimg from "../assets/Group right.webp";
 import xsmobiletopimg from "../assets/new group image 4.webp";
@@ -182,7 +182,7 @@ export default function LandingPage() {
             >
               <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
                 <img src={flash} alt="lightening img" className="h-[22px]" />
-                <p className="text-[#D9D9D9] text-[16px]">Tech Career Empowerment</p>
+                <p className="text-white text-[16px]">Tech Career Empowerment</p>
               </div>
             </div>
 

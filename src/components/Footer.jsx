@@ -4,12 +4,12 @@ import footerbg from "../assets/footerbg.png";
 import innerglow from "../assets/footerglow.webp";
 import floatingimgs from "../assets/footerfloatimg.webp";
 import mobilefloatingimgs from "../assets/mobilefooterfloatimg.webp";
-import arrow from "../assets/arrow-right.webp";
-import linkedin from "../assets/linkedin.webp";
-import twitter from "../assets/twitter.webp";
-import instagram from "../assets/instagram.webp";
+import arrow from "../assets/arrow-right.svg";
+import linkedin from "../assets/linkedin.svg";
+import twitter from "../assets/twitter.svg";
+import instagram from "../assets/instagram.svg";
 import Logo from "../assets/QueenAritCircleLogo.webp";
-import backtotop from "../assets/backtotopimg.webp";
+import backtotop from "../assets/backtotopimg.svg";
 
 const sentence = {
     hidden: { opacity: 1 },
@@ -161,14 +161,14 @@ export default function Footer() {
           <motion.button
             onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
             className="bg-[#fc4f7b] text-white mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
-                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold flex items-center gap-2 sm:gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
+                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold flex items-center gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
             initial={{ opacity: 0, y: 25 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8, ease: [0.25, 1, 0.5, 1] }}
           >
-            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px]">Join the Circle Now</p>
+            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] inter tracking-wide">Join the Circle Now</p>
             <div className="bg-white p-[5px] xl:p-[6px] rounded-full">
-              <img className="xxm:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
+              <img className="h-6" src={arrow} alt="arrow" />
             </div>
           </motion.button>
         </div>
@@ -222,7 +222,7 @@ export default function Footer() {
   
           <div className="px-4 sm:px-8 lg:px-12 mt-2 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             {/* copyright */}
-            <div className="text-[#CECECE] mobile:max-sm:opacity-65 flex flex-wrap text-[10px] sm:text-[12px] tracking-wide gap-2 justify-center">
+            <div className="text-[#CECECE] mobile:max-sm:opacity-65 flex flex-wrap text-[10px] sm:text-[12px] tracking-wide gap-2 justify-center inter">
               <AnimatedText text="© 2025 Queen Arit Circle." />
               <AnimatedText text="All Rights Reserved." />
               <AnimatedText text="Privacy Policy" />
@@ -237,7 +237,7 @@ export default function Footer() {
                 alt="Back to top"
               />
               <div className="mt-[2px]">
-                <AnimatedText text="Back to top" className="text-[12px] mobile:max-sm:text-[14px] text-[#CECECE]" />
+                <AnimatedText text="Back to top" className="text-[12px] mobile:max-sm:text-[14px] text-[#CECECE] inter tracking-wide" />
               </div>
             </div>
           </div>

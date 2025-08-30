@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
-import nextarrow from "../assets/nextarrow.webp";
-import previousarrow from "../assets/previousarrow.webp";
+import nextarrow from "../assets/nextarrow.svg";
+import previousarrow from "../assets/previousarrow.svg";
 import Ego from "../assets/Ego.webp";
 import oladimeji from "../assets/oladimeji.webp";
 import precious from "../assets/precious.webp";
@@ -14,7 +14,7 @@ import miracle from "../assets/miracle.webp";
 import chukwudi from "../assets/chukwudi.webp";
 import motunrayo from "../assets/motunrayo.webp";
 import marvelous from "../assets/marvelous.webp";
-import linkedin from "../assets/linkedin.webp";
+import linkedin from "../assets/linkedin.svg";
 
 
 

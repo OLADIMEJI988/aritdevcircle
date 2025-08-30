@@ -25,7 +25,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
               className="flex items-center justify-center"
             >
               <img
-                className="h-[8px] w-[14px]"
+                className="h-4"
                 src={arrowUp}
                 alt="collapse"
               />
@@ -38,7 +38,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
               className="flex items-center justify-center"
             >
               <img
-                className="h-[8px] w-[14px]"
+                className="h-4"
                 src={arrowDown}
                 alt="expand"
               />

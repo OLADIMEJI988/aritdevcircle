@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import queenarit from "../assets/queenarit.webp";
-import arrow from "../assets/arrow-right.webp";
+import arrow from "../assets/arrow-right.svg";
 
 export default function Section() {
   const ref = useRef(null);
@@ -157,14 +157,13 @@ export default function Section() {
                 className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect 
                             transition text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
                             mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold 
-                            hover:opacity-90 items-center mobile:max-xxm:gap-3 xxm:max-lg:gap-4 
-                            lg:gap-4 inline-flex w-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
+                            hover:opacity-90 items-center gap-3 inline-flex w-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
                 >
                 <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] text-white">
                     Click here to Join
                 </p>
                 <div className="mt-[2px] bg-white p-[5px] xl:p-[6px] rounded-full">
-                    <img className="xxm:max-lg:h-7 xl:h-6" src={arrow} alt="arrow" />
+                    <img className="h-6" src={arrow} alt="arrow" />
                 </div>
           </motion.div>
 

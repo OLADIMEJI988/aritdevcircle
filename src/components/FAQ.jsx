@@ -4,8 +4,8 @@ import faqglow from "../assets/faqglow.webp";
 import mobileglow from "../assets/mobilesideglow.webp";
 import desktopline from "../assets/desktopline.webp";
 import mobileline from "../assets/mobileline.webp";
-import arrowUp from "../assets/arrowup.webp";
-import arrowDown from "../assets/arrowdown.webp";
+import arrowUp from "../assets/arrowup.svg";
+import arrowDown from "../assets/arrowdown.svg";
 import Questions from "./Questions";
 
 export default function FAQ() {
