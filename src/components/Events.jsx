@@ -75,7 +75,7 @@ export default function Events() {
   return (
     <div
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full h-[780px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
+                 mobile:max-lg:h-full h-[780px] lg:h-[820px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
                  mobile:max-ssm:pb-60 ssm:max-lg:pb-64 lg:-mb-10"
       ref={ref}
     >
@@ -121,7 +121,7 @@ export default function Events() {
         animate={inView ? "visible" : "hidden"}
         className="text-white tracking-wide relative px-[4vw] z-20 inter"
       >
-        <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl font-semibold tracking-wide">
+        <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wide">
           Examples Of{" "}
           <span className="text-[#fc4f7b]">Past Circle</span> Events
         </p>
@@ -133,7 +133,7 @@ export default function Events() {
             ssm:max-mdxl:grid-cols-2 
             mdxl:max-lg:grid-cols-3 
             lg:grid-cols-4 
-            mt-8
+            mt-8 lg:mt-9
             mobile:max-ssm:gap-6 
             ssm:max-blg:gap-[14px] blg:max-xl:gap-4 xl:gap-5 
             relative z-20">

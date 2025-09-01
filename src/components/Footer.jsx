@@ -34,7 +34,7 @@ const sentence = {
   const AnimatedText = ({ text, highlight, className = "", delayIndex = 0 }) => {
     return (
       <motion.p
-        className={`overflow-hidden ${className}`}
+        className={`overflow-hidden pb-1 lg:pb-2 ${className}`}
         variants={sentence}
         custom={delayIndex}
         initial="hidden"
@@ -77,7 +77,7 @@ const item = {
 };
 
 export default function Footer() {
-    // helper function to handle smooth scroll with offset
+    // helper function to handle smooth scroll
     const handleScroll = (id, offset = -20) => {
       const el = document.getElementById(id);
       if (el) {
@@ -136,7 +136,8 @@ export default function Footer() {
   
         {/* Text + CTA */}
         <div className="relative z-40 text-white mobile:max-ssm:mt-[150px] mt-[180px] md:mt-[242px] text-center px-4">
-          <div className="space-y-2 mobile:max-ssm:hidden ssm:text-3xl lg:text-4xl font-medium">
+          {/* Desktop Text view */}
+          <div className="space-y-[6px] mobile:max-ssm:hidden ssm:text-3xl lg:text-5xl font-medium">
             <AnimatedText
               text="Join our community of 1000+ "
               highlight={{ start: 21, end: 30 }}
@@ -144,17 +145,18 @@ export default function Footer() {
             <AnimatedText text="techies who are strategically moving" />
             <AnimatedText text="from learning to earning!" />
           </div>
+          
+          {/* Mobile Text view */}
+          <div className="space-y-[3px] ssm:hidden inter tracking-wide text-[27px] mt-2 font-medium text-center">
+            <AnimatedText text="Join our community of" delayIndex={0} />
 
-          <div className="space-y-1 ssm:hidden inter tracking-wide text-[27px] mt-2 font-medium text-center">
-                <AnimatedText text="Join our community of" delayIndex={0} />
+            <div className="flex items-center justify-center gap-2">
+              <AnimatedText text="1000+" className="text-[#fc4f7b]" delayIndex={1} />
+              <AnimatedText text="techies who are" delayIndex={2} />
+            </div>
 
-                <div className="flex items-center justify-center gap-2">
-                    <AnimatedText text="1000+" className="text-[#fc4f7b]" delayIndex={1} />
-                    <AnimatedText text="techies who are" delayIndex={2} />
-                </div>
-
-                <AnimatedText text="strategically moving" delayIndex={3} />
-                <AnimatedText text="from learning to earning!" delayIndex={4} />
+            <AnimatedText text="strategically moving" delayIndex={3} />
+            <AnimatedText text="from learning to earning!" delayIndex={4} />
           </div>
   
           {/* CTA Button */}
@@ -166,7 +168,7 @@ export default function Footer() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.8, ease: [0.25, 1, 0.5, 1] }}
           >
-            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[16px] xl:text-[19px] inter tracking-wide">Join the Circle Now</p>
+            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[19px] xl:text-[19px] inter tracking-wide">Join the Circle Now</p>
             <div className="bg-white p-[5px] xl:p-[6px] rounded-full">
               <img className="h-6" src={arrow} alt="arrow" />
             </div>
@@ -190,7 +192,7 @@ export default function Footer() {
             </div>
   
             {/* Nav links (with scroll functionality restored) */}
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-sm:mt-1 mobile:max-sm:text-[16px] text-[12px] sm:text-[13px] tracking-wider inter text-[#CECECE]">
+            <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-sm:mt-1 mobile:max-sm:text-[16px] text-[12px] sm:text-[13px] lg:text-[15px] tracking-wider inter text-[#CECECE]">
               <div onClick={() => handleScroll("about-section", -20)} className="relative cursor-pointer group">
                 <AnimatedText text="About" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
@@ -222,7 +224,7 @@ export default function Footer() {
   
           <div className="px-4 sm:px-8 lg:px-12 mt-2 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-0">
             {/* copyright */}
-            <div className="text-[#CECECE] mobile:max-sm:opacity-65 flex flex-wrap text-[10px] sm:text-[12px] tracking-wide gap-2 justify-center inter">
+            <div className="text-[#CECECE] opacity-65 flex flex-wrap text-[10px] sm:text-[12px] tracking-wide gap-2 justify-center inter">
               <AnimatedText text="© 2025 Queen Arit Circle." />
               <AnimatedText text="All Rights Reserved." />
               <AnimatedText text="Privacy Policy" />

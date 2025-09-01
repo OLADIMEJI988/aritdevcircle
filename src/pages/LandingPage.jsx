@@ -80,7 +80,7 @@ export default function LandingPage() {
             </button>
 
             {/* Desktop Menu */}
-            <div className="hidden lg:flex gap-7 xl:gap-10 text-sm lg:text-[15px] xl:text-[19px] items-center">
+            <div className="hidden lg:flex gap-7 xl:gap-10 text-sm lg:text-[15px] xl:text-[19px] items-center tracking-wide">
               {["About", "Mentorship", "Testimonials", "Programmes", "FAQ"].map(
                 (item, idx) => (
                   <p
@@ -99,7 +99,7 @@ export default function LandingPage() {
                   </p>
                 )
               )}
-              <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
+              <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center tracking-wide py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
                 Join it’s Free
               </button>
             </div>
@@ -117,7 +117,7 @@ export default function LandingPage() {
                 className="lg:hidden absolute left-0 w-full bg-[#0e0e0e] shadow-lg z-40"
                 style={{ willChange: "transform, opacity" }}
               >
-                <div className="flex flex-col gap-5 text-[20px] text-center py-6">
+                <div className="flex flex-col gap-5 text-[20px] text-center py-6 tracking-wide">
                   {[
                     { name: "About", target: "about-section" },
                     { name: "Mentorship", target: "offer-section" },
@@ -136,7 +136,7 @@ export default function LandingPage() {
                     </ScrollLink>
                   ))}
 
-                  <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold hover:opacity-90 transition mx-auto">
+                  <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold tracking-wide hover:opacity-90 transition mx-auto">
                     Join it’s Free
                   </button>
                 </div>
@@ -262,7 +262,7 @@ export default function LandingPage() {
               transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
               style={{ willChange: "transform, opacity" }}
             >
-              <p className="text-lg">Join the Circle Now</p>
+              <p className="text-lg tracking-wide">Join the Circle Now</p>
               <div onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-white p-[5px] rounded-full">
                 <img className="h-6" src={arrow} alt="arrow" />
               </div>
@@ -301,7 +301,7 @@ export default function LandingPage() {
         <About />
       </div>
 
-      <div id="events-section" className="scroll-mt-[80px]">
+      <div id="events-section" className="">
         <Events />
       </div>
 

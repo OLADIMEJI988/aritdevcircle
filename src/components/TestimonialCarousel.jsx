@@ -211,7 +211,7 @@ export default function TestimonialCarousel() {
         initial="hidden"
         animate={isInView ? "visible" : "hidden"}
         variants={textVariants}
-        className="text-center tracking-wide font-semibold inter mb-8 mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl"
+        className="text-center tracking-wide font-semibold inter mb-8 mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl lg:space-y-2"
       >
         <p>Circle Members Are</p>
         <p className="text-[#FA3E67]">Winning!</p>

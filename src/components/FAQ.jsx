@@ -84,8 +84,8 @@ function FAQHeader() {
       transition={{ duration: 0.6, ease: "easeOut" }}
       className="mb-8 font-semibold text-center px-4 md:px-10 lg:px-20"
     >
-      <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl">
-        Frequently <span className="text-[#FA3E67]">Asked</span> Questions
+      <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl tracking-wide">
+        Frequently <span className="text-[#FA3E67]">Asked</span> Questions (FAQs)
       </p>
     </motion.div>
   );
