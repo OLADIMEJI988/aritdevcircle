@@ -24,8 +24,8 @@ export default function Section() {
     <div
       ref={ref}
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
-                 mobile:max-lg:pb-28 lg:pb-20"
+                 mobile:max-lg:h-full mobile:max-xxm:pt-[45px] xxm:max-lg:pt-16 lg:pt-10 
+                 mobile:max-lg:pb-16 lg:pb-12"
     >
      {/* Top Gradient Overlay */}
     <div className="absolute top-0 left-0 w-full h-[29px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
@@ -68,20 +68,9 @@ export default function Section() {
           {" "}Welcome
         </motion.p>
 
-        {/* <motion.p
-          variants={fadeUp}
-          initial="hidden"
-          animate={isInView ? "show" : "hidden"}
-          custom={1}
-          className="xxm:hidden text-[#fc4f7b] -my-2 mobile:max-xxm:text-[42px] 
-                     px-[15px] xxm:max-xsm:text-4xl xsm:text-4xl font-semibold inter"
-        >
-          Queen's 
-        </motion.p> */}
       </div>
 
-      <div className="flex mobile:max-lg:flex-col mobile:max-lg:items-center justify-center">
-        {/* Image */}
+      <div className="flex mobile:max-lg:flex-col items-center justify-center">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -108,7 +97,7 @@ export default function Section() {
             A <span className="text-[#fc4f7b]">Queen's</span> Welcome
           </motion.p>
 
-          <div className="text-white text-[17px] leading-7 mobile:max-lg:mx-[5vw] mobile:max-lg:-mt-9">
+          <div className="text-white text-[18px] leading-7 mobile:max-lg:mx-[5vw] mobile:max-lg:-mt-9">
             <motion.p
               variants={fadeUp}
               initial="hidden"
@@ -116,11 +105,7 @@ export default function Section() {
               custom={4}
               className="my-5"
             >
-              Breaking into tech is exciting, but the path from learning to
-              earning can be filled with challenges. Our community exists to
-              equip you with the skills that truly move your career forward from
-              effective interviewing and collaboration to storytelling, personal
-              branding, and more.
+              Learning tech is one thing; earning with it is another. That leap from skills to income can feel tough, but you don’t have to figure it out alone.
             </motion.p>
 
             <motion.p
@@ -130,13 +115,10 @@ export default function Section() {
               custom={5}
               className="mb-5"
             >
-              We welcome early-career and mid-level professionals across fields
-              like software development, design, product management, data,
-              cybersecurity, virtual assistance, and more. Even beginners still
-              learning the basics will find a place here.
+              In the Circle, you’ll find guidance, real-world practice, and a supportive community all focused on helping you turn what you’ve learned into opportunities, confidence, and paid work. You belong here, and we’re excited to walk this journey with you!
             </motion.p>
 
-            <motion.p
+            {/* <motion.p
               variants={fadeUp}
               initial="hidden"
               animate={isInView ? "show" : "hidden"}
@@ -145,7 +127,7 @@ export default function Section() {
               Together, we’re building an empowering space where tech
               professionals sharpen skills, gain confidence and transition
               successfully into rewarding careers.
-            </motion.p>
+            </motion.p> */}
           </div>
 
           {/* Button */}
@@ -157,7 +139,7 @@ export default function Section() {
                 className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect 
                             transition text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
                             mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold 
-                            hover:opacity-90 items-center gap-3 inline-flex w-auto mobile:max-lg:mt-8 lg:mt-6 xl:mt-8"
+                            hover:opacity-90 items-center gap-3 inline-flex w-auto mobile:max-lg:mt-4 lg:mt-4 xl:mt-5"
                 >
                 <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[19px] tracking-wide xl:text-[19px] text-white">
                     Click here to Join

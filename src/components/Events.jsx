@@ -123,7 +123,7 @@ export default function Events() {
       >
         <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wide">
           Examples Of{" "}
-          <span className="text-[#fc4f7b]">Past Circle</span> Events
+          <span className="text-[#fc4f7b]">Circle</span> Events
         </p>
       </motion.div>
 
