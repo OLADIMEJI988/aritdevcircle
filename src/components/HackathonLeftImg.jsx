@@ -11,21 +11,10 @@ import rainbowimg from "../assets/rainbowimg.png";
 import dreadsguy from "../assets/dreadsguy.png";
 import womanonblack from "../assets/womanonblack.png";
 
-export default function HackathonLeftImg() {
-  const nodes = [
-    rainbowimg,
-    brownguy,
-    greenimg,
-    browngirl,
-    womanonblack,
-    github,
-    java,
-    dreadsguy,
-    img31,
-  ];
 
+export default function HackathonLeftImg() {
   const containerRef = useRef(null);
-  const nodeRefs = nodes.map(() => useRef(null));
+  const nodeRefs = IMG_SRCS.map(() => useRef(null));
 
   useNodeAnimation(containerRef, nodeRefs);
 
@@ -50,7 +39,7 @@ export default function HackathonLeftImg() {
         <path d="M218 288C325.76 288 343.847 384 451.607 384" stroke="url(#paint7_linear_639_595)" strokeWidth="4" strokeLinecap="round" strokeLinejoin="bevel"/>
 
         {/* Nodes */}
-        {nodes.map((src, i) => (
+        {IMG_SRCS.map((src, i) => (
           <image
             key={i}
             ref={nodeRefs[i]}
@@ -123,3 +112,16 @@ export default function HackathonLeftImg() {
     </div>
   );
 }
+
+
+const IMG_SRCS = [
+  rainbowimg,
+  brownguy,
+  greenimg,
+  browngirl,
+  womanonblack,
+  github,
+  java,
+  dreadsguy,
+  img31,
+];

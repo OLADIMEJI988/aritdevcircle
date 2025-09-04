@@ -12,20 +12,9 @@ import figma from "../assets/figma.png";
 import womanongrey from "../assets/womanongrey.png";
 
 export default function HackathonRightImg() {
-  const nodes = [
-    react,
-    penguin,
-    figma,
-    smilingman,
-    womanongrey,
-    multicoloredbox,
-    multicolorimg,
-    smilingwoman,
-    python,
-  ];
 
   const containerRef = useRef(null);
-  const nodeRefs = nodes.map(() => useRef(null));
+  const nodeRefs = IMG_SRCS.map(() => useRef(null));
 
   useNodeAnimation(containerRef, nodeRefs);
 
@@ -50,7 +39,7 @@ export default function HackathonRightImg() {
         <path d="M198 499.241C306.147 492.955 261.289 284.953 328.361 293.241" stroke="url(#paint7_linear_657_595)" strokeOpacity="0.6" strokeWidth="4" strokeLinecap="round" strokeLinejoin="bevel" />
 
         {/* Nodes */}
-        {nodes.map((src, i) => (
+        {IMG_SRCS.map((src, i) => (
           <image
             key={i}
             ref={nodeRefs[i]}
@@ -123,3 +112,17 @@ export default function HackathonRightImg() {
     </div>
   );
 }
+
+
+
+const IMG_SRCS = [
+    react,
+    penguin,
+    figma,
+    smilingman,
+    womanongrey,
+    multicoloredbox,
+    multicolorimg,
+    smilingwoman,
+    python,
+  ];
