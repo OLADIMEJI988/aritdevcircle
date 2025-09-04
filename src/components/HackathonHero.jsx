@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 import flash from "../assets/flash.svg";
@@ -22,13 +22,7 @@ export default function HackathonHero() {
         {/* Center Content */}
         <div className="mobile:max-lg:order-2 text-center flex flex-col items-center justify-center">
           {/* Badge */}
-          <div
-              // initial={{ opacity: 0, y: -10 }}
-              // animate={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-              // style={{ willChange: "transform, opacity" }}
-            className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mobile:max-md:-mt-[5px] md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition z-20"
-          >
+          <div className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mobile:max-md:-mt-[5px] md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition z-20" >
             <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
               <img src={flash} alt="lightening img" className="h-[19px]" />
               <p className="text-white text-[16px] tracking-wide">Are you ready?</p>
@@ -117,8 +111,6 @@ export default function HackathonHero() {
             </div>
           </motion.button>
         </div>
-
-        {/* Right image */}
 
         <HackathonRightImg />
 

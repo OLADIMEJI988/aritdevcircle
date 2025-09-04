@@ -1,16 +1,10 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
-import flash from "../assets/flash.svg";
 import Logo from "../assets/QueenAritCircleLogo.webp";
 import glow from "../assets/inner glow.webp";
 import mobileglow from "../assets/inner glow mobile.webp";
-import arrow from "../assets/arrow-right.svg";
-import leftimg from "../assets/Group left.webp";
-import rightimg from "../assets/Group right.webp";
-import xsmobiletopimg from "../assets/new group image 4.webp";
-import xsmobilebottomimg from "../assets/new group image.webp";
 
 import './LandingPage.css'
 import Offer from "../components/Offer";
@@ -23,13 +17,9 @@ import RegularHero from "../components/RegularHero";
 import HackathonHero from "../components/HackathonHero";
 
 export default function LandingPage() {
-  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
-  const heading = "FROM LEARNING".split(" ");
-  const earn = "TO EARNING!".split(" ");
 
-  // maps menu label -> id used on page
   const sectionIdFor = (label) => {
     switch (label) {
       case "About":
@@ -39,9 +29,9 @@ export default function LandingPage() {
       case "Programmes":
         return "events-section";
       case "Testimonials":
-        return "testimonials"; // placeholder
+        return "testimonials"; 
       case "FAQ":
-        return "faq"; // placeholder
+        return "faq"; 
       default:
         return "";
     }
