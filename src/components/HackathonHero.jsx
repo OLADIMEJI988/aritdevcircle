@@ -1,5 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 import flash from "../assets/flash.svg";
 import arrow from "../assets/arrow-right.svg";
@@ -8,6 +9,7 @@ import HackathonLeftImg from "./HackathonLeftImg";
 
 
 export default function HackathonHero() {
+  const navigate = useNavigate();
 
   const heading = "2025 OCTOBER".split(" ");
   const earn = "HACKATHON".split(" ");
@@ -97,7 +99,7 @@ export default function HackathonHero() {
 
           {/* CTA Button */}
           <motion.button
-            onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
+            onClick={() => navigate("/hackathon")}
             className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] transition text-white mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
                           mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold hover:opacity-90 flex items-center gap-3 mx-auto mt-4 lg:mt-7"
             initial={{ opacity: 0, y: 25 }}
@@ -106,7 +108,7 @@ export default function HackathonHero() {
             style={{ willChange: "transform, opacity" }}
           >
             <p className="text-lg tracking-wide">Register Now</p>
-            <div onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-white p-[5px] rounded-full">
+            <div className="bg-white p-[5px] rounded-full">
               <img className="h-6" src={arrow} alt="arrow" />
             </div>
           </motion.button>
