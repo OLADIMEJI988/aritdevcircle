@@ -283,14 +283,14 @@ export default function HackathonPage() {
                 </div>
 
                 <div className="text-start w-full lg:w-[800px] mt-6 lg:mt-0">
-                  <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide">
                     The purpose of the hackathon is to bridge the gap between theory
                     and practice. Many early career professionals know how to code,
                     design, or manage but haven't yet worked in a fast-paced,
                     cross-functional team environment where real products are built.
                     By participating you will:
                   </p>
-                  <div className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide mt-5 space-y-3">
+                  <div className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide mt-5 space-y-3">
                     <p className="flex">
                       <span className="-mt-[5px] mr-2 font-bold">.</span>
                       Collaborate with developers, designers and product managers in
