@@ -46,7 +46,7 @@ export default function AwardsAndReg() {
               transition={{ delay: 0.4, duration: 0.6 }}
             >
               <p className="mt-5 mb-4">
-                Note: projects will be evaluated based on
+                Projects will be evaluated according to:
               </p>
 
               <p className="flex my-[10px]">
@@ -66,7 +66,7 @@ export default function AwardsAndReg() {
 
               <p className="flex">
                 <span className="-mt-[5px] mr-2 font-extrabold">.</span>
-                Team Collaboration and process.
+                Team Collaboration and Process.
               </p>
             </motion.div>
           </motion.div>
