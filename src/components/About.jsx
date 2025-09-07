@@ -33,21 +33,6 @@ export default function Section() {
     {/* Bottom Gradient Overlay */}
     <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
-
-      {/* Desktop Glow */}
-      {/* <div
-        className="mobile:max-lg:hidden absolute top-0 left-0 translate-x-[650px] h-[700px] w-full 
-                   bg-no-repeat bg-center bg-cover pointer-events-none z-0"
-        style={{ backgroundImage: `url(${glow})` }}
-      /> */}
-
-      {/* Mobile Glow */}
-      {/* <div
-        className="lg:hidden absolute top-0 left-0 h-full w-full 
-                   bg-no-repeat bg-center bg-cover pointer-events-none z-0"
-        style={{ backgroundImage: `url(${mobileglow})` }}
-      /> */}
-
       {/* Content */}
 
       {/* Mobile View */}
@@ -118,16 +103,6 @@ export default function Section() {
               In the Circle, you’ll find guidance, real-world practice, and a supportive community all focused on helping you turn what you’ve learned into opportunities, confidence, and paid work. You belong here, and we’re excited to walk this journey with you!
             </motion.p>
 
-            {/* <motion.p
-              variants={fadeUp}
-              initial="hidden"
-              animate={isInView ? "show" : "hidden"}
-              custom={6}
-            >
-              Together, we’re building an empowering space where tech
-              professionals sharpen skills, gain confidence and transition
-              successfully into rewarding careers.
-            </motion.p> */}
           </div>
 
           {/* Button */}

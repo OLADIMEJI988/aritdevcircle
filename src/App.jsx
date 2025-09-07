@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import './index.css' 
 import LandingPage from './pages/LandingPage';
-import CardSlider from "./components/DateTimeline";
 import HackathonPage from "./pages/HackathonPage";
 import ScrollToTop from "./components/ScrollToTop";
 

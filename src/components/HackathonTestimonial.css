@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+  
 * {
     margin: 0;
 }
@@ -13,7 +14,7 @@
     max-width: 1536px;
     margin-inline: auto;
     position: relative;
-    height: 190px;
+    height: 235px;
     margin-top: 1rem;
     overflow: hidden;
     mask-image: linear-gradient(
@@ -25,7 +26,6 @@
     );
 }
 
-/* Normal scrolling */
 @keyframes scrollleft {
     to {
         left: -350px;
@@ -33,11 +33,11 @@
 }
 
 .item {
-    width: 300px;
-    height: 190px;
+    width: 320px;
+    height: 235px;
     border-radius: 6px;
     position: absolute;
-    left: max(calc(255px * 6), 100%);
+    left: max(calc(275px * 6), 100%);
     animation: scrollleft 30s linear infinite;
 }
 

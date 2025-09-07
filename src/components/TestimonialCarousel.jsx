@@ -153,14 +153,13 @@ const testimonials = [
 
 ];
 
-// Animation variants
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: { 
     opacity: 1, 
     y: 0, 
     transition: { 
-      staggerChildren: 0.25, // children animate one after another
+      staggerChildren: 0.25, 
       duration: 0.5 
     } 
   },
@@ -191,7 +190,6 @@ export default function TestimonialCarousel() {
     setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
   };
 
-  // Get left, center, right cards
   const leftIndex = (current - 1 + testimonials.length) % testimonials.length;
   const rightIndex = (current + 1) % testimonials.length;
 
@@ -274,7 +272,6 @@ export default function TestimonialCarousel() {
                   </motion.div>
                 ) : (
 
-                  // 🔹 Side cards stay static
                   <div
                     key={t.id}
                     className={`text-gray-400 relative z-10 rounded-2xl bg-[#1D1D1D] text-start mobile:max-xxm:px-5 px-7 py-6 shadow-xl flex flex-col justify-between mobile:max-mmm:w-[330px] mmm:max-xxm:w-[350px] xxm:max-blm:w-[385px] blm:max-xsm:w-[420px] xsm:max-lg:w-[460px] lg:w-[480px] h-auto`}

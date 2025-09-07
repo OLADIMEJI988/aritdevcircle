@@ -10,6 +10,8 @@ import twitter from "../assets/twitter.svg";
 import instagram from "../assets/instagram.svg";
 import Logo from "../assets/QueenAritCircleLogo.webp";
 import backtotop from "../assets/backtotopimg.svg";
+import ApplyCta from "./ApplyCta";
+import ApplyNow from "./ApplyNow";
 
 const sentence = {
     hidden: { opacity: 1 },
@@ -17,7 +19,7 @@ const sentence = {
       opacity: 1,
       transition: {
         staggerChildren: 0.05, 
-        delayChildren: i * 0.3,
+        delayChildren: i * 0.3, 
       },
     }),
   };
@@ -76,7 +78,21 @@ const item = {
     show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
 
-export default function Footer() {
+const containerVariants = {
+    hidden: {},
+    visible: {
+      transition: {
+        staggerChildren: 0.3,
+      },
+    },
+  };
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+  };
+
+export default function HackathonFooter() {
     const handleScroll = (id, offset = -20) => {
       const el = document.getElementById(id);
       if (el) {
@@ -86,7 +102,7 @@ export default function Footer() {
     };
   
     return (
-      <div className="relative bg-[#0E0E0E] h-[800px] overflow-hidden flex flex-col justify-between">
+      <div className="relative bg-[#0E0E0E] mobile:max-lg:h-[91pc] lg:h-[950px] overflow-hidden flex flex-col justify-between">
         {/* Top Gradient Overlay */}
         <div className="absolute top-0 left-0 w-full h-[80px] md:h-[100px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-30" />
   
@@ -106,75 +122,82 @@ export default function Footer() {
           src={innerglow}
           alt="Glow"
         />
-
-        <div className="absolute mobile:max-ssm:hidden inset-0 pt-6 md:pt-11 flex justify-center z-30">
-          <motion.img
-            src={floatingimgs}
-            alt="Floating"
-            className="w-auto h-[100px] sm:h-[120px] md:h-[140px] object-contain"
-            initial={{ opacity: 0, y: 40, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          />
-        </div>
-
-        <div className="absolute ssm:hidden inset-0 pt-8 flex justify-center z-30">
-          <motion.img
-            src={mobilefloatingimgs}
-            alt="Floating"
-            className="w-auto h-[100px] sm:h-[120px] md:h-[140px] object-contain"
-            initial={{ opacity: 0, y: 40, scale: 0.9 }}
-            whileInView={{ opacity: 1, y: 0, scale: 1 }}
-            transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.3 }}
-          />
+ 
+        <div className="absolute inset-0 pt-6 md:pt-11 flex justify-center z-30">
+         <div className="space-y-[6px] text-2xl lg:text-5xl font-medium">
+            <AnimatedText
+              text="Want To Know What's Next? "
+              highlight={{ start: 12, end: 30 }}
+            />
+          </div>
         </div>
  
   
         {/* Text + CTA */}
-        <div className="relative z-40 text-white mobile:max-ssm:mt-[150px] mt-[180px] md:mt-[242px] text-center px-4">
+        <div className="relative z-40 text-white mobile:max-ssm:mt-[90px] mt-[140px] text-center px-4">
           {/* Desktop Text view */}
-          <div className="space-y-[6px] mobile:max-ssm:hidden ssm:text-3xl lg:text-5xl font-medium">
+          <div className="space-y-[6px] mobile:max-lg:hidden tracking-wide text-xl font-medium">
             <AnimatedText
-              text="Join our community of 1000+ "
-              highlight={{ start: 21, end: 30 }}
+              text="Click the link that matches your tech career path and register to join "
+              highlight={{ start: 20, end: 28 }}
             />
-            <AnimatedText text="techies who are strategically moving" />
-            <AnimatedText text="from learning to earning!" />
+            <AnimatedText text="the challenge. All further updates will be shared directly with" />
+            <AnimatedText text="registered participants." />
           </div>
-          
+
           {/* Mobile Text view */}
-          <div className="space-y-[3px] ssm:hidden inter tracking-wide text-[27px] mt-2 font-medium text-center">
-            <AnimatedText text="Join our community of" delayIndex={0} />
-
-            <div className="flex items-center justify-center gap-2">
-              <AnimatedText text="1000+" className="text-[#fc4f7b]" delayIndex={1} />
-              <AnimatedText text="techies who are" delayIndex={2} />
-            </div>
-
-            <AnimatedText text="strategically moving" delayIndex={3} />
-            <AnimatedText text="from learning to earning!" delayIndex={4} />
+          <div className="space-y-[6px] lg:hidden tracking-wide text-xl font-medium">
+            <AnimatedText
+              text="Click the link that matches your"
+              highlight={{ start: 20, end: 28 }}
+            />
+            <AnimatedText
+              text="tech career path and register to join "
+            />
+            <AnimatedText text="the challenge. All further updates" />
+            <AnimatedText text="will be shared directly with" />
+            <AnimatedText text="registered participants." />
           </div>
-  
-          {/* CTA Button */}
-          <motion.button
-            onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
-            className="bg-[#fc4f7b] text-white mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
-                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold flex items-center gap-3 mx-auto hover:shadow-[0_0_7px_#FF4F76] transition hover:opacity-90 mt-6 sm:mt-8 text-sm sm:text-base"
-            initial={{ opacity: 0, y: 25 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 1.8, ease: [0.25, 1, 0.5, 1] }}
-          >
-            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[19px] xl:text-[19px] inter tracking-wide">Join the Circle Now</p>
-            <div className="bg-white p-[5px] xl:p-[6px] rounded-full">
-              <img className="h-6" src={arrow} alt="arrow" />
-            </div>
-          </motion.button>
+
+          <motion.div
+                className="flex mobile:max-lg:flex-col justify-center mt-10 gap-6 mobile:max-lg:gap-7"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }} 
+            >
+                <motion.div variants={itemVariants}>
+                    <ApplyCta
+                    title="Developers"
+                    subtext="Developers looking to gain real project experience"
+                    ctatext="Join as a developer"
+                    link="https://forms.gle/KQL8Jx6qf89Xtart9"
+                    />
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
+                    <ApplyCta
+                    title="Designer"
+                    subtext="Designers eager to practice UI/UX in live collaboration."
+                    ctatext="Join as a designer"
+                    link="https://forms.gle/VC3ydM9DeYqp6tWd8"
+                    />
+                </motion.div>
+
+                <motion.div variants={itemVariants}>
+                    <ApplyCta
+                    title="Product Manager"
+                    subtext="Product managers that wants to sharpen their leadership skills."
+                    ctatext="Join as a manager"
+                    link="https://forms.gle/TczgYJCTJf4MF6Jh6"
+                    />
+                </motion.div>
+          </motion.div>
+
         </div>
   
         {/* Bottom section */}
-        <div className="absolute bottom-2 inset-x-0 z-50">
+        <div className="absolute bottom-1 inset-x-0 z-50">
           <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 lg:px-12 gap-4 sm:gap-0">
             {/* Social icons */}
             <div className="flex mobile:max-ssm:gap-4 ssm:gap-3">
@@ -190,23 +213,23 @@ export default function Footer() {
             </div>
   
             <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-sm:mt-1 mobile:max-sm:text-[16px] text-[12px] sm:text-[13px] lg:text-[15px] tracking-wider inter text-[#CECECE]">
-              <div onClick={() => handleScroll("about-section", -20)} className="relative cursor-pointer group">
-                <AnimatedText text="About" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
+              <div onClick={() => handleScroll("dates", -20)} className="relative cursor-pointer group">
+                <AnimatedText text="Dates" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
               </div>
   
-              <div onClick={() => handleScroll("testimonials", -20)} className="relative cursor-pointer group">
-                <AnimatedText text="Testimonials" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
+              <div onClick={() => handleScroll("purpose", -20)} className="relative cursor-pointer group">
+                <AnimatedText text="Purpose" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
               </div>
   
-              <div onClick={() => handleScroll("events-section", -5)} className="relative cursor-pointer group">
-                <AnimatedText text="Programmes" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
+              <div onClick={() => handleScroll("testimonial", -5)} className="relative cursor-pointer group">
+                <AnimatedText text="Reviews" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
               </div>
   
-              <div onClick={() => handleScroll("faq", -10)} className="relative cursor-pointer group">
-                <AnimatedText text="FAQs" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
+              <div onClick={() => handleScroll("recognition", -10)} className="relative cursor-pointer group">
+                <AnimatedText text="Recognition" className="inline-block text-[#BBBABA] group-hover:text-white transition" />
                 <span className="absolute left-0 -bottom-[1px] w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
               </div>
             </div>
@@ -243,5 +266,5 @@ export default function Footer() {
         </div>
       </div>
     );
-  }
+}
   

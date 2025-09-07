@@ -1,21 +1,28 @@
-import React, { useEffect, useState, useMemo } from "react";
+import React, { useEffect, useState, useMemo, useRef } from "react";
 import open from "../assets/regstart.webp";
-import close from "../assets/regcloses.webp";
-import team from "../assets/team.webp";
 import orientation from "../assets/orientation.webp";
 import location from "../assets/location.svg";
-import routing from "../assets/routing.svg";
-import teamicon from "../assets/teamicon.svg";
 import sessionicon from "../assets/sessionicon.svg";
-import pplliftingtrophy from "../assets/pplliftingtrophy.png";
+import whocanjoinglow from "../assets/whocanjoinglow.webp";
 
 import { motion, useInView } from "framer-motion";
 
 const events = [
-  { title: "Developers", subtext: "Looking to gain real project experience", icon: location, image: open },
-  { title: "Designers", subtext: "Looking to gain real project experience", icon: routing, image: close },
-  { title: "Product Managers", subtext: "Looking to gain real project experience", icon: teamicon, image: team },
-  { title: "The Masses", subtext: "Irrespective of your role, all particpant will walk away with new skills, new connections and a real sense of what it feels lijke to ship software as a product.", icon: sessionicon, image: orientation },
+  {
+    title: (
+      <>
+        <span className="text-[#fc4f7b]">Early-Career</span> Developers, Designers or Product/Project Managers
+      </>
+    ),
+    icon: location,
+    image: open,
+  },
+  {
+    subtext:
+      "All participants will walk away with new skills, new connections and a real sense of what it feels like to ship software as a product!",
+    icon: sessionicon,
+    image: orientation,
+  },
 ];
 
 const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
@@ -31,13 +38,11 @@ const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
     }
   }, [ref, nextRef]);
 
-  const Icon = event.icon;
-
   return (
     <div className="relative flex items-start" ref={ref}>
       {/* Icon Node */}
       <div className="relative z-10 flex items-center justify-center w-10 h-10 bg-[#2D2D2D] rounded-xl">
-        <img src={Icon} className="w-5 h-5 object-contain" alt="" />
+        <img src={event.icon} className="w-5 h-5 object-contain" alt="" />
       </div>
 
       {/* Connector Line */}
@@ -57,8 +62,13 @@ const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="ml-6"
       >
-        <p className="text-xl mb-1 -mt-2">{event.title}</p>
-        <h3 className="text-sm font-normal max-w-[300px]">{event.subtext}</h3>
+        <p className="text-2xl max-w-[500px] mobile:max-lg:w-[300px] mb-1 -mt-5 leading-9">
+          {event.title}
+        </p>
+
+        <h3 className="text-sm font-normal max-w-[400px] mobile:max-lg:leading-6 mobile:max-lg:w-[300px]">
+          {event.subtext}
+        </h3>
       </motion.div>
     </div>
   );
@@ -66,41 +76,54 @@ const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
 
 export default function WhoCanJoin() {
   const refs = useMemo(() => events.map(() => React.createRef()), []);
+  const sectionRef = useRef(null);
+  const sectionInView = useInView(sectionRef, { once: true, margin: "-100px" });
 
   return (
-    <div className="mt-16 lg:mt-16 flex flex-col pb-20 pt-8">
-      <p className="text-4xl lg:text-5xl text-center px-4">
-        Who Can Join The <span className="text-[#fc4f7b]">Challenge!</span>
-      </p>
+    <motion.div
+      ref={sectionRef}
+      initial={{ opacity: 0, y: 50 }}
+      animate={sectionInView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative mt-16 lg:mt-[108px] flex flex-col pb-24 pt-14 items-center justify-center"
+      style={{
+        backgroundImage: `url(${whocanjoinglow})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* Top Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-[129px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
-      {/* Responsive layout */}
-      <div className="flex flex-col mx-auto max-w-[800px] lg:flex-row gap-10 lg:gap-3 mt-10 items-center">
-            {/* Left Image */}
-            <div className="w-[250px] h-[250px] md:w-[350px] md:h-[350px] lg:w-[450px] lg:h-[450px] flex-shrink-0">
-                <img
-                className="w-full h-full object-contain"
-                src={pplliftingtrophy}
-                alt=""
-                />
-            </div>
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
-            {/* Timeline */}
-            <div className="relative flex justify-center w-full max-w-lg">
-                <div className="tracking-wide font-normal flex flex-col space-y-8 md:space-y-12 text-start w-full">
-                {events.map((event, i) => (
-                    <TimelineItem
-                    key={i}
-                    event={event}
-                    isLast={i === events.length - 1}
-                    nextRef={i < events.length - 1 ? refs[i + 1] : null}
-                    ref={refs[i]}
-                    />
-                ))}
-                </div>
-            </div>
+      <motion.p
+        initial={{ opacity: 0, y: -20 }}
+        animate={sectionInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+        className="text-4xl lg:text-5xl text-center px-4 tracking-wide leading-snug relative z-10"
+      >
+        Who Can <span className="text-[#fc4f7b]">Participate?</span>
+      </motion.p>
+
+      <div className="flex flex-col mx-auto lg:max-w-[800px] lg:flex-row gap-10 lg:gap-3 mt-10 items-center relative z-10">
+        {/* Timeline */}
+        <div className="relative flex justify-center lg:ml-24 mt-5 w-full mobile:max-lg:px-[3px]">
+          <div className="tracking-wide font-normal flex flex-col space-y-14 text-start w-full">
+            {events.map((event, i) => (
+              <TimelineItem
+                key={i}
+                event={event}
+                isLast={i === events.length - 1}
+                nextRef={i < events.length - 1 ? refs[i + 1] : null}
+                ref={refs[i]}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-
-
-    </div>
+    </motion.div>
   );
 }

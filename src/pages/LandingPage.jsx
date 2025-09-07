@@ -19,7 +19,6 @@ import HackathonHero from "../components/HackathonHero";
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
 
-
   const sectionIdFor = (label) => {
     switch (label) {
       case "About":
@@ -83,6 +82,8 @@ export default function LandingPage() {
                       to={sectionIdFor(item)}
                       smooth={true}
                       duration={600}
+                      spy={true}
+                      offset={-80}
                       className="inline-block"
                     >
                       {item}
@@ -91,7 +92,10 @@ export default function LandingPage() {
                   </p>
                 )
               )}
-              <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center tracking-wide py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90">
+              <button 
+                onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} 
+                className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center tracking-wide py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90"
+              >
                 Join it’s Free
               </button>
             </div>
@@ -122,13 +126,18 @@ export default function LandingPage() {
                       to={link.target}
                       smooth={true}
                       duration={600}
+                      spy={true}
+                      offset={-80}
                       onClick={() => setIsOpen(false)}
                     >
                       <p className="hover:cursor-pointer">{link.name}</p>
                     </ScrollLink>
                   ))}
 
-                  <button onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold tracking-wide hover:opacity-90 transition mx-auto">
+                  <button 
+                    onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"} 
+                    className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold tracking-wide hover:opacity-90 transition mx-auto"
+                  >
                     Join it’s Free
                   </button>
                 </div>
@@ -137,16 +146,13 @@ export default function LandingPage() {
           </AnimatePresence>
         </header>
 
-        { /*Hero Sections */}
-
-        {/* <RegularHero /> */}
-
-        <HackathonHero />
+        {/* Hero Sections */}
         
+        {/* <RegularHero /> */}
+        <HackathonHero />
       </div>
 
-
-      {/* Sections with IDs - added scroll-mt so react-scroll and anchors land exactly where i want */}
+      {/* Sections with IDs */}
       <div id="offer-section" className="scroll-mt-[80px]">
         <Offer />
       </div>
@@ -155,7 +161,7 @@ export default function LandingPage() {
         <About />
       </div>
 
-      <div id="events-section" className="">
+      <div id="events-section">
         <Events />
       </div>
 
@@ -170,7 +176,6 @@ export default function LandingPage() {
       <div>
         <Footer />
       </div>
-
     </>
   );
 }

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useMemo } from "react";
+import React, { useMemo, useRef } from "react";
 import open from "../assets/regstart.webp";
 import close from "../assets/regcloses.webp";
 import team from "../assets/team.webp";
@@ -15,12 +15,10 @@ import notificationcircle from "../assets/notification-circle.svg";
 import notificationbing from "../assets/notification-bing.svg";
 import cpusetting from "../assets/cpu-setting.svg";
 import cup from "../assets/cup.svg";
-import semicircle from "../assets/semicircle.webp";
 import datesglow from "../assets/datesglow.png";
 
 import { motion, useInView } from "framer-motion";
 
-// Add an image for each event
 const events = [
   { date: "September 8th", title: "Registration Opens", icon: location, image: open },
   { date: "September 14th", title: "Registration Closes", icon: routing, image: close },
@@ -34,58 +32,19 @@ const events = [
 
 const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
   const inView = useInView(ref, { once: true, margin: "-100px" });
-  const [lineHeight, setLineHeight] = useState(0);
-  const [hovered, setHovered] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    if (ref?.current && nextRef?.current) {
-      const currentRect = ref.current.getBoundingClientRect();
-      const nextRect = nextRef.current.getBoundingClientRect();
-      const distance = nextRect.top - currentRect.top;
-      setLineHeight(distance);
-    }
-
-    // Detect screen size
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [ref, nextRef]);
-
-  const Icon = event.icon;
 
   return (
-    <div
-      className="relative flex items-start cursor-pointer"
-      ref={ref}
-      onMouseEnter={() => !isMobile && setHovered(true)}
-      onMouseLeave={() => !isMobile && setHovered(false)}
-    >
-      {/* Hovered Image Beside Node (Desktop only) */}
-      {!isMobile && hovered && (
-        <motion.img
-          src={event.image}
-          alt={event.title}
-          className="absolute right-[280px] -mt-10 -translate-y-1/2 
-                     w-full object-contain rounded-xl shadow-2xl z-50"
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -30 }}
-          transition={{ duration: 0.3 }}
-        />
-      )}
-
+    <div className="relative flex items-start cursor-pointer" ref={ref}>
       {/* Icon Node */}
-      <div className="relative z-10 flex items-center justify-center w-10 h-10 bg-[#2D2D2D] rounded-xl">
-        <img src={Icon} className="w-5 h-5 object-contain" alt="" />
+      <div className="relative z-10 flex items-center justify-center w-10 h-10 bg-[#2D2D2D] -mt-1 rounded-xl">
+        <img src={event.icon} className="w-5 h-5 object-contain" alt="" />
       </div>
 
       {/* Connector Line */}
       {!isLast && (
         <motion.div
           initial={{ height: 0 }}
-          animate={inView ? { height: lineHeight } : {}}
+          animate={inView ? { height: "100%" } : {}}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute left-5 top-10 w-[2px] bg-[#2D2D2D] origin-top"
         />
@@ -105,43 +64,75 @@ const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
   );
 });
 
-export default function DateTimeline() {
-  const refs = useMemo(() => events.map(() => React.createRef()), []);
+// Card for desktop layout
+const TimelineCard = ({ event }) => {
+  const ref = useRef(null);
+  const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <div className="relative min-h-screen mt-32 pt-5 lg:mt-32">
+    <motion.div
+      ref={ref}
+      initial={{ opacity: 0, y: 50 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="relative border border-[#fc4f7b] rounded-xl px-5 py-6 w-[220px] text-center shadow-md"
+    >
+      <p className="text-sm text-gray-300">{event.date}</p>
+      <h3 className="text-lg font-medium">{event.title}</h3>
+    </motion.div>
+  );
+};
+
+export default function DateTimeline() {
+  const refs = useMemo(() => events.map(() => React.createRef()), []);
+  const headingRef = useRef(null);
+  const headingInView = useInView(headingRef, { once: true, margin: "-100px" });
+
+  return (
+    <div className="relative mt-5 pt-5 lg:pt-10">
       <img className="absolute" src={datesglow} alt="" />
 
-      {/* Flex wrapper: column on mobile, row on desktop */}
-      <div className="flex flex-col md:flex-row items-center md:items-start justify-center lg:justify-between text-center md:text-left">
-        {/* Left side text */}
-        <p className="text-4xl tracking-wide md:text-5xl w-full md:w-[500px] px-4 mobile:max-lg:mb-12 mb-10 md:mb-0">
-          Important <span className="text-[#fc4f7b]">Dates</span>
-        </p>
+      <motion.p
+        ref={headingRef}
+        initial={{ opacity: 0, y: -30 }}
+        animate={headingInView ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="text-4xl tracking-wide md:text-5xl text-center mb-12"
+      >
+        Important <span className="text-[#fc4f7b]">Dates</span>
+      </motion.p>
 
-        {/* Right side timeline */}
-        <div className="relative flex justify-center w-full">
-          <div className="ml-[17vw] tracking-wide font-normal lg:-ml-40 flex flex-col space-y-12 md:space-y-16 text-start w-full md:w-auto">
-            {events.map((event, i) => (
-              <TimelineItem
-                key={i}
-                event={event}
-                isLast={i === events.length - 1}
-                nextRef={i < events.length - 1 ? refs[i + 1] : null}
-                ref={refs[i]}
-              />
-            ))}
-          </div>
+      {/* Mobile layout*/}
+      <div className="flex flex-col items-start justify-center mx-[10vw] xxm:mx-[14vw] space-y-12 lg:hidden px-6">
+        {events.map((event, i) => (
+          <TimelineItem
+            key={i}
+            event={event}
+            isLast={i === events.length - 1}
+            nextRef={i < events.length - 1 ? refs[i + 1] : null}
+            ref={refs[i]}
+          />
+        ))}
+      </div>
+
+      {/* Desktop layout */}
+      <div className="hidden lg:flex flex-col items-center relative">
+        <div className="flex items-center space-x-24">
+          <TimelineCard event={events[0]} />
+          <TimelineCard event={events[1]} />
+          <TimelineCard event={events[2]} />
         </div>
 
-        {/* Semicircle (responsive height only) */}
-        <img
-          src={semicircle}
-          className="absolute mobile:max-xxm:mt-[320px] xxm:max-lg:mt-56 right-0 top-1/2 -translate-y-1/2 
-                     h-[350px] xxm:h-[400px] sm:h-[400px] md:h-[700px] lg:h-[1000px] z-0"
-          alt=""
-        />
+        <div className="flex items-center my-12 space-x-24">
+          <TimelineCard event={events[3]} />
+          <TimelineCard event={events[4]} />
+          <TimelineCard event={events[5]} />
+        </div>
 
+        <div className="flex items-center space-x-24">
+          <TimelineCard event={events[6]} />
+          <TimelineCard event={events[7]} />
+        </div>
       </div>
     </div>
   );

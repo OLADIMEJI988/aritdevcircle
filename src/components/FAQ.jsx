@@ -71,7 +71,6 @@ export default function FAQ() {
   );
 }
 
-/* Title Animation */
 function FAQHeader() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -91,7 +90,6 @@ function FAQHeader() {
   );
 }
 
-/* Each Question Animates On Scroll */
 function FAQItem({ question, answer }) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });

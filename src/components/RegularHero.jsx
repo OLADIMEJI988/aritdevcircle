@@ -14,9 +14,8 @@ export default function RegularHero() {
 
   return (
     <div className="flex flex-col lg:flex-row items-center justify-center gap-9 lg:max-blg:gap-11 blg:max-xl:gap-20 mx-[15px] relative z-10">
-          {/* Left Image (mobile top image) */}
           <motion.div
-            className="flex justify-center items-center min-h-[170px] lg:min-h-0" // reserve space on mobile
+            className="flex justify-center items-center min-h-[170px] lg:min-h-0"
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 1.2, duration: 0.6, ease: [0.25, 1, 0.5, 1] }}
@@ -42,10 +41,6 @@ export default function RegularHero() {
           <div className="text-center flex flex-col items-center">
             {/* Badge */}
             <div
-              // initial={{ opacity: 0, y: -10 }}
-              // animate={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 0.5, ease: [0.25, 1, 0.5, 1] }}
-              // style={{ willChange: "transform, opacity" }}
               className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition"
             >
               <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
