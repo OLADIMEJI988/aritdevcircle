@@ -228,13 +228,15 @@ export default function HackathonPage() {
                   This is where you’ll find all the key dates, details, and updates
                   to guide you from registration all the way to the awards ceremony.
                 </p>
-                <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide mt-5 leading-relaxed lg:leading-8">
+                <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide mt-5 leading-relaxed lg:leading-8">
                   Our hackathon is designed to give early-career developers,
                   designers, and product managers the closest possible simulation of
-                  real-world software ideation, development, and deployment. If
-                  you’ve been looking for a way to sharpen your skills, collaborate
+                  real-world software ideation, development, and deployment.
+                </p>
+                <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide mt-5 leading-relaxed lg:leading-8">
+                  If you’ve been looking for a way to sharpen your skills, collaborate
                   in teams, and bring an app concept to life,{" "}
-                  <span className="text-[#fc4f7b]">This is it!</span>
+                  <span className="text-[#ff668d] font-bold">this is it!</span>
                 </p>
               </div>
             </motion.div>
@@ -281,14 +283,14 @@ export default function HackathonPage() {
                 </div>
 
                 <div className="text-start w-full lg:w-[800px] mt-6 lg:mt-0">
-                  <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide">
+                  <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide">
                     The purpose of the hackathon is to bridge the gap between theory
                     and practice. Many early career professionals know how to code,
                     design, or manage but haven't yet worked in a fast-paced,
                     cross-functional team environment where real products are built.
                     By participating you will:
                   </p>
-                  <div className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide mt-5 space-y-3">
+                  <div className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-thin tracking-wide mt-5 space-y-3">
                     <p className="flex">
                       <span className="-mt-[5px] mr-2 font-bold">.</span>
                       Collaborate with developers, designers and product managers in

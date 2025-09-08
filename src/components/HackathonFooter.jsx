@@ -126,8 +126,8 @@ export default function HackathonFooter() {
         <div className="absolute inset-0 pt-6 md:pt-11 flex justify-center z-30">
          <div className="space-y-[6px] text-2xl lg:text-5xl font-medium">
             <AnimatedText
-              text="Want To Know What's Next? "
-              highlight={{ start: 12, end: 30 }}
+              text="What Comes Next?"
+              highlight={{ start: 12, end: 16 }}
             />
           </div>
         </div>
@@ -138,10 +138,10 @@ export default function HackathonFooter() {
           {/* Desktop Text view */}
           <div className="space-y-[6px] mobile:max-lg:hidden tracking-wide text-xl font-medium">
             <AnimatedText
-              text="Click the link that matches your tech career path and register to join "
+              text="Click the link that matches your tech career path and apply to"
               highlight={{ start: 20, end: 28 }}
             />
-            <AnimatedText text="the challenge. All further updates will be shared directly with" />
+            <AnimatedText text="the hackathon. All further updates will be shared directly with" />
             <AnimatedText text="registered participants." />
           </div>
 
@@ -152,9 +152,9 @@ export default function HackathonFooter() {
               highlight={{ start: 20, end: 28 }}
             />
             <AnimatedText
-              text="tech career path and register to join "
+              text="tech career path and apply to "
             />
-            <AnimatedText text="the challenge. All further updates" />
+            <AnimatedText text="the hackathon. All further updates" />
             <AnimatedText text="will be shared directly with" />
             <AnimatedText text="registered participants." />
           </div>
@@ -168,28 +168,27 @@ export default function HackathonFooter() {
             >
                 <motion.div variants={itemVariants}>
                     <ApplyCta
-                    title="Developers"
-                    subtext="Developers looking to gain real project experience"
-                    ctatext="Join as a developer"
-                    link="https://forms.gle/KQL8Jx6qf89Xtart9"
+                        title="Developers"
+                        subtext="Gain real engineering experience"
+                        ctatext="Apply as Dev"
+                        link="https://forms.gle/KQL8Jx6qf89Xtart9"
                     />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
                     <ApplyCta
-                    title="Designer"
-                    subtext="Designers eager to practice UI/UX in live collaboration."
-                    ctatext="Join as a designer"
-                    link="https://forms.gle/VC3ydM9DeYqp6tWd8"
+                        title="Designers"
+                        subtext="Practice UI/UX in live collaboration."
+                        ctatext="Apply as Desginer"
+                        link="https://forms.gle/VC3ydM9DeYqp6tWd8"
                     />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
                     <ApplyCta
-                    title="Product Manager"
-                    subtext="Product managers that wants to sharpen their leadership skills."
-                    ctatext="Join as a manager"
-                    link="https://forms.gle/TczgYJCTJf4MF6Jh6"
+                        title="Product or Project Managers"
+                        subtext="Sharpen vision, planning & leadership skills."
+                        ctatext="Apply as PM" link="https://forms.gle/TczgYJCTJf4MF6Jh6"
                     />
                 </motion.div>
           </motion.div>
