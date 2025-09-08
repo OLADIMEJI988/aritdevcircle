@@ -11,7 +11,7 @@
 
 .wrapper {
     width: 90%;
-    max-width: 1536px;
+    max-width: 1600px;
     margin-inline: auto;
     position: relative;
     height: 235px;
@@ -33,11 +33,11 @@
 }
 
 .item {
-    width: 320px;
+    width: 350px;
     height: 235px;
     border-radius: 6px;
     position: absolute;
-    left: max(calc(275px * 6), 100%);
+    left: max(calc(305px * 6), 100%);
     animation: scrollleft 30s linear infinite;
 }
 

@@ -169,7 +169,7 @@ export default function HackathonPage() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={revealVariant}
-              className="mobile:max-lg:hidden tracking-wide lxl:mb-28"
+              className="mobile:max-lg:hidden tracking-wide lg:mb-96"
             >
               <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
                 All You Need To Know About
@@ -212,9 +212,9 @@ export default function HackathonPage() {
               initial="hidden"
               animate={inView ? "visible" : "hidden"}
               variants={revealVariant}
-              className="flex flex-col lg:flex-row lg:h-[430px] mobile:max-lg:gap-2 gap-9 px-4 lg:px-[15px] justify-center items-center"
+              className="flex flex-col lg:h-[330px] mobile:max-lg:gap-2 gap-9 px-4 lg:px-[15px] justify-center items-center"
             >
-              <div className="w-full lg:w-[1050px]">
+              <div className="w-full lg:max-w-[700px]">
                 <img
                   className="w-full rounded-2xl object-cover"
                   src={hackathonimg}
@@ -222,8 +222,8 @@ export default function HackathonPage() {
                 />
               </div>
 
-              <div className="text-start flex flex-col justify-center h-full lg:w-[800px] mt-6 lg:mt-0">
-                <p className="text-base sm:text-lg md:text-xl lg:text-[18px] lxl:text-[23px] font-normal tracking-wide leading-relaxed lg:leading-8">
+              <div className="text-start flex flex-col justify-center h-full lg:w-[800px] mt-6 lg:mt-0 lg:mb-80">
+                <p className="text-base sm:text-lg md:text-xl lg:text-[19px] lxl:text-[24px] font-normal tracking-wide leading-relaxed lg:leading-10">
                   Welcome to the central hub for our upcoming community hackathon!
                   This is where you’ll find all the key dates, details, and updates
                   to guide you from registration all the way to the awards ceremony.

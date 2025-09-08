@@ -41,32 +41,32 @@ const TimelineItem = React.forwardRef(({ event, isLast, nextRef }, ref) => {
   return (
     <div className="relative flex items-start" ref={ref}>
       {/* Icon Node */}
-      <div className="relative z-10 flex items-center justify-center w-10 h-10 bg-[#2D2D2D] rounded-xl">
+      {/* <div className="relative z-10 flex items-center justify-center w-10 h-10 bg-[#2D2D2D] rounded-xl">
         <img src={event.icon} className="w-5 h-5 object-contain" alt="" />
-      </div>
+      </div> */}
 
       {/* Connector Line */}
-      {!isLast && (
+      {/* {!isLast && (
         <motion.div
           initial={{ height: 0 }}
           animate={inView ? { height: lineHeight } : {}}
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="absolute left-5 top-10 w-[2px] bg-[#2D2D2D] origin-top"
         />
-      )}
+      )} */}
 
       {/* Event Content */}
       <motion.div
         initial={{ opacity: 0, x: 50 }}
         animate={inView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="ml-6"
+        className=""
       >
-        <p className="text-2xl max-w-[500px] mobile:max-lg:w-[300px] mb-1 -mt-5 leading-9">
+        <p className="text-2xl text-center max-w-[400px] mobile:max-lg:w-[300px] mb-1 -mt-5 leading-9">
           {event.title}
         </p>
 
-        <h3 className="text-sm font-normal max-w-[400px] mobile:max-lg:leading-6 mobile:max-lg:w-[300px]">
+        <h3 className="text-sm text-center font-normal max-w-[400px] mobile:max-lg:leading-6 mobile:max-lg:w-[300px]">
           {event.subtext}
         </h3>
       </motion.div>
@@ -110,7 +110,7 @@ export default function WhoCanJoin() {
 
       <div className="flex flex-col mx-auto lg:max-w-[800px] lg:flex-row gap-10 lg:gap-3 mt-10 items-center relative z-10">
         {/* Timeline */}
-        <div className="relative flex justify-center lg:ml-24 mt-5 w-full mobile:max-lg:px-[3px]">
+        <div className="relative flex justify-center mt-5 w-full mobile:max-lg:px-[3px]">
           <div className="tracking-wide font-normal flex flex-col space-y-14 text-start w-full">
             {events.map((event, i) => (
               <TimelineItem

@@ -62,9 +62,9 @@ const testimonials = [
 
 export default function HackathonTestimonial() {
   return (
-    <div className="pb-20 pt-9 mt-[100px] mobile:max-xxm:mt-12 xxm:max-lg:mt-8 lg:pt-10">
+    <div className="bg-[#0e0e0e] pb-20 pt-9">
       <motion.div
-        className="text-center font-semibold tracking-wide mb-8 lg:mb-12"
+        className="text-center text-[#E3E3E3] font-semibold tracking-wide mb-8 lg:mb-10"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.3 }}
@@ -81,11 +81,10 @@ export default function HackathonTestimonial() {
           Past <span className="text-[#FA3E67]">Participants</span>
         </p>
       </motion.div>
-
       <div className="wrapper">
         {testimonials.map((t, index) => (
           <div key={t.id} className={`item item${index + 1}`}>
-            <div className="bg-[#1D1D1D] text-start text-white rounded-2xl border border-[#707070] p-4 w-[320px] h-[220px] shadow-xl flex flex-col justify-between">
+            <div className="bg-[#1D1D1D] text-start text-[#E3E3E3] rounded-2xl border border-[#707070] p-4 w-[350px] h-[230px] shadow-xl flex flex-col justify-between">
               {/* Text */}
               <p className="text-[14px] line-clamp-6">{t.text}</p>
 
