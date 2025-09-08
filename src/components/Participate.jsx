@@ -11,6 +11,7 @@ import manincirclemobile from "../assets/manincirclemobile.svg";
 
 
 import girlincircle from "../assets/girlincircle.svg";
+import threecircles from "../assets/threecircles.svg";
 import manincircle from "../assets/manincircle.svg";
 import curvedpinkarrow from "../assets/curvedpinkarrow.svg";
 import CtaCards from './CtaCards';
@@ -30,8 +31,10 @@ export default function Participate() {
                     <img
                         src={halfblackcircle}
                         alt=""
-                        className="absolut mobile:max-lg:h-[420px] h-full w-full object-cover"
+                        className="mobile:max-lg:h-[420px] h-full w-full object-cover"
                     />
+
+                    <img className='lg:hidden absolute translate-x-48 -translate-y-44' src={threecircles} alt="" />
 
 
                     {/* Text on top */}

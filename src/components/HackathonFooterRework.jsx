@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import footerbg from "../assets/footerbg.png";
 import innerglow from "../assets/footerbg.svg";
-import floatingimgs from "../assets/footerfloatimg.webp";
-import mobilefloatingimgs from "../assets/mobilefooterfloatimg.webp";
-import arrow from "../assets/arrow-right.svg";
-import linkedin from "../assets/linkedin.svg";
+import innermobileglow from "../assets/footerglow.webp";
 import twitter from "../assets/twitter.svg";
-import QueenAritCircle from "../assets/Queen Arit Circle.svg";
 import Logo from "../assets/QueenAritCircleLogo.webp";
 import backtotop from "../assets/backtotopimg.svg";
+import topfloatingimgs from "../assets/topfloatingimgs.svg";
+import bottomfloatingimgs from "../assets/bottomfloatingimgs.svg";
+
 import ApplyCta from "./ApplyCta";
 import ApplyNow from "./ApplyNow";
 
@@ -102,7 +102,7 @@ export default function HackathonFooterRework() {
     };
   
     return (
-      <div className="relative bg-[#0E0E0E] mobile:max-lg:h-[91pc] lg:h-[1000px] overflow-hidden flex flex-col justify-between">
+      <div className="relative bg-[#0E0E0E] mobile:max-lg:h-[89pc] lg:h-[1000px] overflow-hidden flex flex-col justify-between">
         {/* Top Gradient Overlay */}
         <div className="absolute top-0 left-0 w-full h-[80px] md:h-[100px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-30" />
   
@@ -118,12 +118,14 @@ export default function HackathonFooterRework() {
   
         {/* Glow background */}
         <img
-          className="absolute inset-0 w-full h-full object-cover z-20"
+          className="absolute mobile:max-lg:hidden inset-0 w-full h-full object-cover z-20"
           src={innerglow}
           alt="Glow"
         />
+
+        <img className="lg:hidden absolute mt-14 z-40 ml-[5vw] xxm:ml-[10vw]" src={topfloatingimgs} alt="" />
  
-        <div className="absolute inset-0 pt-6 md:pt-16 flex justify-center z-30">
+        <div className="absolute inset-0 pt-6 md:pt-16 mobile:max-lg:mt-48 flex justify-center z-30">
          <div className="space-y-[6px] text-white text-2xl lg:text-5xl font-medium">
             <AnimatedText
               text="Want To Know What's Next? "
@@ -134,7 +136,7 @@ export default function HackathonFooterRework() {
  
   
         {/* Text + CTA */}
-        <div className="relative z-40 text-white mobile:max-ssm:mt-[90px] mt-[160px] text-center px-4">
+        <div className="relative z-40 mobile:max-lg:pt-48 text-white mobile:max-ssm:mt-[90px] mt-[160px] text-center px-4">
           {/* Desktop Text view */}
           <div className="space-y-[6px] mobile:max-lg:hidden tracking-wide text-xl font-medium">
             <AnimatedText
@@ -191,6 +193,9 @@ export default function HackathonFooterRework() {
                 </motion.div>
           </motion.div>
 
+        <img className="lg:hidden absolute mt-14 z-40 -ml-2 xxm:max-lg:ml-5" src={bottomfloatingimgs} alt="" />
+
+
         </div>
   
         {/* Bottom section */}
@@ -198,7 +203,9 @@ export default function HackathonFooterRework() {
         <div className="flex flex-col sm:flex-row items-center justify-between px-4 sm:px-8 lg:px-12 gap-4 sm:gap-0">
             {/* Logo */}
             <motion.div>
-            <img className="h-12 mobile:max-sm:h-14" src={Logo} alt="Logo" />
+              <Link to="/">
+                <img className="h-12 mobile:max-sm:h-14 mobile:max-lg:mb-3 " src={Logo} alt="Logo" />
+              </Link>
             </motion.div>
 
             {/* Links */}
@@ -221,7 +228,7 @@ export default function HackathonFooterRework() {
             </div>
 
             {/* Social icons */}
-            <div className="flex mobile:max-ssm:gap-4 ssm:gap-3">
+            <div className="flex mobile:max-ssm:gap-4 ssm:gap-3 mobile:max-lg:mb-6 mobile:max-lg:mt-2">
             <motion.a href="https://x.com/TheQueenArit" target="_blank">
                 <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={twitter} alt="Twitter" />
             </motion.a>
@@ -251,6 +258,18 @@ export default function HackathonFooterRework() {
             </div>
             </div>
         </div>
+
+         <img
+            className="lg:hidden absolute -translate-y-[1020px] translate-x-24 inset-0 w-full h-full object-cover z-20"
+            src={innermobileglow}
+            alt="Glow"
+          />
+    
+         <img
+            className="lg:hidden absolute -translate-y-[230px] -translate-x-20 inset-0 w-full h-full object-cover z-20"
+            src={innermobileglow}
+            alt="Glow"
+          />
 
         {/* <img className="w-full h-[115px]" src={QueenAritCircle} alt="" /> */}
         </div>

@@ -63,7 +63,7 @@ const testimonials = [
 export default function HackathonTestimonial() {
   return (
     <div className="bg-[#0e0e0e] pb-20 pt-9">
-      <motion.div
+      <div
         className="text-center text-[#E3E3E3] font-semibold tracking-wide mb-8 lg:mb-10"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -80,7 +80,7 @@ export default function HackathonTestimonial() {
         <p className="lg:hidden text-4xl lg:text-5xl mt-2 tracking-wide">
           Past <span className="text-[#FA3E67]">Participants</span>
         </p>
-      </motion.div>
+      </div>
       <div className="wrapper">
         {testimonials.map((t, index) => (
           <div key={t.id} className={`item item${index + 1}`}>

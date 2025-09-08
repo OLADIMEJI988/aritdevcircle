@@ -4,18 +4,23 @@ import whitearrow from "../assets/whitearrow.svg";
 import bottomline from "../assets/bottomline.svg";
 import bottomglow from "../assets/bottomglow.svg";
 import reasonbg from "../assets/reasonbg.svg";
+import threecircles from "../assets/threecircles.svg";
+
 
 export default function Reason() {
   return (
     <div className='bg-[#0e0e0e] pb-44 mobile:max-lg:pb-16'>
         <div className='flex mobile:max-lg:flex-col mobile:max-lg:h-[1100px] h-[700px]'>
             <div className="relative w-1/2 flex mobile:max-lg:flex-col items-center justify-center">
-                {/* Background image */}
+                {/* Black circle */}
                 <img
-                src={halfblackcircle}
-                alt=""
-                className="absolut mobile:max-lg:h-[420px] h-full w-full object-cover"
+                    src={halfblackcircle}
+                    alt=""
+                    className="absolut mobile:max-lg:h-[420px] h-full w-full object-cover"
                 />
+
+                
+                <img className='lg:hidden absolute translate-x-48 -translate-y-44' src={threecircles} alt="" />  
 
                 {/* Text on top */}
                 <p className="relative mobile:max-lg:w-36 z-10 text-start leading-10 text-white text-3xl mobile:max-lg:text-[27px] mobile:max-lg:-translate-x-4 mobile:max-lg:-translate-y-[270px] -translate-x-[350px] xl:-translate-x-[420px] font-bold">
@@ -91,7 +96,7 @@ export default function Reason() {
             src={bottomglow}
             alt=""
             className="h-[500px] lg:hidden absolute -translate-y-[260px] xl:-translate-y-[290px] object-contain z-20 pointer-events-none"
-        />
+        />        
 
 
         <img

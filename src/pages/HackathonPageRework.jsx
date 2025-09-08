@@ -202,7 +202,7 @@ export default function HackathonPageRework() {
                 >  
                    <img className="absolute w-full mobile:max-lg:mt-28 h-[1100px]" src={topbg} alt="" />
                   <div className="text-start text-white flex flex-col justify-center font-light max-w-[1200px] items-center mt-6 lg:mt-10 mobile:max-lg:mt-0 lg:mb-[20px]">
-                    <div className="border-2 rounded-lg flex mobile:max-lg:flex-col justify-between items-center mobile:max-lg:h-[550px] h-[470px] mobile:max-lg:w-[355px] w-[1100px] xl:mt-10 bg-[#0e0e0e] border-[#0e0e0e] z-30 px-20 mb-8 xl:mb-10  mobile:max-lg:px-5 mobile:max-lg:py-5 shadow-[0_8px_20px_(#0E1F32)]">
+                    <div className="border-2 rounded-lg flex mobile:max-lg:flex-col justify-between items-center mobile:max-lg:h-[550px] h-[470px] mobile:max-xxm:w-[355px] xxm:max-lg:w-[400px] w-[1100px] xl:mt-10 bg-[#0e0e0e] border-[#0e0e0e] z-30 px-20 mb-8 xl:mb-10  mobile:max-lg:px-5 mobile:max-lg:py-5 shadow-[0_8px_20px_(#0E1F32)]">
                         
                         <div className="text-[#fc4f7b] mobile:max-lg:tracking-wider tracking-wide font-bold mobile:max-lg:text-5xl mobile:max-lg:mb-10 text-7xl">
                             <p className="text-white text-[17px] font-light mb-14 mobile:max-lg:text-center">About</p>
