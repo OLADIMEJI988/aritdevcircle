@@ -181,12 +181,6 @@ export default function Footer() {
               <motion.a href="https://x.com/TheQueenArit" target="_blank">
                 <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={twitter} alt="Twitter" />
               </motion.a>
-              <motion.a href="https://instagram.com/" target="_blank">
-                <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={instagram} alt="Instagram" />
-              </motion.a>
-              <motion.a href="https://linkedIn.com/" target="_blank">
-                <img className="cursor-pointer mobile:max-sm:h-8 sm:h-7" src={linkedin} alt="LinkedIn" />
-              </motion.a>
             </div>
   
             <div className="flex flex-wrap justify-center gap-4 sm:gap-5 mobile:max-sm:mt-1 mobile:max-sm:text-[16px] text-[12px] sm:text-[13px] lg:text-[15px] tracking-wider inter text-[#CECECE]">
