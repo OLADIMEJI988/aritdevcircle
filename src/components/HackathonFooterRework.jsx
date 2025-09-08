@@ -148,7 +148,7 @@ export default function HackathonFooterRework() {
           </div>
 
           {/* Mobile Text view */}
-          <div className="space-y-[6px] lg:hidden tracking-wide text-xl font-medium">
+          <div className="space-y-[6px] lg:hidden tracking-wide text-lg font-light">
             <AnimatedText
               text="Click the link that matches your"
               highlight={{ start: 20, end: 28 }}

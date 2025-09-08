@@ -151,7 +151,11 @@ export default function AwardsAndRegRework() {
                 {/* Content */}
                 <div className="relative tracking-wide justify-center text-2xl py-20 leading-tight z-10 flex flex-col h-full">
                     <p className="text-white text-[26px] font-semibold">Project Evaluation <span className='text-[#FF4F76]'>Basis</span></p>
-                    <p className='text-white text-[16px] leading-8 mt-7 px-10'>At the end of the hackthon,  winners will be announced at the award ceremony on November 1st with prizes and recognition across categories.</p>
+                    <p className='text-white text-[16px] leading-8 mt-7 mb-2 px-2'>Note: Projects will be evaluated base on</p>
+                    <p className='text-white text-[16px] flex leading-8 px-5'><span className='font-bold -mt-[5px] mr-[5px]'>.</span> Functionality and feature completion</p>
+                    <p className='text-white text-[16px] flex leading-8 px-5'><span className='font-bold -mt-[5px] mr-[5px]'>.</span> User experience and design quality</p>
+                    <p className='text-white text-[16px] flex leading-8 px-5'><span className='font-bold -mt-[5px] mr-[5px]'>.</span> Code quality and documentation</p>
+                    <p className='text-white text-[16px] flex leading-8 px-5'><span className='font-bold -mt-[5px] mr-[5px]'>.</span> Team collaboration and process</p>
                 </div>
                 
            </div>
