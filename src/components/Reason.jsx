@@ -113,10 +113,10 @@ export default function Reason() {
         <img
           src={boyontiemobile}
           alt="boy in tie"
-          className="h-[250px] absolute right-0 bottom-[80px] z-30"
+          className="h-[250px] absolute right-0 bottom-[78px] z-30"
         />
 
-        <img className="mt-44 xxm:mt-[130px] w-[500px]" src={bottomline} alt="" />
+        <img className="mt-[170px] xxm:mt-[130px] w-[500px]" src={bottomline} alt="" />
       </div>
 
       <img

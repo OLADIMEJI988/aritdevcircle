@@ -5,7 +5,7 @@ import arrow from "../assets/arrow-right.svg";
 
 export default function RegularParticipate() {
   return (
-    <div className="bg-[#0e0e0e] lg:pb-5 pb-10 lg:pr-12 mobile:max-lg:pt-3 pt-[480px] xl:pt-[580px]">
+    <div className="bg-[#0e0e0e] lg:pb-5 pb-16 lg:pr-12 mobile:max-lg:pt-10 pt-[480px] xl:pt-[580px]">
       <img
         className="absolute right-0 mt-28 xl:-mt-32 h-full object-contain z-0"
         src={subtleglow}

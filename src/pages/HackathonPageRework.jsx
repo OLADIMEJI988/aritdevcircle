@@ -95,11 +95,11 @@ export default function HackathonPageRework() {
               <button
                 onClick={() =>
                   (window.location.href =
-                    "https://x.com/thequeenarit/status/1965465279506645381?s=46&t=U1cHbbVtEG7-OXvrKgX5-A")
+                    "https://proxy.nas.io/queenaritcircle")
                 }
                 className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white xl:text-[20px] flex justify-center tracking-wide py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90"
               >
-                Info Session
+                Join it's Free
               </button>
             </div>
           </div>
@@ -135,11 +135,11 @@ export default function HackathonPageRework() {
                   <button
                     onClick={() =>
                       (window.location.href =
-                        "https://x.com/thequeenarit/status/1965465279506645381?s=46&t=U1cHbbVtEG7-OXvrKgX5-A")
+                        "https://proxy.nas.io/queenaritcircle")
                     }
                     className="bg-[#fc4f7b] flex items-center text-white py-2 px-6 rounded-full font-semibold tracking-wide hover:opacity-90 transition mx-auto"
                   >
-                    Info Session
+                    Join it's Free
                   </button>
                 </div>
               </motion.div>
@@ -216,7 +216,7 @@ export default function HackathonPageRework() {
                     <p className="mobile:max-lg:text-center">OCTOBER</p>
                     <p className="mt-3 mobile:max-lg:text-center">HACKATHON</p>
 
-                    <button
+                    {/* <button
                     onClick={() =>
                       (window.location.href =
                         "https://x.com/thequeenarit/status/1965465279506645381?s=46&t=U1cHbbVtEG7-OXvrKgX5-A")
@@ -224,7 +224,7 @@ export default function HackathonPageRework() {
                     className="bg-[#fc4f7b] mt-5 lg:mt-8 hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect transition text-white text-lg xl:text-[20px] flex justify-center tracking-wide py-2 xl:pt-3 xl:pb-4 px-7 rounded-full font-semibold hover:opacity-90"
                   >
                     Listen To Info Session
-                  </button>
+                  </button> */}
                   </div>
 
             
