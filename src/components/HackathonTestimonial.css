@@ -1,72 +1,70 @@
-*, 
+*,
 *::before,
 *::after {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-  
 * {
-    margin: 0;
+  margin: 0;
 }
 
 .wrapper {
-    width: 90%;
-    max-width: 1600px;
-    margin-inline: auto;
-    position: relative;
-    height: 235px;
-    margin-top: 1rem;
-    overflow: hidden;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0)
-    );
+  width: 90%;
+  max-width: 1600px;
+  margin-inline: auto;
+  position: relative;
+  height: 235px;
+  margin-top: 1rem;
+  overflow: hidden;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 1) 20%,
+    rgba(0, 0, 0, 1) 80%,
+    rgba(0, 0, 0, 0)
+  );
 }
 
 @keyframes scrollleft {
-    to {
-        left: -350px;
-    }
+  to {
+    left: -350px;
+  }
 }
 
 .item {
-    width: 350px;
-    height: 235px;
-    border-radius: 6px;
-    position: absolute;
-    left: max(calc(305px * 6), 100%);
-    animation: scrollleft 30s linear infinite;
+  width: 350px;
+  height: 235px;
+  border-radius: 6px;
+  position: absolute;
+  left: max(calc(305px * 6), 100%);
+  animation: scrollleft 30s linear infinite;
 }
 
 .wrapper:hover .item {
-    animation-play-state: paused;
-    cursor: pointer;
+  animation-play-state: paused;
+  cursor: pointer;
 }
 
-
 .item1 {
-    animation-delay: calc(30s / 6 * (6 - 1) * -1);
+  animation-delay: calc(30s / 6 * (6 - 1) * -1);
 }
 
 .item2 {
-    animation-delay: calc(30s / 6 * (6 - 2) * -1);
+  animation-delay: calc(30s / 6 * (6 - 2) * -1);
 }
 
 .item3 {
-    animation-delay: calc(30s / 6 * (6 - 3) * -1);
+  animation-delay: calc(30s / 6 * (6 - 3) * -1);
 }
 
 .item4 {
-    animation-delay: calc(30s / 6 * (6 - 4) * -1);
+  animation-delay: calc(30s / 6 * (6 - 4) * -1);
 }
 
 .item5 {
-    animation-delay: calc(30s / 6 * (6 - 5) * -1);
+  animation-delay: calc(30s / 6 * (6 - 5) * -1);
 }
 
 .item6 {
-    animation-delay: calc(30s / 6 * (6 - 6) * -1);
+  animation-delay: calc(30s / 6 * (6 - 6) * -1);
 }

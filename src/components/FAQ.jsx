@@ -10,8 +10,7 @@ import Questions from "./Questions";
 
 export default function FAQ() {
   return (
-    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-28 blm:max-lg:pb-44 lg:pb-44 pt-10 tracking-wide inter overflow-hidden">
-
+    <div className="relative bg-[#0E0E0E] text-white ssm:max-lg:pb-56 mobile:max-blm:pb-28 blm:max-lg:pb-44 lg:pb-44 pt-9 lg:pt-10 tracking-wide inter overflow-hidden">
       {/* Top Gradient Overlay */}
       <div className="absolute top-0 left-0 w-full h-[229px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
@@ -84,7 +83,8 @@ function FAQHeader() {
       className="mb-8 font-semibold text-center px-4 md:px-10 lg:px-20"
     >
       <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl tracking-wide">
-        Frequently <span className="text-[#FA3E67]">Asked</span> Questions (FAQs)
+        Frequently <span className="text-[#FA3E67]">Asked</span> Questions
+        (FAQs)
       </p>
     </motion.div>
   );

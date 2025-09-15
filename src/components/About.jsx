@@ -24,20 +24,22 @@ export default function Section() {
     <div
       ref={ref}
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full mobile:max-xxm:pt-[45px] xxm:max-lg:pt-16 lg:pt-10 
-                 mobile:max-lg:pb-16 lg:pb-12"
+                 mobile:max-lg:h-full mobile:max-xxm:pt-10 xxm:max-lg:pt-16 lg:pt-10 
+                 mobile:max-lg:pb-16 lg:pb-[73px]"
     >
-     {/* Top Gradient Overlay */}
-    <div className="absolute top-0 left-0 w-full h-[29px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
+      {/* Top Gradient Overlay */}
+      <div className="absolute top-0 left-0 w-full h-[29px] bg-gradient-to-b from-[#0E0E0E] to-transparent z-10" />
 
-    {/* Bottom Gradient Overlay */}
-    <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
+      {/* Bottom Gradient Overlay */}
+      <div className="absolute bottom-0 left-0 w-full h-[129px] bg-gradient-to-t from-[#0E0E0E] to-transparent z-10" />
 
       {/* Content */}
 
       {/* Mobile View */}
-      <div className="lg:hidden absolute mobile:max-xxm:pt-20 left-1/2 -translate-x-1/2 -translate-y-1/2 
-                      z-20 flex flex-col items-center text-center w-full">
+      <div
+        className="lg:hidden absolute mobile:max-xxm:pt-20 left-1/2 -translate-x-1/2 -translate-y-1/2 
+                      z-20 flex flex-col items-center text-center w-full"
+      >
         <motion.p
           variants={fadeUp}
           initial="hidden"
@@ -46,13 +48,8 @@ export default function Section() {
           className="text-white mobile:max-xxm:text-[42px] px-[15px] 
                      xxm:max-xsm:text-[39px] tracking-wide xsm:text-[46px] font-semibold inter"
         >
-          A{" "}
-          <span className="text-[#fc4f7b]">
-            Queen's
-          </span>
-          {" "}Welcome
+          A <span className="text-[#fc4f7b]">Queen's</span> Welcome
         </motion.p>
-
       </div>
 
       <div className="flex mobile:max-lg:flex-col items-center justify-center">
@@ -90,7 +87,9 @@ export default function Section() {
               custom={4}
               className="my-5"
             >
-              Learning tech is one thing; earning with it is another. That leap from skills to income can feel tough, but you don’t have to figure it out alone.
+              Learning tech is one thing; earning with it is another. That leap
+              from skills to income can feel tough, but you don’t have to figure
+              it out alone.
             </motion.p>
 
             <motion.p
@@ -100,30 +99,33 @@ export default function Section() {
               custom={5}
               className="mb-5"
             >
-              In the Circle, you’ll find guidance, real-world practice, and a supportive community all focused on helping you turn what you’ve learned into opportunities, confidence, and paid work. You belong here, and we’re excited to walk this journey with you!
+              In the Circle, you’ll find guidance, real-world practice, and a
+              supportive community all focused on helping you turn what you’ve
+              learned into opportunities, confidence, and paid work. You belong
+              here, and we’re excited to walk this journey with you!
             </motion.p>
-
           </div>
 
           {/* Button */}
           <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
-                onClick={() => window.location.href = "https://proxy.nas.io/queenaritcircle"}
-                className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect 
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.9 }}
+            onClick={() =>
+              (window.location.href = "https://proxy.nas.io/queenaritcircle")
+            }
+            className="bg-[#fc4f7b] hover:shadow-[0_0_7px_#FF4F76] cursor-pointer hoverEffect 
                             transition text-[#110D0D] mobile:max-xsm:py-[10px] xsm:max-lg:py-4 lg:py-2 
-                            mobile:max-xsm:px-8 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold 
+                            mobile:max-xsm:px-8 mobile:max-lg:mb-7 xsm:max-lg:px-9 lg:px-7 rounded-full font-semibold 
                             hover:opacity-90 items-center gap-3 inline-flex w-auto mobile:max-lg:mt-4 lg:mt-4 xl:mt-5"
-                >
-                <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[19px] tracking-wide xl:text-[19px] text-white">
-                    Click here to Join
-                </p>
-                <div className="mt-[2px] bg-white p-[5px] xl:p-[6px] rounded-full">
-                    <img className="h-6" src={arrow} alt="arrow" />
-                </div>
+          >
+            <p className="mobile:max-xsm:text-[18px] xsm:max-lg:text-[25px] lg:text-[19px] tracking-wide xl:text-[19px] text-white">
+              Click here to Join
+            </p>
+            <div className="mt-[2px] bg-white p-[5px] xl:p-[6px] rounded-full">
+              <img className="h-6" src={arrow} alt="arrow" />
+            </div>
           </motion.div>
-
         </div>
       </div>
     </div>

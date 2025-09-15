@@ -8,7 +8,13 @@ const itemVariants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } },
 };
 
-export default function EventCards({ img, title, hostimg, hostname, description }) {
+export default function EventCards({
+  img,
+  title,
+  hostimg,
+  hostname,
+  description,
+}) {
   return (
     <div
       className="antialiased tracking-wide border border-[#FF4F76] mobile:max-ssm:w-80 pb-4 rounded-2xl 
@@ -24,7 +30,11 @@ export default function EventCards({ img, title, hostimg, hostname, description 
       <div className="absolute inset-0 bg-black bg-opacity-65 rounded-2xl pointer-events-none"></div>
 
       {/* event image */}
-      <img src={img} alt="event" className="w-full rounded-t-2xl relative z-10" />
+      <img
+        src={img}
+        alt="event"
+        className="w-full rounded-t-2xl relative z-10"
+      />
 
       <motion.p
         variants={itemVariants}
@@ -55,7 +65,9 @@ export default function EventCards({ img, title, hostimg, hostname, description 
         viewport={{ once: true, amount: 0.3 }}
         className="flex items-center mobile:max-lg:px-[18px] lg:px-[10px] gap-[4px] text-[13px] relative z-10"
       >
-        <p className="text-white leading-[22px] mt-1 text-[12px] tracking-wide">{description}</p>
+        <p className="text-white leading-[22px] mt-1 text-[12px] tracking-wide">
+          {description}
+        </p>
       </motion.div>
     </div>
   );

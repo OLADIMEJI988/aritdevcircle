@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import bendingarrows from "../assets/bendingarrows.webp";
 import timelineglow from "../assets/timelineglow.webp";
 import num1 from "../assets/01.svg";
@@ -8,7 +8,7 @@ import num4 from "../assets/04.svg";
 import num5 from "../assets/05.svg";
 import num6 from "../assets/06.svg";
 import num7 from "../assets/07.svg";
-import num8 from "../assets/08.svg"; 
+import num8 from "../assets/08.svg";
 import num1mobile from "../assets/01mobile.svg";
 import num2mobile from "../assets/02mobile.svg";
 import num3mobile from "../assets/03mobile.svg";
@@ -22,7 +22,7 @@ import mobiletimeline from "../assets/mobiletimeline.svg";
 
 export default function DateTimelineRework() {
   return (
-    <div className="bg-[#0e0e0e] mobile:max-lg:pb-14 pt-10">
+    <div className="bg-[#0e0e0e] relative mobile:max-lg:pb-14 pt-10">
       {/* Heading */}
       <div>
         <p className="text-4xl mobile:max-lg:text-[33px] mobile:max-lg:leading-normal tracking-wide font-semibold md:text-5xl text-center pb-20 text-white">
@@ -30,88 +30,87 @@ export default function DateTimelineRework() {
         </p>
       </div>
 
-      <div className='lg:hidden mobile:max-lg:pb-20 flex justify-center'>
-        <div><img src={mobiletimeline} alt="" /></div>
-        <div className='flex flex-col'>
-
-          <div className='flex gap-3 -translate-y-4 -translate-x-1'>
+      <div className="lg:hidden mobile:max-lg:pb-20 flex justify-center">
+        <div>
+          <img src={mobiletimeline} alt="" />
+        </div>
+        <div className="flex flex-col">
+          <div className="flex gap-3 -translate-y-4 -translate-x-1">
             <img src={num1mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>September 8th</p>
-              <p className='text-white mt-1'>Registration Opens</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">September 8th</p>
+              <p className="text-white mt-1">Registration Opens</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-20 -translate-x-1'>
+          <div className="flex gap-3 translate-y-20 -translate-x-1">
             <img src={num2mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>September 14th</p>
-              <p className='text-white mt-1'>Registration Closes</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">September 14th</p>
+              <p className="text-white mt-1">Registration Closes</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[170px] -translate-x-1'>
+          <div className="flex gap-3 translate-y-[170px] -translate-x-1">
             <img src={num3mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>September 15th - 19th</p>
-              <p className='text-white mt-1'>Team Creation</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">September 15th - 19th</p>
+              <p className="text-white mt-1">Team Creation</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[260px] -translate-x-1'>
+          <div className="flex gap-3 translate-y-[260px] -translate-x-1">
             <img src={num4mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>September 20th</p>
-              <p className='text-white mt-1'>Orientation Session</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">September 20th</p>
+              <p className="text-white mt-1">Orientation Session</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[350px] -translate-x-[2px]'>
+          <div className="flex gap-3 translate-y-[350px] -translate-x-[2px]">
             <img src={num5mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>September 29th</p>
-              <p className='text-white mt-1'>Hackathon Kickoff</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">September 29th</p>
+              <p className="text-white mt-1">Hackathon Kickoff</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[440px]'>
+          <div className="flex gap-3 translate-y-[440px]">
             <img src={num6mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>October 19th</p>
-              <p className='text-white mt-1'>Hackathon Ends</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">October 19th</p>
+              <p className="text-white mt-1">Hackathon Ends</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[530px]'>
+          <div className="flex gap-3 translate-y-[530px]">
             <img src={num7mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>October 20th - 31st</p>
-              <p className='text-white mt-1'>Project Grading</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">October 20th - 31st</p>
+              <p className="text-white mt-1">Project Grading</p>
             </div>
           </div>
 
-          <div className='flex gap-3 translate-y-[630px]'>
+          <div className="flex gap-3 translate-y-[630px]">
             <img src={num8mobile} alt="" />
-            <div className='text-start tracking-wide'>
-              <p className='text-[#fc4f7b]'>November 1st</p>
-              <p className='text-white mt-1'>Awards Ceremony</p>
+            <div className="text-start tracking-wide">
+              <p className="text-[#fc4f7b]">November 1st</p>
+              <p className="text-white mt-1">Awards Ceremony</p>
             </div>
           </div>
-
-
         </div>
       </div>
 
       {/* Timeline wrapper */}
       <div className="mobile:max-lg:hidden relative flex justify-center pb-28">
-        {/* Glow background (always right, not taller than container) */}
+        {/* Glow background */}
         <img
           className="absolute right-0 top-0 h-full object-contain"
           src={timelineglow}
           alt="glow background"
         />
 
-        {/* Timeline content on top */}
+        {/* Timeline content */}
         <div className="relative z-10 flex justify-center">
           {/* Line */}
           <img

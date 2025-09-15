@@ -8,6 +8,7 @@
       screens: {
         mobile: "300px",
         mmm: "402px",
+        xr: "413px",
         xxm: "424px",
         xlm: '452px',
         blm: "465px",

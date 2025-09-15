@@ -1,13 +1,12 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import leftsemicircle from "../assets/leftsemicircle.webp"
-import rightsemicircle from "../assets/rightsemicircle.webp"
+import React from "react";
+import { motion } from "framer-motion";
+import leftsemicircle from "../assets/leftsemicircle.webp";
+import rightsemicircle from "../assets/rightsemicircle.webp";
 
 export default function AwardsAndReg() {
   return (
     <>
       <div className="mt-20 lg:mt-10 pb-20 mobile:max-lg:pb-44 flex justify-center items-center">
-        
         <img
           className="absolute left-0 lg:mt-40 mobile:max-lg:h-80 mobile:max-xxm:-mt-[470px] xxm:max-lg:-mt-[450px]"
           src={leftsemicircle}
@@ -79,5 +78,5 @@ export default function AwardsAndReg() {
         />
       </div>
     </>
-  )
+  );
 }

@@ -1,7 +1,7 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import ApplyCta from './ApplyCta'
-import whocanjoinglow from "../assets/whocanjoinglow.webp"
+import React from "react";
+import { motion } from "framer-motion";
+import ApplyCta from "./ApplyCta";
+import whocanjoinglow from "../assets/whocanjoinglow.webp";
 
 export default function ApplyNow() {
   return (
@@ -29,9 +29,24 @@ export default function ApplyNow() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <ApplyCta title="Developers" subtext="Gain real engineering experience" ctatext="Apply as Dev" link="https://forms.gle/KQL8Jx6qf89Xtart9" />
-          <ApplyCta title="Designers" subtext="Practice UI/UX in live collaboration." ctatext="Apply as Desginer" link="https://forms.gle/VC3ydM9DeYqp6tWd8" />
-          <ApplyCta title="Product or Project Managers" subtext="Sharpen vision, planning & leadership skills." ctatext="Apply as PM" link="https://forms.gle/TczgYJCTJf4MF6Jh6" />
+          <ApplyCta
+            title="Developers"
+            subtext="Gain real engineering experience"
+            ctatext="Apply as Dev"
+            link="https://forms.gle/KQL8Jx6qf89Xtart9"
+          />
+          <ApplyCta
+            title="Designers"
+            subtext="Practice UI/UX in live collaboration."
+            ctatext="Apply as Desginer"
+            link="https://forms.gle/VC3ydM9DeYqp6tWd8"
+          />
+          <ApplyCta
+            title="Product or Project Managers"
+            subtext="Sharpen vision, planning & leadership skills."
+            ctatext="Apply as PM"
+            link="https://forms.gle/TczgYJCTJf4MF6Jh6"
+          />
         </motion.div>
       </motion.div>
 
@@ -63,11 +78,26 @@ export default function ApplyNow() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4, duration: 0.6 }}
         >
-          <ApplyCta title="Developers" subtext="Gain real engineering experience" ctatext="Apply as Dev" link="https://forms.gle/KQL8Jx6qf89Xtart9" />
-          <ApplyCta title="Designers" subtext="Practice UI/UX in live collaboration." ctatext="Apply as Desginer" link="https://forms.gle/VC3ydM9DeYqp6tWd8" />
-          <ApplyCta title="Product or Project Managers" subtext="Sharpen vision, planning & leadership skills." ctatext="Apply as PM" link="https://forms.gle/TczgYJCTJf4MF6Jh6" />
+          <ApplyCta
+            title="Developers"
+            subtext="Gain real engineering experience"
+            ctatext="Apply as Dev"
+            link="https://forms.gle/KQL8Jx6qf89Xtart9"
+          />
+          <ApplyCta
+            title="Designers"
+            subtext="Practice UI/UX in live collaboration."
+            ctatext="Apply as Desginer"
+            link="https://forms.gle/VC3ydM9DeYqp6tWd8"
+          />
+          <ApplyCta
+            title="Product or Project Managers"
+            subtext="Sharpen vision, planning & leadership skills."
+            ctatext="Apply as PM"
+            link="https://forms.gle/TczgYJCTJf4MF6Jh6"
+          />
         </motion.div>
       </motion.div>
     </>
-  )
+  );
 }

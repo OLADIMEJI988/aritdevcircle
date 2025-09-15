@@ -1,13 +1,13 @@
-import React from "react"
-import { motion } from "framer-motion"
-import mahmud from "../assets/mahmud.webp"
-import chibuzor from "../assets/chibuzor.webp"
-import michael from "../assets/michael.webp"
-import delight from "../assets/delight.webp"
-import opeyemi from "../assets/opeyemi.webp"
-import linkedin from "../assets/linkedin.svg"
-import vera from "../assets/vera.webp"
-import "./HackathonTestimonial.css" 
+import React from "react";
+import { motion } from "framer-motion";
+import mahmud from "../assets/mahmud.webp";
+import chibuzor from "../assets/chibuzor.webp";
+import michael from "../assets/michael.webp";
+import delight from "../assets/delight.webp";
+import opeyemi from "../assets/opeyemi.webp";
+import linkedin from "../assets/linkedin.svg";
+import vera from "../assets/vera.webp";
+import "./HackathonTestimonial.css";
 
 const testimonials = [
   {
@@ -58,7 +58,7 @@ const testimonials = [
     img: opeyemi,
     text: "For someone who hasn’t participated in a virtual  class, the experience was very different and great, I learned, grow from my other teammates.",
   },
-]
+];
 
 export default function HackathonTestimonial() {
   return (
@@ -116,5 +116,5 @@ export default function HackathonTestimonial() {
         ))}
       </div>
     </div>
-  )
+  );
 }

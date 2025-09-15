@@ -20,13 +20,48 @@ import datesglow from "../assets/datesglow.png";
 import { motion, useInView } from "framer-motion";
 
 const events = [
-  { date: "September 8th", title: "Registration Opens", icon: location, image: open },
-  { date: "September 14th", title: "Registration Closes", icon: routing, image: close },
-  { date: "September 15th - 19th", title: "Team Creation", icon: teamicon, image: team },
-  { date: "September 20th", title: "Orientation Session", icon: sessionicon, image: orientation },
-  { date: "September 29th", title: "Hackathon Kickoff", icon: notificationcircle, image: hackstarts },
-  { date: "October 19th", title: "Hackathon Ends", icon: notificationbing, image: hackends },
-  { date: "October 20th - 31st", title: "Project Grading", icon: cpusetting, image: grading },
+  {
+    date: "September 8th",
+    title: "Registration Opens",
+    icon: location,
+    image: open,
+  },
+  {
+    date: "September 14th",
+    title: "Registration Closes",
+    icon: routing,
+    image: close,
+  },
+  {
+    date: "September 15th - 19th",
+    title: "Team Creation",
+    icon: teamicon,
+    image: team,
+  },
+  {
+    date: "September 20th",
+    title: "Orientation Session",
+    icon: sessionicon,
+    image: orientation,
+  },
+  {
+    date: "September 29th",
+    title: "Hackathon Kickoff",
+    icon: notificationcircle,
+    image: hackstarts,
+  },
+  {
+    date: "October 19th",
+    title: "Hackathon Ends",
+    icon: notificationbing,
+    image: hackends,
+  },
+  {
+    date: "October 20th - 31st",
+    title: "Project Grading",
+    icon: cpusetting,
+    image: grading,
+  },
   { date: "November 1st", title: "Awards Ceremony", icon: cup, image: award },
 ];
 
@@ -102,7 +137,7 @@ export default function DateTimeline() {
         Important <span className="text-[#fc4f7b]">Dates</span>
       </motion.p>
 
-      {/* Mobile layout*/}
+      {/* Mobile layout */}
       <div className="flex flex-col items-start justify-center mx-[10vw] xxm:mx-[14vw] space-y-12 lg:hidden px-6">
         {events.map((event, i) => (
           <TimelineItem

@@ -83,7 +83,7 @@ export default function LandingPage() {
                       smooth={true}
                       duration={600}
                       spy={true}
-                      offset={-80}
+                      offset={0}
                       className="inline-block"
                     >
                       {item}
@@ -127,7 +127,7 @@ export default function LandingPage() {
                       smooth={true}
                       duration={600}
                       spy={true}
-                      offset={-80}
+                      offset={0}
                       onClick={() => setIsOpen(false)}
                     >
                       <p className="hover:cursor-pointer">{link.name}</p>
@@ -153,11 +153,11 @@ export default function LandingPage() {
       </div>
 
       {/* Sections with IDs */}
-      <div id="offer-section" className="scroll-mt-[80px]">
+      <div id="offer-section">
         <Offer />
       </div>
 
-      <div id="about-section" className="scroll-mt-[80px]">
+      <div id="about-section">
         <About />
       </div>
 
@@ -165,11 +165,11 @@ export default function LandingPage() {
         <Events />
       </div>
 
-      <div id="testimonials" className="scroll-mt-[80px]" >
+      <div id="testimonials">
         <TestimonialCarousel />
       </div>
 
-      <div id="faq" className="scroll-mt-[80px]">
+      <div id="faq">
         <FAQ />
       </div>
 

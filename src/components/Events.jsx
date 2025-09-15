@@ -1,7 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-
 import eventsglow from "../assets/eventsbg.webp";
 import mobileglow from "../assets/mobilesideglow.webp";
 import desktopline from "../assets/desktopline.webp";
@@ -17,33 +16,36 @@ import EventCards from "./EventCards";
 export default function Events() {
   const events = [
     {
-        img: hackathon,
-        title: "QAC Hackathon",
-        hostimg: queenarit,
-        hostname: "Queen Arit",
-        description: "Our flagship program, the QAC Hackathon brings designers, developers and product/project managers together to build a fullstack app under real-world constraints & conditions."
+      img: hackathon,
+      title: "QAC Hackathon",
+      hostimg: queenarit,
+      hostname: "Queen Arit",
+      description:
+        "Our flagship program, the QAC Hackathon brings designers, developers and product/project managers together to build a fullstack app under real-world constraints & conditions.",
     },
     {
       img: mentor,
       title: "Mentor's Corner",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      description: "Enjoy high quality tech mentoring without the high price! Once monthly, we answer your career questions with knowledge, wisdom and humour!"
+      description:
+        "Enjoy high quality tech mentoring without the high price! Once monthly, we answer your career questions with knowledge, wisdom and humour!",
     },
     {
       img: mumsintech,
       title: "Mums In Tech",
-    //   subtitle: "Encouragement & Learning",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      description: "Queen Arit became an engineer as a mum-of-two. So mums in Tech hold a special place in her spirit. These events are uniquely designed to empower mums with their multi-faceted lives!"
+      description:
+        "Queen Arit became an engineer as a mum-of-two. So mums in Tech hold a special place in her spirit. These events are uniquely designed to empower mums with their multi-faceted lives!",
     },
     {
       img: portfolioreview,
       title: "Tech Profile Reviews",
       hostimg: queenarit,
       hostname: "Queen Arit",
-      description: "Before they meet you, your professional profiles speak for you. Learn how to make the BEST impression with your resume, LinkedIn and portfolio."
+      description:
+        "Before they meet you, your professional profiles speak for you. Learn how to make the BEST impression with your resume, LinkedIn and portfolio.",
     },
   ];
 
@@ -63,7 +65,7 @@ export default function Events() {
     visible: (i) => ({
       opacity: 1,
       y: 0,
-      transition: { delay: 0.6 + i * 0.25, duration: 0.6, ease: "easeOut" }, // delay starts after header
+      transition: { delay: 0.6 + i * 0.25, duration: 0.6, ease: "easeOut" },
     }),
   };
 
@@ -75,7 +77,7 @@ export default function Events() {
   return (
     <div
       className="antialiased relative overflow-hidden w-full bg-[#0E0E0E] inter 
-                 mobile:max-lg:h-full h-[780px] lg:h-[820px] mobile:max-xxm:pt-[70px] xxm:max-lg:pt-20 lg:pt-16 
+                 mobile:max-lg:h-full h-[780px] lg:h-[820px] mobile:max-xxm:pt-5 xxm:max-lg:pt-20 lg:pt-10 
                  mobile:max-ssm:pb-60 ssm:max-lg:pb-64 lg:-mb-10"
       ref={ref}
     >
@@ -92,27 +94,23 @@ export default function Events() {
         style={{ backgroundImage: `url(${eventsglow})` }}
       />
 
+      <div
+        className="lg:hidden absolute top-0 left-0 h-full w-full 
+                        bg-no-repeat bg-center bg-cover pointer-events-none z-0"
+        style={{ backgroundImage: `url(${mobileglow})` }}
+      />
 
       <div
-            className="lg:hidden absolute top-0 left-0 h-full w-full 
-                        bg-no-repeat bg-center bg-cover pointer-events-none z-0"
-            style={{ backgroundImage: `url(${mobileglow})` }}
-       />
-
-
-        <div
-            className="mobile:max-ssm:hidden lg:hidden absolute bottom-0 left-0 h-[300px] w-full 
+        className="mobile:max-ssm:hidden lg:hidden absolute bottom-0 left-0 h-[300px] w-full 
                         bg-no-repeat translate-y-28 mb-14 bg-center bg-cover pointer-events-none z-0"
-            style={{ backgroundImage: `url(${desktopline})` }}
-        />
+        style={{ backgroundImage: `url(${desktopline})` }}
+      />
 
-
-       <div
-            className="ssm:hidden absolute bottom-0 left-0 h-[250px] w-full 
+      <div
+        className="ssm:hidden absolute bottom-0 left-0 h-[250px] w-full 
                         bg-no-repeat translate-y-11 mb-10 bg-center bg-cover pointer-events-none z-0"
-            style={{ backgroundImage: `url(${mobileline})` }}
-       />
-
+        style={{ backgroundImage: `url(${mobileline})` }}
+      />
 
       {/* Animated Header */}
       <motion.div
@@ -122,13 +120,13 @@ export default function Events() {
         className="text-white tracking-wide relative px-[4vw] z-20 inter"
       >
         <p className="mobile:max-xxm:text-[35px] xxm:text-3xl sm:text-4xl lg:text-5xl font-semibold tracking-wide">
-          Examples Of{" "}
-          <span className="text-[#fc4f7b]">Circle</span> Events
+          Examples Of <span className="text-[#fc4f7b]">Circle</span> Events
         </p>
       </motion.div>
 
       {/* Animated Cards */}
-      <div className="mx-[2vw] grid justify-center 
+      <div
+        className="mx-[2vw] grid justify-center 
             mobile:max-ssm:grid-cols-1
             ssm:max-mdxl:grid-cols-2 
             mdxl:max-lg:grid-cols-3 
@@ -136,21 +134,21 @@ export default function Events() {
             mt-8 lg:mt-9
             mobile:max-ssm:gap-6 
             ssm:max-blg:gap-[14px] blg:max-xl:gap-4 xl:gap-5 
-            relative z-20">
-            {events.map((event, i) => (
-                <motion.div
-                key={i}
-                variants={cardVariants}
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                custom={i}
-                className="flex justify-center"
-                >
-                <EventCards {...event} />
-                </motion.div>
-            ))}
-        </div>
-
+            relative z-20"
+      >
+        {events.map((event, i) => (
+          <motion.div
+            key={i}
+            variants={cardVariants}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            custom={i}
+            className="flex justify-center"
+          >
+            <EventCards {...event} />
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 }

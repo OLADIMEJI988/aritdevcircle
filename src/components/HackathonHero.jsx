@@ -1,33 +1,31 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
-
 import flash from "../assets/flash.svg";
 import arrow from "../assets/arrow-right.svg";
 import HackathonRightImg from "./HackathonRightImg";
 import HackathonLeftImg from "./HackathonLeftImg";
-
 
 export default function HackathonHero() {
   const navigate = useNavigate();
 
   const heading = "2025 OCTOBER".split(" ");
   const earn = "HACKATHON".split(" ");
-  
+
   return (
     <>
-
       <div className="flex flex-col lg:flex-row items-center h-full gap-9 justify-center mobile:max-lg:-mt-10 mobile:max-lg:-mb-5 lg:-mt-32 xl:mt-0 z-10">
-
         <HackathonLeftImg />
 
         {/* Center Content */}
         <div className="mobile:max-lg:order-2 text-center flex flex-col items-center justify-center">
           {/* Badge */}
-          <div className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mobile:max-md:-mt-[5px] md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition z-20" >
+          <div className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mobile:max-md:-mt-[5px] md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition z-20">
             <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
               <img src={flash} alt="lightening img" className="h-[19px]" />
-              <p className="text-white text-[16px] tracking-wide">Are you ready?</p>
+              <p className="text-white text-[16px] tracking-wide">
+                Are you ready?
+              </p>
             </div>
           </div>
 
@@ -94,7 +92,8 @@ export default function HackathonHero() {
             transition={{ duration: 0.5, delay: 1, ease: [0.25, 1, 0.5, 1] }}
             style={{ willChange: "transform, opacity" }}
           >
-            Do you have what it takes to turn bold ideas into real-world solutions?
+            Do you have what it takes to turn bold ideas into real-world
+            solutions?
           </motion.p>
 
           {/* CTA Button */}
@@ -115,10 +114,7 @@ export default function HackathonHero() {
         </div>
 
         <HackathonRightImg />
-
       </div>
-      
     </>
-   
   );
 }

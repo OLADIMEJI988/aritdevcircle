@@ -24,11 +24,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
               onClick={closePopup}
               className="flex items-center justify-center"
             >
-              <img
-                className="h-4"
-                src={arrowUp}
-                alt="collapse"
-              />
+              <img className="h-4" src={arrowUp} alt="collapse" />
             </button>
           </div>
         ) : (
@@ -37,11 +33,7 @@ export default function Questions({ question, arrowDown, answer, arrowUp }) {
               onClick={openPopup}
               className="flex items-center justify-center"
             >
-              <img
-                className="h-4"
-                src={arrowDown}
-                alt="expand"
-              />
+              <img className="h-4" src={arrowDown} alt="expand" />
             </button>
           </div>
         )}
