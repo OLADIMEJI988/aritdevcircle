@@ -24,7 +24,7 @@ export default function HackathonHero() {
             <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
               <img src={flash} alt="lightening img" className="h-[19px]" />
               <p className="text-white text-[16px] tracking-wide">
-                Are you ready?
+                Registration closed
               </p>
             </div>
           </div>
@@ -92,8 +92,7 @@ export default function HackathonHero() {
             transition={{ duration: 0.5, delay: 1, ease: [0.25, 1, 0.5, 1] }}
             style={{ willChange: "transform, opacity" }}
           >
-            Do you have what it takes to turn bold ideas into real-world
-            solutions?
+            Follow up with the scheduled timeline as the hackathon progresses.
           </motion.p>
 
           {/* CTA Button */}
@@ -106,7 +105,7 @@ export default function HackathonHero() {
             transition={{ duration: 0.5, delay: 0.3, ease: [0.25, 1, 0.5, 1] }}
             style={{ willChange: "transform, opacity" }}
           >
-            <p className="text-lg tracking-wide">Register Now</p>
+            <p className="text-lg tracking-wide">See More</p>
             <div className="bg-white p-[5px] rounded-full">
               <img className="h-6" src={arrow} alt="arrow" />
             </div>

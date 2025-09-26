@@ -110,13 +110,14 @@ export default function Reason() {
       </div>
 
       <div className="relative lg:hidden">
+        <div className="w-full h-2 bg-[#0e0e0e] absolute -mt-[219px]"></div>
         <img
           src={boyontiemobile}
           alt="boy in tie"
-          className="h-[250px] absolute right-0 bottom-[78px] z-30"
+          className="h-[250px] absolute right-0 bottom-[72px] z-30"
         />
 
-        <img className="mt-[170px] xxm:mt-[130px] w-[500px]" src={bottomline} alt="" />
+        <img className="mt-[173px] xxm:mt-[130px] w-[500px]" src={bottomline} alt="" />
       </div>
 
       <img

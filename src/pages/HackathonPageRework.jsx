@@ -71,27 +71,24 @@ export default function HackathonPageRework() {
 
             {/* Desktop Menu */}
             <div className="hidden lg:flex gap-7 xl:gap-10 text-sm lg:text-[15px] xl:text-[19px] items-center tracking-wide">
-              {[
-                "Timeline",
-                "Purpose",
-                "Recognition",
-                "Reviews",
-              ].map((item, idx) => (
-                <p
-                  key={idx}
-                  className="relative cursor-pointer text-[#BBBABA] group hover:text-white transition"
-                >
-                  <ScrollLink
-                    to={sectionIdFor(item)}
-                    smooth={true}
-                    duration={600}
-                    className="inline-block"
+              {["Timeline", "Purpose", "Recognition", "Reviews"].map(
+                (item, idx) => (
+                  <p
+                    key={idx}
+                    className="relative cursor-pointer text-[#BBBABA] group hover:text-white transition"
                   >
-                    {item}
-                  </ScrollLink>
-                  <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
-                </p>
-              ))}
+                    <ScrollLink
+                      to={sectionIdFor(item)}
+                      smooth={true}
+                      duration={600}
+                      className="inline-block"
+                    >
+                      {item}
+                    </ScrollLink>
+                    <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#fc4f7b] transition-all duration-300 group-hover:w-full"></span>
+                  </p>
+                )
+              )}
               <button
                 onClick={() =>
                   (window.location.href =
@@ -226,8 +223,6 @@ export default function HackathonPageRework() {
                     Listen To Info Session
                   </button> */}
                   </div>
-
-            
 
                   <div className="gap-60">
                     {/* Small circle 1 */}
