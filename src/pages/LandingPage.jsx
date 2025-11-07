@@ -148,8 +148,8 @@ export default function LandingPage() {
 
         {/* Hero Sections */}
         
-        {/* <RegularHero /> */}
-        <HackathonHero />
+        <RegularHero />
+        {/* <HackathonHero /> */}
       </div>
 
       {/* Sections with IDs */}

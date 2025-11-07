@@ -75,12 +75,12 @@ export default function Rules() {
           />
 
           <motion.div
-            className="h-10 mobile:max-lg:h-9 w-10 mobile:max-lg:w-9 rounded-full self-start -ml-10 mobile:max-lg:ml-0 mobile:max-lg:mt-80"
+            className="h-10 mobile:max-lg:h-9 w-10 mobile:max-lg:w-9 rounded-full self-start -ml-10 mobile:max-lg:ml-0 mobile:max-lg:mt-[360px]"
             style={{
               background:
                 "linear-gradient(180deg, #EFE3E6 0%, #DF496A 66%, #BF435E 100%)",
             }}
-            animate={{ y: [0, -25, 0] }}
+            animate={{ y: [0, -20, 0] }}
             transition={{
               duration: 2.6,
               repeat: Infinity,
@@ -95,7 +95,7 @@ export default function Rules() {
           <div className="p-[1px] border border-[#fc4f7b] rounded-full w-fit mx-auto mt-1 md:mt-10 hover:shadow-[0_0_8px_#FF4F76] cursor-pointer transition">
             <div className="rounded-full flex justify-center items-center gap-2 px-4 py-2">
               <img src={flash} alt="lightening img" className="h-[22px]" />
-              <p className="text-white text-[16px]">Tech Career Empowerment</p>
+              <p className="text-white text-[16px]">Empowerment</p>
             </div>
           </div>
 
@@ -127,7 +127,7 @@ export default function Rules() {
           </motion.p>
 
           <motion.p
-            className="text-[#E3E3E3] -mt-3 xsm:max-lg:mt-2 text-[38px] xsm:max-lg:text-5xl lg:text-[55px] xl:text-[80px] font-semibold tracking-wide flex-wrap justify-center"
+            className="text-[#E3E3E3] mt-2 xsm:max-lg:mt-2 text-[38px] xsm:max-lg:text-5xl lg:text-[55px] xl:text-[80px] font-semibold tracking-wide flex-wrap justify-center"
             initial="hidden"
             animate="visible"
             variants={{
@@ -153,7 +153,7 @@ export default function Rules() {
             ))}
           </motion.p>
 
-          <motion.p
+          {/* <motion.p
             className="text-[#CECECE] text-lg lg:text-[18px] max-w-[550px] mx-auto mt-2 lg:-mt-[1px] leading-8"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -161,7 +161,7 @@ export default function Rules() {
             style={{ willChange: "transform, opacity" }}
           >
             Here are some rules that guides us in the circle.
-          </motion.p>
+          </motion.p> */}
 
           <motion.button
             onClick={() =>
@@ -185,6 +185,43 @@ export default function Rules() {
           </motion.button>
         </div>
 
+        {/* <div className="lg:hidden flex">
+          <div>
+          <div className="absolute mobile:max-lg:left-2 top-10 mobile:max-lg:-top-10 pointer-events-none sm:flex sm:flex-col sm:items-center sm:gap-64 z-10">
+            <motion.div
+              className="h-16 mobile:max-lg:h-[50px] w-16 mobile:max-lg:w-[50px] rounded-full"
+              style={{
+                background:
+                  "linear-gradient(180deg, #EFE3E6 0%, #DF496A 66%, #BF435E 100%)",
+              }}
+              animate={{ y: [0, -20, 0] }}
+              transition={{
+                duration: 1.9,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0,
+              }}
+            />
+
+            <motion.div
+              className="h-10 mobile:max-lg:h-9 w-10 mobile:max-lg:w-9 rounded-full self-start -ml-10 mobile:max-lg:ml-0 mobile:max-lg:mt-80"
+              style={{
+                background:
+                  "linear-gradient(180deg, #EFE3E6 0%, #DF496A 66%, #BF435E 100%)",
+              }}
+              animate={{ y: [0, -25, 0] }}
+              transition={{
+                duration: 2.6,
+                repeat: Infinity,
+                ease: "easeInOut",
+                delay: 0.3,
+              }}
+            />
+          </div>
+          </div>
+          
+        </div> */}
+
         {/* RIGHT bubbles */}
         <div className="absolute right-40 mobile:max-lg:-right-0 top-10 mobile:max-lg:-top-10 pointer-events-none sm:flex sm:flex-col sm:items-center sm:gap-64 z-10">
           <motion.div
@@ -203,12 +240,12 @@ export default function Rules() {
           />
 
           <motion.div
-            className="h-16 w-16 mobile:max-lg:h-[50px] mobile:max-lg:w-[50px] rounded-full self-start -mr-10 mobile:max-lg:mr-2 mobile:max-lg:mt-80"
+            className="h-16 w-16 mobile:max-lg:h-[50px] mobile:max-lg:w-[50px] rounded-full self-start -mr-10 mobile:max-lg:mr-2 mobile:max-lg:mt-[375px]"
             style={{
               background:
                 "linear-gradient(180deg, #EFE3E6 0%, #DF496A 66%, #BF435E 100%)",
             }}
-            animate={{ y: [0, -30, 0] }}
+            animate={{ y: [0, -20, 0] }}
             transition={{
               duration: 3,
               repeat: Infinity,
@@ -219,10 +256,9 @@ export default function Rules() {
         </div>
       </div>
 
-      <div className="h-[15pc] flex justify-center text-white relative top-[90px] lg:top-[200px] z-20">
+      <div className="h-[10pc] flex justify-center text-white relative top-[50px] lg:top-[200px] z-20">
         <p className="text-xl lg:text-2xl px-5 w-[600px] tracking-wide leading-9">
-          Here are rules that all members of The Queen Arit Circle is expected
-          to adhere to.
+          Here are the rules that guides us in the circle.
         </p>
       </div>
 
@@ -245,7 +281,7 @@ export default function Rules() {
           />
         </div>
 
-        <div className="flex mobile:max-lg:flex-col justify-center gap-20 my-28">
+        <div className="flex mobile:max-lg:flex-col justify-center gap-20 my-28 mobile:max-lg:my-0 mobile:max-lg:mt-20">
           <Rule
             img={engagement}
             title="ENGAGEMENT MOOD"
@@ -263,7 +299,7 @@ export default function Rules() {
           />
         </div>
 
-        <div className="flex mobile:max-lg:flex-col justify-center gap-20 mb-28">
+        <div className="flex mobile:max-lg:flex-col justify-center gap-20 mb-28 mobile:max-lg:mt-20">
           <Rule
             img={prohibited}
             title="PROHIBITED WORDS"
